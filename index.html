@@ -1,43 +1,58 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,shrink-to-fit=no,initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title> GTI | Tu campo en cualquier sitio</title>
-    <link rel="stylesheet" href="css/LandingPage.css">
-</head>
-<body>
-    <!-- primera sección de la página (cabecera)-->
-    <section class="landing">
-        <header class="cabecera" role="banner">
-    <!-- logo-->
-    <a class="logo"><img src="img/logoGTI.svg" alt="Logo GTI"></a>
-    <!-- botones del menú-->
-    <button type="button" class="boton_iniciarSesion">Iniciar sesión</button>
-    <!-- bloque de menú desplegado-->
-    <nav id="menu"> 
-        <ul>
-            <li class="active"> <a href="index.html">Inicio</a></li>           
-            <li> <a href="nosotros.html">Nosotros</a></li>
-            <li> <a href="servicios.html">Servicios</a></li>
-            <li> <a href="#">Contactos</a></li>
-        </ul>
-    </nav>
-</header>
-    <section class="fondo">
-<!-- texto de reclamo-->   
-    <div class="texto-encabezado">
-        <h1>Tu campo en cualquier sitio</h1>
-        <p>Podrás consultar los datos de tu campo desde cualquier lugar, de forma fácil y sencilla</p>
-    </div>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>GTI Tu Campo En Cualquier Sitio</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/estilo-header.css">
+    </head>
 
-    <!-- texto de reclamo-->   
-    <div class="promocion">
-        <h2>¡MANTENTE INFORMADO!</h2>
-        <button type="button" class="Boton_contacto">Contacto</button>
-    </div>
-    </section>
-</section>
-</body>
+    <body>
+        <header>
+            <a class="logo" href="/"><img src="images/logo.svg" alt="logo"></a>
+            <nav>
+                <ul class="navegar">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+            <a class="inicio" href="#">Iniciar Sesión</a>
+            <p class="menu inicio">Menú</p>
+        </header>
+
+
+        <div id="menutlf" class="overlay">
+            <a class="close">&times;</a>
+            <div class="overlay__content">
+                <a href="#">Iniciar Sesión</a>
+                <a href="#">Inicio</a>
+                <a href="#">Nosotros</a>
+                <a href="#">Servicios</a>
+                <a href="#">Contacto</a>
+
+            </div>
+        </div>
+
+        <script type="text/javascript" src="mobile.js"></script>
+
+<!-- Fin real del header -->
+
+        <section class="fondo">
+            <!-- texto de reclamo-->
+            <div class="texto-encabezado">
+                <h1>Tu campo en cualquier sitio</h1>
+                <p>Podrás consultar los datos de tu campo desde cualquier lugar, de forma fácil y sencilla</p>
+            </div>
+
+            <!-- texto de reclamo-->
+            <div class="promocion">
+                <h2>¡MANTENTE INFORMADO!</h2>
+                <button type="button" class="Boton_contacto">Contacto</button>
+            </div>
+        </section>
+        </section>
+    </body>
 </html>
