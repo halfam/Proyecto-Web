@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  background-color: #EAEAEA;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+}
+header p {
+  color: white;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.navegar {
+  list-style: none;
+  display: flex;
+}
+
+.navegar a {
+  font-family: Constantia;
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+}
+.inicio,
+.overlay__content a{
+  font-family: Constantia;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+.navegar li {
+  padding: 0px 20px;
+}
+
+.navegar li a {
+  transition: all 0.3s ease 0s;
+}
+
+.navegar li a:hover {
+  color: #8B008BBF;
+}
+
+.inicio {
+  margin-left: 30px;
+  margin-right: 30px;
+  padding: 5px 18px;
+  background-color: #8B008BBF;
+  border: 3px solid darkmagenta;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  border-radius: 12px;
+}
+
+.inicio:hover {
+  background: darkmagenta;
+  box-shadow: 0 0 0px darkmagenta, 0 0 0px darkmagenta, 0 0 0px darkmagenta;
+  transition-delay: 0.05s;
+}
+
+/* Navegación Para Teléfono */
+
+.menu {
+  display: none;
+}
+
+/*Salida del menú en teléfono */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #8B008B;
+  overflow-x: hidden;
+  transition: all 0.3s ease 0s;
+}
+/*Salida del menú en teléfono */
+
+
+/*Tamaño del menú extensible verticalmente */
+.overlay--active {
+  width: 70%;
+}
+/*Tamaño del menú extensible verticalmente */
+
+
+/* Contenido del menú */
+.overlay__content {
+  display: flex;
+  height: 70%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* Contenido del menú */
+
+/* Diseño de lo escrito */
+.overlay a {
+  padding: 15px;
+  font-size: 25px;
+  display: block;
+  transition: all 0.3s ease 0s;
+}
+/* Diseño de lo escrito */
+
+/* Color al accionar */
+.overlay >div> a:hover,
+.overlay >div> a:focus {
+  color: black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+
+}
+/* Color al accionar */
+
+/* Edición de cruz para cerrar */
+.overlay .close {
+  position: absolute;
+  top: 50px;
+  right: 25px;
+  font-size: 45px;
+  color: #edf0f1;
+  cursor: pointer;
+}
+/* Edición de Cruz para cerrar */
+
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .navegar,
+  .inicio {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
+
