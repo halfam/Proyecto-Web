@@ -6,21 +6,21 @@
 }
 /*-------------------------------- */
 
-
+/*Primera parte del texto y foto*/
 .contacto-encabezado {
     margin-bottom: 100px;
     background-color: #D0DCE5;
     border-top: solid 4px #820153;
-    /*border-right: solid 4px #820153;*/
-    /*border-left: solid 4px #820153;*/
     margin-bottom: -0.5rem;
 }
-
+/*-------------------------------- */
+/*diseño del texto tipografia y alineacion*/
 .contacto-textos {
     font-family: "Times New Roman";
     margin: 0 auto;
     text-align: center;
 }
+/*-------------------------------- */
 
 h1 {
     margin-top: 10px;
@@ -32,21 +32,21 @@ p {
     font-size: 16.5px;
     font-weight: normal;
 }
-
+/*-------------------------------- */
+/*Diseño de la imagen*/
 #contacto-img {
     width: 100%;
     height: auto;
     margin-bottom: -3px;
 }
-
+/*-------------------------------- */
+/*diseño del formulario*/
 .contacto-formulario {
     background: linear-gradient(to right, #6F60CC 10%, #9F6CB4);
     height: auto;
     padding-top: 15px;
     padding-bottom: 10px;
     border-bottom: solid 4px #820153;
-    /*border-right: solid 4px #820153;*/
-    /*border-left: solid 4px #820153;*/
 
 }
 
@@ -83,6 +83,7 @@ textarea {
     border-color: #D0DCE5;
     margin: 10px auto;
     padding-top: 15px;
+    resize: none;
 }
 
 .formulario input:focus {
@@ -101,7 +102,8 @@ textarea {
 
 
 }
-
+/*-------------------------------- */
+/*diseño del boton*/
 .btn {
     display: block;
     width: 100%;
@@ -123,6 +125,4 @@ textarea {
 .btn:hover {
     background-position: right;
 }
-textarea{
-    resize: none;
-}
+/*-------------------------------- */

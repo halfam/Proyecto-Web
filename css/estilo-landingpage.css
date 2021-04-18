@@ -8,7 +8,7 @@
 /*Imagen de fondo y estilo*/
 .fondo{
     padding-top: 22%;
-    background-image: url(fondo.jpg);
+    background-image: url(../img/fondo.jpg);
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;

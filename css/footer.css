@@ -1,3 +1,4 @@
+/*Diseño de la organizacion del footer*/
 footer {
     clear:both;
     position: relative;
@@ -10,23 +11,29 @@ footer {
     background: #D4CFE5;
     align-items: center;
 }
+/*-------------------------------- */
+/*quitamos los puntos para que la lista se vea "clean"*/
 footer > ul {
     list-style-type: none;
     overflow: hidden;
 }
+/*-------------------------------- */
 .iconos-redes{
     width: 29px;
     height: 29px;
 }
-.contenedor-redes{
-    display: inline;
-    justify-content: space-around;
-    flex-flow: nowrap;
-}
-
+/*.contenedor-redes{*/
+/*    display: flex;*/
+/*    justify-content: space-around;*/
+/*    flex-flow: nowrap;*/
+/*}*/
+/*-------------------------------- */
+/*Posicionamos los elementos de la lista en horizontal*/
 footer li{
     display: inline;
 }
+/*-------------------------------- */
+/*Separamos los elementos del footer para que distingan*/
 .contenedor-footer{
     width: 100%;
     height: 75%;
@@ -35,6 +42,8 @@ footer li{
     align-items: center;
     justify-content: space-around;
 }
+/*-------------------------------- */
+/*texto de copyright*/
 #copyright {
     margin-block-start:0px;
     margin-block-end:0px;
@@ -44,28 +53,29 @@ footer li{
     margin-bottom: 5px;
     font-size: 15px;
 }
-.enlaces-logo{
-    text-decoration: none;
-}
+/*-------------------------------- */
 
 .contenedor-footer > ul{
     display: flex;
-    /*flex-flow: row wrap;*/
     justify-content: space-around;
 
 }
-.contenedor-enlaces ul{
-    display: flex;
-}
-.contenedor-enlaces >ul>li{
-    margin-right: 10px;
-    left :0;
-}
-.contenedor-enlaces > ul > li > a{
-    color: black;
-    text-decoration: underline;
-}
+/*.enlaces-logo{*/
+/*    text-decoration: none;*/
+/*}*/
 
+/*.contenedor-enlaces ul{*/
+/*    display: flex;*/
+/*}*/
+/*.contenedor-enlaces >ul>li{*/
+/*    margin-right: 10px;*/
+/*    left :0;*/
+/*}*/
+/*.contenedor-enlaces > ul > li > a{*/
+/*    color: black;*/
+/*    text-decoration: underline;*/
+/*}*/
+/*-------------------------------- */
 
 .redes{
     display: inline-block;
@@ -94,10 +104,10 @@ footer li{
 }
 
 /*Esto se comenta porque al presentarlo en teléfono no tiene sentido la animación*/
-/*.redes:hover i{*/
-/*    transform: scale(1.3);*/
-/*    color: white;*/
-/*}*/
+.redes:hover i{
+    transform: scale(1.3);
+    color: white;
+}
 
 .redes::before{
     content: "";
@@ -112,26 +122,26 @@ footer li{
 
 
 /*Esto se comenta porque al presentarlo en teléfono no tiene sentido la animación*/
-/*.redes:hover::before{*/
-/*    animation: aaa 0.8s 1;*/
-/*    top: -10%;*/
-/*    left: -10%;*/
-/*}*/
+.redes:hover::before{
+    animation: aaa 0.8s 1;
+    top: -10%;
+    left: -10%;
+}
 
 
-/*@keyframes aaa {*/
-/*    0%{*/
-/*        left: -100%;*/
-/*        top: 90%;*/
-/*    }50% {*/
-/*         left: 10%;*/
-/*         top: -30%;*/
-/*     }75% {*/
-/*          right: -10%;*/
-/*          bottom: 30%;*/
-/*      }100% {*/
-/*           right: 100%;*/
-/*           bottom: -90%;*/
-/*       }*/
-/*}*/
+@keyframes aaa {
+    0%{
+        left: -100%;
+        top: 90%;
+    }50% {
+         left: 10%;
+         top: -30%;
+     }75% {
+          right: -10%;
+          bottom: 30%;
+      }100% {
+           right: 100%;
+           bottom: -90%;
+       }
+}
 

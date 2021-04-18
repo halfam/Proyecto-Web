@@ -130,15 +130,17 @@ form{
 /* -------------------------------------------------------*/
 
 /* Para texto de nombre de usuario y contraseña acorde a lo demás */
+
 .input-div > div > h5{
 	position: absolute;
 	left: 10px;
 	top: 50%;
 	transform: translateY(-50%);
-	color: #999;
 	font-size: 18px;
 	transition: .3s;
-
+}
+h1,h5{
+	color: #999;
 }
 /* -------------------------------------------------------*/
 
@@ -209,6 +211,7 @@ form{
 /* --------------------------------------------------------------------------------*/
 
 /* -----------------------------------------------------------------*/
+/*diseño de los enlaces punto*/
 a{
 	display: block;
 	text-align: right;
@@ -217,15 +220,13 @@ a{
 	font-size: 0.9rem;
 	transition: .3s;
 }
-/* -----------------------------------------------------------------*/
 
-/* -----------------------------------------------------------------*/
 a:hover{
 	color: darkmagenta;
 }
 /* -----------------------------------------------------------------*/
 
-/* -----------------------------------------------------------------*/
+/*diseño del boton*/
 .btn{
 	display: block;
 	width: 100%;
@@ -243,14 +244,12 @@ a:hover{
 	cursor: pointer;
 	transition: .5s;
 }
-/* -----------------------------------------------------------------*/
 
-/* -----------------------------------------------------------------*/
 .btn:hover{
 	background-position: right;
 }
 /* -----------------------------------------------------------------*/
-
+/*diseño para que se vea refacherita en el movil*/
 @media screen and (max-width: 1050px){
 	.container{
 		grid-gap: 5rem;
@@ -300,8 +299,3 @@ a:hover{
 		width: 100%;
 	}
 }
-/*quitamos el text align que afectaba a la imagen del logo debido a que se encuentra en una <a>*/
-.logo{
-	text-align: center;
-}
-

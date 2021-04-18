@@ -29,7 +29,8 @@
 			<form method="post">
 
 				<!-- Imagen GTI  y texto para login-->
-				<a href="index.php" class="logo"><img src="img/logoGTI.svg"></a>
+<!--				<a href="index.php" class="logo"><img src="img/logoGTI.svg"></a>-->
+                <h1>Iniciar Sesión</h1>
            		<div class="input-div one">
            		   <div class="i">
            		   		<i class="fas fa-user"></i>
