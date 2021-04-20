@@ -65,12 +65,12 @@
   .boton_personalizado{
     text-decoration: none;
     padding: 15px 60px;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 17px;
-    color: #ffffff;
-    background-color: darkmagenta;
+    color: #820053;
+    background-color: #d8d6eb;
     border-radius: 15px;
-    border: 2px solid darkmagenta;
+    border: 2px solid #820053;
     font-family: 'Rubik', sans-serif;
     font-family: 'Varela Round', sans-serif;
   
