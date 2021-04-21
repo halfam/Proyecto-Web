@@ -16,7 +16,7 @@
 /*-------------------------------- */
 /*diseño del texto tipografia y alineacion*/
 .contacto-textos {
-    font-family: "Times New Roman";
+    font-family: 'Varela Round', sans-serif;
     margin: 0 auto;
     text-align: center;
 }
@@ -60,7 +60,7 @@ form {
 }
 
 input {
-    font-family: Constantia;
+    font-family: 'Varela Round', sans-serif;
     background-color: #EAEFF3;
     width: 99%;
     height: 40px;
@@ -73,7 +73,7 @@ input {
 
 
 textarea {
-    font-family: Constantia;
+    font-family: 'Varela Round', sans-serif;
     background-color: #EAEFF3;
     width: 99%;
     height: 100px;
@@ -115,7 +115,7 @@ textarea {
     background-size: 200%;
     font-size: 1.2rem;
     color: #fff;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Varela Round', sans-serif;
     text-transform: uppercase;
     margin: 1rem 0;
     cursor: pointer;

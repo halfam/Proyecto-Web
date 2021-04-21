@@ -9,13 +9,11 @@ ul{
 }
 
 a{
-  font-family: 'Rubik', sans-serif;
   font-family: 'Varela Round', sans-serif;
   text-decoration: none;
 }
 
 header {
-
   align-items: center;
   background-color: #EAEAEA;
   height: 70px;
@@ -38,7 +36,6 @@ header {
 }
 
 .butolog{
-  font-family: 'Rubik', sans-serif;
   font-family: 'Varela Round', sans-serif;
   display: flex;
   justify-content: center;
@@ -157,10 +154,13 @@ header {
   /*right: 1px;*/
   cursor: pointer;
   margin-right: 10px;
-  height: 24px;
+  height: 25px;
   /*opacity: 100;*/
   /*z-index: 90;*/
-
+}
+.picuser > img{
+  height: 25px;
+  width: 25px;
 }
 /*#check{*/
 /*  position: absolute;*/
@@ -227,7 +227,7 @@ header {
     align-items: center;
     overflow-x: hidden;
     overflow-y: auto;
-    transform: translateX(100%);
+    transform: translateY(-135%);
     transition: .65s;
     height: auto;
   }
@@ -248,6 +248,7 @@ header {
   }
 
   .nav-links{
+
     flex: initial;
     width: 100%;
   }
@@ -299,7 +300,76 @@ header {
   }
 
 }
-/*.picuser{*/
-/*  width: 20px;*/
-/*}*/
+.overlay__content a{
+  font-family: Constantia;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+/*Salida del menú en teléfono */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  /*background-color: black;*/
+  overflow-x: hidden;
+  transition: all 0.3s ease 0s;
+}
+/*Salida del menú en teléfono */
+/*Tamaño del menú extensible verticalmente */
+.overlay--active {
+  width: 100%;
+  height: 100%;
+  /*opacity: 90%;*/
+  /*filter: blur(4px);*/
+}
+/*Tamaño del menú extensible verticalmente */
+/* Contenido del menú */
+.overlay__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* Contenido del menú */
+.overlay .close {
+  padding: 15px;
+  font-size: 25px;
+  display: block;
+  transition: all 0.3s ease 0s;
+}
+/* Color al accionar */
+.overlay >div> a:hover,
+.overlay >div> a:focus {
+  color: black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 
+}
+/* Color al accionar */
+
+/* Edición de cruz para cerrar */
+.overlay .close {
+  position: absolute;
+  top: 50px;
+  right: 25px;
+  font-size: 45px;
+  color: #edf0f1;
+  cursor: pointer;
+}
+/* Edición de Cruz para cerrar */
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
