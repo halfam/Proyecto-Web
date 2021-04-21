@@ -79,8 +79,8 @@
                     <!-- Formulario de login -->
                     <form method="post">
                         <!-- Imagen GTI  y texto para login-->
-                        <!--				<a href="index.php" class="logo"><img src="img/logoGTI.svg"></a>-->
-                        <h2>Iniciar Sesión</h2>
+                        <a class="logologin"><img src="img/Security-amico.svg"></a>
+
                         <div class="input-div one">
                             <div class="i">
                                 <i class="fas fa-user"></i>
