@@ -35,6 +35,10 @@ header {
   flex: 2;
 }
 
+.nav-link:hover{
+  text-decoration:underline;
+}
+
 .butolog{
   font-family: 'Varela Round', sans-serif;
   display: flex;
@@ -301,7 +305,6 @@ header {
 
 }
 .overlay__content a{
-  font-family: Constantia;
   font-weight: 600;
   color: white;
   text-decoration: none;

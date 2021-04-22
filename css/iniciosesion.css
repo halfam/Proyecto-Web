@@ -22,11 +22,11 @@
 
 
 
-/* Para tamaño de la imagen del logo*/
+/* Para tamaño de la imagen de seguridad*/
 .login-content img{
 	display: flex;
 	width: 100%;
-	height: 200px;
+	height: 120px;
 	margin-bottom: 1%;
 }
 /* ---------------------------------*/
@@ -34,12 +34,12 @@
 /* -----------------------------------*/
 
 /* Para cambios de la letra h2 */
-.login-content h2{
-	margin: 15px 0;
-	color: #333;
-	text-transform: uppercase;
-	font-size: 2rem;
-}
+/*.login-content h2{*/
+/*	margin: 15px 0;*/
+/*	color: #333;*/
+/*	text-transform: uppercase;*/
+/*	font-size: 2rem;*/
+/*}*/
 /* ----------------------------*/
 
 /* Para diseño de nombre de usuario y contraseña (lineas inferiores) */

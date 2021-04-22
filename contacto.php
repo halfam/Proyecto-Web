@@ -16,8 +16,8 @@
 
 <body>
     <?php include_once 'header.php'?>
-    <div class="header" style="height: 80px"></div>
-    <section class="contacto-encabezado">
+    <div class="header" style="height: 70px"></div>
+    <section class="contacto-encabezado blur">
 
         <div class="contacto-textos">
             <h1>¿Cómo podemos ayudarte?</h1>
@@ -28,7 +28,7 @@
     </section>
 
     <!-- formulario de contacto en html y css -->
-    <section class="contacto-formulario">
+    <section class="contacto-formulario blur">
         <div class="formulario">
 
             <form method="post" action="formulario.php">
