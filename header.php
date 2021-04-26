@@ -43,7 +43,7 @@
                     </li>
 
                     <li class="nav-link" style="--i: 0.3s">
-                        <a href="#">Nosotros</a>
+                        <a href="nosotros.php">Nosotros</a>
                     </li>
 
                     <li class="nav-link" style="--i: 0.3s">
@@ -70,14 +70,16 @@
         </div>
 
 
-<!--        empieza el despegable-->
+        <!--empieza el despegable-->
         <div id="menutlf" class="overlay">
 
-<!--            <span class="overlay__content blur"></span>-->
+<!--        <span class="overlay__content blur"></span>-->
             <div class="overlay--active">
                 <div class="login-content">
                     <a class="close cerrar" onclick="loginBlur(false)">&times;</a>
                     <div class="clickme cerrar" onclick="loginBlur(false)"></div>
+
+
                     <!-- Formulario de login -->
                     <form method="post">
                         <!-- Imagen GTI  y texto para login-->
@@ -110,8 +112,9 @@
                         </div>
                         <div id="output"></div>
                         <input type="submit" class="btn" value="Iniciar Sesión" >
-
                     </form>
+
+                    
                     <script src="js/login.js"></script>
                     <!-- Fin de formulario para login -->
                 </div>

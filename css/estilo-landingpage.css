@@ -64,19 +64,19 @@
     padding: 15px 60px;
     font-weight: 700;
     font-size: 17px;
-    color: #820053;
-    background-color: #d8d6eb;
+    color: white;
+    background-color: #8b9ec8;
     border-radius: 15px;
-    border: 2px solid #820053;
+    border: 3px solid white;
     font-family: 'Varela Round', sans-serif;
   
   }
 /*Diseño del call to action (botón contacto)*/
   .boton_personalizado:hover{
-    background: darkmagenta;
-    box-shadow: 0 0 0px darkmagenta, 0 0 0px darkmagenta, 0 0 0px darkmagenta;
+    background: #8b9ec8;
     transition-delay: 0.05s;
-  
+    color: white;
+    border: 3px solid ;
   }
 
 /*Diseño del call to action (botón contacto)*/
@@ -87,7 +87,7 @@
 
 /*Diseño del call to action (botón contacto)*/
   .boton_personalizado:active{
-    background: #8B008B
+    background: #8b9ec8;
   }
 
 
