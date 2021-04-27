@@ -1,31 +1,40 @@
 /*Para borde y diseño del conjunto */
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 /*-------------------------------- */
 
 /*Primera parte del texto y foto*/
 .contacto-encabezado {
-    margin-bottom: 100px;
     background-color: #D0DCE5;
-    border-top: solid 4px #820153;
-    margin-bottom: -0.5rem;
+    border-bottom: solid 4px #820153;
+    margin-top: -0.2rem;
 }
-/*-------------------------------- */
 
+/*-------------------------------- */
 /*diseño del texto tipografia y alineacion*/
 .contacto-textos {
-    font-family: 'Varela Round', sans-serif;
+    font-family: "Times New Roman";
     margin: 0 auto;
     text-align: center;
+    color: #DCCEE8;
 }
+
+.contacto-textos-2 {
+    font-family: "Times New Roman";
+    margin: 0 auto;
+    text-align: center;
+    font-style: italic;
+}
+
 /*-------------------------------- */
 
 h1 {
-    margin-top: 10px;
     font-size: 24px;
+    margin-bottom: 5px;
 }
 
 p {
@@ -33,6 +42,9 @@ p {
     font-size: 16.5px;
     font-weight: normal;
 }
+
+
+
 /*-------------------------------- */
 /*Diseño de la imagen*/
 #contacto-img {
@@ -40,14 +52,22 @@ p {
     height: auto;
     margin-bottom: -3px;
 }
+
 /*-------------------------------- */
+
+#contacto-elipse {
+    width: 100%;
+    height: auto;
+    margin-bottom: -3px;
+}
+
 /*diseño del formulario*/
 .contacto-formulario {
     background: linear-gradient(to right, #6F60CC 10%, #9F6CB4);
     height: auto;
     padding-top: 15px;
     padding-bottom: 10px;
-    border-bottom: solid 4px #820153;
+    border-top: solid 4px #820153;
 
 }
 
@@ -57,11 +77,11 @@ form {
     background: rgba(255, 255, 255, 0.7);
     padding: 20px;
     border-radius: 20px;
-    margin: 0 auto;
+    margin: 10px auto 0px auto;
 }
 
 input {
-    font-family: 'Varela Round', sans-serif;
+    font-family: Constantia;
     background-color: #EAEFF3;
     width: 99%;
     height: 40px;
@@ -69,12 +89,12 @@ input {
     border-style: solid;
     border-width: 1px;
     border-color: #D0DCE5;
-    margin: 10px auto;
+    margin: 5px auto;
 }
 
 
 textarea {
-    font-family: 'Varela Round', sans-serif;
+    font-family: Constantia;
     background-color: #EAEFF3;
     width: 99%;
     height: 100px;
@@ -82,7 +102,7 @@ textarea {
     border-style: solid;
     border-width: 1px;
     border-color: #D0DCE5;
-    margin: 10px auto;
+    margin: 5px auto 10px auto;
     padding-top: 15px;
     resize: none;
 }
@@ -103,6 +123,7 @@ textarea {
 
 
 }
+
 /*-------------------------------- */
 /*diseño del boton*/
 .btn {
@@ -116,9 +137,9 @@ textarea {
     background-size: 200%;
     font-size: 1.2rem;
     color: #fff;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
-    margin: 1rem 0;
+    margin: 0 0;
     cursor: pointer;
     transition: .5s;
 }
@@ -126,4 +147,5 @@ textarea {
 .btn:hover {
     background-position: right;
 }
+
 /*-------------------------------- */
