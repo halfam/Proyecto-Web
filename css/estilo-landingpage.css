@@ -10,7 +10,6 @@
     padding-top: 22%;
     background-image: url(../img/fondo.jpg);
     background-position: center center;
-    background-attachment: fixed;
     background-size: cover;
   padding-bottom: 25%;
   }
@@ -69,7 +68,7 @@
     border-radius: 15px;
     border: 3px solid white;
     font-family: 'Varela Round', sans-serif;
-  
+
   }
 /*Diseño del call to action (botón contacto)*/
   .boton_personalizado:hover{
