@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -10,41 +10,49 @@
     <link rel="stylesheet" href="css/contacto.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/estilo-header.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600;800&family=Varela+Round&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <?php include_once 'header.php'?>
-    <div class="header" style="height: 70px"></div>
-    <section class="contacto-encabezado blur">
+    <div class="header" style="height: 80px"></div>
 
-        <div class="contacto-textos">
-            <h1>¿Cómo podemos ayudarte?</h1>
-            <p>Estamos aquí para darte más información, contestar cualquier pregunta que puedas tener, y crear una solución eficiente para tus necesidades.</p>
-        </div>
+    <div class="blur">
 
-        <img src="img/img-contacto2.png" alt="" id="contacto-img">
-    </section>
+        <!-- formulario de contacto en html y css -->
+        <section class="contacto-formulario">
+            <div class="formulario">
+                <div class="contacto-textos">
+                    <h1>¿Cómo podemos ayudarte?</h1>
+                    <p>Estamos aquí para darte más información, contestar cualquier pregunta que puedas tener, y crear una solución eficiente para tus necesidades.</p>
+                </div>
 
-    <!-- formulario de contacto en html y css -->
-    <section class="contacto-formulario blur">
-        <div class="formulario">
+                <form method="post" action="formulario.php">
+                    <label>Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
 
-            <form method="post" action="formulario.php">
-                <input type="text" name="nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                    <label>Email:</label>
+                    <input type="email" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email">
 
-                <input type="email" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                    <label>Mensaje:</label>
+                    <textarea name="mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="¿Cómo podemos ayudarte?"></textarea>
 
-                <textarea name="mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="¿Cómo podemos ayudarte?"></textarea>
+                    <input type="submit" class="btn" name="enviar_formulario" value="ENVIAR">
 
-                <input type="submit" class="btn" name="enviar_formulario" value="ENVIAR">
+                </form>
 
-            </form>
+            </div>
+        </section>
 
-        </div>
-    </section>
+        <img src="img/img-contacto-elispse.png" alt="" id="contacto-elipse">
 
+        <section class="contacto-encabezado">
+            <div class="contacto-textos-2">
+                <p>Nos pondremos en contacto con usted en menos de 48 horas laborales.</p>
+            </div>
+            <img src="img/img-contacto.png" alt="" id="contacto-img">
+        </section>
+
+    </div>
 
     <!--Footer -->
     <?php include 'footer.php' ?>
