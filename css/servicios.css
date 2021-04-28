@@ -39,7 +39,7 @@
         border-radius: 15px;
         text-align: center;
         align-items: center;
-        box-shadow: 0px 0px 3px 1px black;
+        box-shadow: 0px 0px 3px 1px gray;
     }
     .text-sensores{
         font-family: 'Varela Round', sans-serif;

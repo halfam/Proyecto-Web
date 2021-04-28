@@ -17,14 +17,14 @@
 /*-------------------------------- */
 /*diseño del texto tipografia y alineacion*/
 .contacto-textos {
-    font-family: "Times New Roman";
-    margin: 0 auto;
+    font-family: 'Varela Round', sans-serif;
+    margin: 0 10px 15px;
     text-align: center;
     color: #DCCEE8;
 }
 
 .contacto-textos-2 {
-    font-family: "Times New Roman";
+    font-family: 'Varela Round', sans-serif;
     margin: 0 auto;
     text-align: center;
     font-style: italic;
@@ -58,16 +58,18 @@ p {
 #contacto-elipse {
     width: 100%;
     height: auto;
-    margin-bottom: -3px;
+    margin-bottom: -2px;
 }
 
 /*diseño del formulario*/
 .contacto-formulario {
     background: linear-gradient(to right, #6F60CC 10%, #9F6CB4);
     height: auto;
-    padding-top: 15px;
+    padding-top: 10px;
     padding-bottom: 10px;
     border-top: solid 4px #820153;
+    margin-top: -10px;
+
 
 }
 
@@ -77,11 +79,11 @@ form {
     background: rgba(255, 255, 255, 0.7);
     padding: 20px;
     border-radius: 20px;
-    margin: 10px auto 0px auto;
+    font-family: 'Varela Round', sans-serif;
 }
 
 input {
-    font-family: Constantia;
+    font-family: 'Varela Round', sans-serif;
     background-color: #EAEFF3;
     width: 99%;
     height: 40px;
@@ -89,12 +91,12 @@ input {
     border-style: solid;
     border-width: 1px;
     border-color: #D0DCE5;
-    margin: 5px auto;
+    margin-bottom: 10px ;
 }
 
 
 textarea {
-    font-family: Constantia;
+    font-family: 'Varela Round', sans-serif;
     background-color: #EAEFF3;
     width: 99%;
     height: 100px;
@@ -137,9 +139,9 @@ textarea {
     background-size: 200%;
     font-size: 1.2rem;
     color: #fff;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Varela Round', sans-serif;
     text-transform: uppercase;
-    margin: 0 0;
+    margin: -5px 0px;
     cursor: pointer;
     transition: .5s;
 }
