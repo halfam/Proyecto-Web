@@ -20,7 +20,7 @@
 .contacto-textos {
     margin: 0 auto;
     text-align: center;
-    color: #DCCEE8;
+    color: white;
 }
 
 .contacto-textos-2 {
@@ -66,7 +66,7 @@ p {
     height: auto;
     padding-top: 15px;
     padding-bottom: 10px;
-    border-top: solid 3px #820153;
+    border-top: solid 4px #820053;
 }
 
 .contacto-formulario form {
@@ -110,13 +110,13 @@ textarea {
 
 .formulario input:focus {
     outline: 0;
-    border: 2px solid #820153;
+    border: 2px solid #820053;
 }
 
 
 .formulario textarea:focus {
     outline: 0;
-    border: 2px solid #820153;
+    border: 2px solid #820053;
 }
 
 ::placeholder {
@@ -134,7 +134,7 @@ textarea {
     border-radius: 50px;
     outline: none;
     border: none;
-    background-image: linear-gradient(to left, #8B008B, #8088, #8B008B);
+    background-image: linear-gradient(to left, #820053, #8088, #820053);
     background-size: 200%;
     font-size: 1.2rem;
     color: #fff;
