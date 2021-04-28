@@ -15,6 +15,10 @@
         padding-right: 5%;
         padding-left: 5%;
     }
+    .texto-explicativo{
+        font-family: 'Varela Round', sans-serif;
+        font-size: 15px;
+    }
     .display{
         display: flex;
         text-align: center;
@@ -39,7 +43,7 @@
         border-radius: 15px;
         text-align: center;
         align-items: center;
-        box-shadow: 0px 0px 3px 1px gray;
+        box-shadow: 0px 0px 3px 1px black;
     }
     .text-sensores{
         font-family: 'Varela Round', sans-serif;
