@@ -15,7 +15,7 @@
 
 <body>
     <?php include_once 'header.php'?>
-    <div class="header" style="height: 80px"></div>
+    <div class="header" style="height: 70px"></div>
 
     <div class="blur">
 
@@ -29,15 +29,15 @@
 
                 <form method="post" action="formulario.php">
                     <label>Nombre:</label>
-                    <input type="text" name="nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                    <input type="text" name="nombre" id="nombre"  required="obligatorio" placeholder="Escribe tu nombre">
 
                     <label>Email:</label>
-                    <input type="email" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                    <input type="email" name="email" id="email"required="obligatorio" placeholder="Escribe tu Email">
 
                     <label>Mensaje:</label>
                     <textarea name="mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="¿Cómo podemos ayudarte?"></textarea>
 
-                    <input type="submit" class="btn" name="enviar_formulario" value="ENVIAR">
+                    <input type="submit" class="btn txt" name="enviar_formulario" value="ENVIAR">
 
                 </form>
 

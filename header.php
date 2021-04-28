@@ -122,7 +122,7 @@
         </div>
         <script src="js/mobile.js"></script>
 <!--        termina el menun desplegable-->
-
+        <script type="text/javascript" src="js/main.js"></script>
 
 </header>
 

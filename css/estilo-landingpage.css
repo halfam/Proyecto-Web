@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+  font-family: 'Varela Round', sans-serif;
   }
 
 /*Imagen de fondo y estilo*/
@@ -25,7 +26,6 @@
   align-items: center;
   text-align: center;
   justify-content: center;
-  font-family: 'Varela Round', sans-serif;
   font-size: 20px;
   margin-left: 30px;
   margin-right: 30px;
@@ -36,7 +36,6 @@
 .texto_relleno{
   padding-top: 10%;
   padding-bottom: 35%;
-  font-family: 'Varela Round', sans-serif;
   font-size: 18px;
 }
 
@@ -53,8 +52,6 @@
   padding-bottom: 5%;
   align-items: center;
   text-align: center;
-  font-family: 'Varela Round', sans-serif;
-
 }
 
 /*Diseño del call to action (botón contacto)*/
@@ -67,8 +64,6 @@
     background-color: #8b9ec8;
     border-radius: 15px;
     border: 3px solid white;
-    font-family: 'Varela Round', sans-serif;
-
   }
 /*Diseño del call to action (botón contacto)*/
   .boton_personalizado:hover{

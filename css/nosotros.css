@@ -41,7 +41,6 @@
         text-align: center;
     }
 
-
     .nosotros-principal{
         position: relative;
         display: inline-block;
@@ -56,6 +55,7 @@
         font-size: 20px;
         background: #79797990;
         width: 100%;
+        color: white;
     }
 
     .quienes-somos{

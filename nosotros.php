@@ -12,13 +12,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600;800&family=Varela+Round&display=swap" rel="stylesheet">
 </head>
-
-
-
-
-
-
-
 <body>
 <?php include_once 'header.php'?>
 <div class="header" style="height: 70px"></div>
@@ -86,7 +79,7 @@
             width="90%" height="250" style="border:1;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 </section>
-<script type="text/javascript" src="js/main.js"></script>
+
 <!--Footer -->
 <?php include 'footer.php' ?>
 </body>

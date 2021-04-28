@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
 }
 
 /*-------------------------------- */
@@ -17,14 +18,12 @@
 /*-------------------------------- */
 /*diseño del texto tipografia y alineacion*/
 .contacto-textos {
-    font-family: "Times New Roman";
     margin: 0 auto;
     text-align: center;
     color: #DCCEE8;
 }
 
 .contacto-textos-2 {
-    font-family: "Times New Roman";
     margin: 0 auto;
     text-align: center;
     font-style: italic;
@@ -58,7 +57,7 @@ p {
 #contacto-elipse {
     width: 100%;
     height: auto;
-    margin-bottom: -3px;
+    margin-bottom: -5px;
 }
 
 /*diseño del formulario*/
@@ -67,43 +66,45 @@ p {
     height: auto;
     padding-top: 15px;
     padding-bottom: 10px;
-    border-top: solid 4px #820153;
-
+    border-top: solid 3px #820153;
 }
 
-form {
+.contacto-formulario form {
     width: 85%;
-    height: 350px;
+    height: 360px;
     background: rgba(255, 255, 255, 0.7);
     padding: 20px;
     border-radius: 20px;
     margin: 10px auto 0px auto;
 }
 
-input {
-    font-family: Constantia;
+.contacto-formulario input, .txt{
     background-color: #EAEFF3;
-    width: 99%;
+    width: 100%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 13px;
     border-style: solid;
     border-width: 1px;
     border-color: #D0DCE5;
-    margin: 5px auto;
+    margin: 3px auto;
 }
 
+.contacto-formulario input{
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
 
 textarea {
-    font-family: Constantia;
     background-color: #EAEFF3;
     width: 99%;
     height: 100px;
-    border-radius: 5px;
+    border-radius: 15px;
     border-style: solid;
     border-width: 1px;
     border-color: #D0DCE5;
     margin: 5px auto 10px auto;
     padding-top: 15px;
+    padding-left: 10px;
     resize: none;
 }
 
@@ -130,22 +131,21 @@ textarea {
     display: block;
     width: 100%;
     height: 50px;
-    border-radius: 25px;
+    border-radius: 50px;
     outline: none;
     border: none;
     background-image: linear-gradient(to left, #8B008B, #8088, #8B008B);
     background-size: 200%;
     font-size: 1.2rem;
     color: #fff;
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-    margin: 0 0;
+    margin: 0 auto;
     cursor: pointer;
     transition: .5s;
 }
 
 .btn:hover {
     background-position: right;
+
 }
 
 /*-------------------------------- */

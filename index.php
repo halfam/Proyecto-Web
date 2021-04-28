@@ -32,7 +32,6 @@
                 <a href="contacto.php"><button type="button" class="boton_personalizado">CONTÁCTANOS</button></a>
             </div>
         </div>
-        <script type="text/javascript" src="js/main.js"></script>
         <!-- inicio sección sensores-->
 
         <section class="sensores blur">
