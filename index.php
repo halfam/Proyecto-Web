@@ -18,6 +18,7 @@
     <body>
         <?php include_once 'header.php'?>
         <div class="fondo blur" id="fondo">
+
             <!-- texto de reclamo-->
             <div class="texto-encabezado">
 
@@ -33,18 +34,18 @@
         </div>
 
         <!-- Botón scroll down-->
-        <a class="desliz" href="#sensores">
+        <a class=" desliz" href="#sensores">
             <div class="scroll-down"></div>
         </a>
 
         <div class="finscroll" id="sensores"></div>
-        <section class="servicios-encabezado blur" >
         <!-- Fin Botón scroll down-->
 
-            <!-- Sección Servicios-->
+        <!-- Sección Servicios-->
+        <section class="servicios-encabezado blur" >
             <div class="servicios-principal">
                 <div class="dentro"><h1>Servicios</h1></div>
-                <img src="img/servicios.jpg" alt="nosotros-img" id="nosotros-img">
+                <img src="img/servicios.jpg" alt="servicios-img" id="servicios-img">
             </div>
         </section>
 
@@ -76,10 +77,10 @@
                     <p class="text-sensores"><b>Luminosidad</b></p>
                     <p>Obtiene el porcentaje de luminosidad en cualquier momento del dia.</p>
                 </div>
+
             </div>
 
-
-        <section class="adquirir_servicios blur">
+        <section class="adquirir_servicios blur" id="adquirir_servicios">
             <h2 class="titulo">¿Cómo adquirir nuestro servicio?</h2>
             <div class="contacto">
                 <h4><b>CONTÁCTANOS</b></h4>

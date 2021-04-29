@@ -139,4 +139,31 @@
         padding-top: 15%;
     }
 
+    .servicios-encabezado {
+        font-family: 'Varela Round', sans-serif;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #servicios-img {
+        width: 100%;
+        height: auto;
+        margin-bottom: -3px;
+    }
+    .servicios-principal{
+        position: relative;
+        display: inline-block;
+    }
+
+    .dentro{
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2px;
+        font-size: 20px;
+        background: #EAEAEA80;
+        width: 100%;
+        color: black;
+    }
 }
