@@ -1,14 +1,6 @@
 <footer>
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
 	    <div class="contenedor-footer">
-            <!--    aqui empieza el contenedor de los enlaces de interes-->
-<!--			<nav class="contenedor-enlaces">-->
-<!--				<ul>-->
-<!--					<li><a href="contacto.php">Contáctanos</a></li>-->
-<!--					<li><a href="#">Servicios</a></li>-->
-<!--					<li><a href="#">Nosotros</a></li>-->
-<!--				</ul>-->
-<!--			</nav>-->
-            <!--    aqui termina el contenedor de los enlaces de interes-->
             <!--    aqui empieza el contenedor de los iconos de redes sociales-->
 			<nav class="contenedor-redes">
 				<ul>
@@ -32,6 +24,7 @@
             <!--    aqui termina el contenedor de los iconos de redes sociales-->
 
 		</div>
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
         <!--    texto de copyright-->
 		<p id="copyright">Copyright &#169 2021 GTI Todos los derechos reservados</p>
 	</footer>

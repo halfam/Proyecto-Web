@@ -17,8 +17,10 @@
     <?php include_once 'header.php'?>
     <div class="header" style="height: 70px"></div>
 
+    <!-- Para que el fondo se vea borroso al iniciar sesión -->
     <div class="blur">
 
+        <!-- ------------------------------------------------------------------------------------------------------------------------ -->
         <!-- formulario de contacto en html y css -->
         <section class="contacto-formulario">
             <div class="formulario">
@@ -38,21 +40,23 @@
                     <textarea name="mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="¿Cómo podemos ayudarte?"></textarea>
 
                     <input type="submit" class="btn txt" name="enviar_formulario" value="ENVIAR">
-
                 </form>
-
             </div>
         </section>
+        <!-- ------------------------------------------------------------------------------------------------------------------------ -->
 
+        <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+        <!-- Imagen elipse después de formulario -->
         <img src="img/img-contacto-elispse.png" alt="" id="contacto-elipse">
 
+        <!-- Segunda parte de la página -->
         <section class="contacto-encabezado">
             <div class="contacto-textos-2">
                 <p>Nos pondremos en contacto con usted en menos de 48 horas laborales.</p>
             </div>
             <img src="img/img-contacto.png" alt="" id="contacto-img">
         </section>
-
+        <!-- ------------------------------------------------------------------------------------------------------------------------ -->
     </div>
 
     <!--Footer -->

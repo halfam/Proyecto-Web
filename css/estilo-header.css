@@ -4,15 +4,18 @@
   box-sizing: border-box;
   font-family: 'Varela Round', sans-serif;
 }
+/* ------------------------------------------------------------------------------------------------------------------------ */
 
+/*Para que no se vea en forma de lista en versión ordenador*/
 ul{
   list-style: none;
 }
-
+/*Botón sin decoración no deseada*/
 a{
   text-decoration: none;
 }
 
+/*Diseño del header*/
 header {
   align-items: center;
   background-color: #EAEAEA;
@@ -31,6 +34,7 @@ header {
   display: flex;
 }
 
+/* Opciones de los links */
 .nav-links{
   flex: 2;
 }
@@ -38,7 +42,7 @@ header {
 .nav-link:hover{
   text-decoration:underline;
 }
-
+/* Diseño del botón */
 .butolog{
   display: flex;
   justify-content: center;
@@ -48,6 +52,7 @@ header {
   margin-right: 10px;
 }
 
+/* Diseño del botón */
 .buto{
   padding: .5rem 1.3rem;
   font-size: 1rem;
@@ -64,7 +69,7 @@ header {
   vertical-align: top;
   display: flex;
 }
-
+/* Diseño del botón */
 .btn{
   padding: .5rem 1.3rem;
   font-size: 1rem;
@@ -84,6 +89,7 @@ header {
   color: #fff;
 }
 
+/* Opciones de los links */
 .nav-links > ul{
   display: flex;
   margin-top: 10px;
@@ -100,12 +106,10 @@ header {
 .nav-link:hover > a{
   transform: scale(1.1);
 }
+/* ------------------------------------------------------------------------------------------------------------------------ */
 
-
-
-
-/*-------------------------------------------------------------*/
-
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* Diseño y estilo del botón del menu */
 .hamburger-menu-container{
   display: flex;
   flex-flow: row nowrap;
@@ -150,7 +154,10 @@ header {
 .hamburger-menu:after{
   transform: translateY(7px);
 }
+/* ------------------------------------------------------------------------------------------------------------------------ */
 
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* Opciones de la imagen de iniciar sesion */
 .picuser{
   position: relative;
   cursor: pointer;
@@ -162,7 +169,10 @@ header {
   height: 25px;
   width: 25px;
 }
+/* ------------------------------------------------------------------------------------------------------------------------ */
 
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* Movimiento a X del menú al presionar */
 #check:checked ~ .hamburger-menu-container .hamburger-menu {
   background-color: transparent;
 }
@@ -174,7 +184,8 @@ header {
 #check:checked ~ .hamburger-menu-container .hamburger-menu:after{
   transform: translateY(0) rotate(45deg);
 }
-/*----------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------ */
 
 @keyframes animation{
   from{
@@ -187,26 +198,15 @@ header {
   }
 }
 
-@media (max-width: 920px){
-  /*.hamburger-menu-container{*/
-  /*!*  display: flex;*!*/
-  /*!*  flex-flow: column nowrap;*!*/
-  /*!*  justify-content: space-between;*!*/
-  /*!*}*!*/
-  /*!*.userpic{*!*/
-  /*!*  display: initial;*!*/
-  /*!*!*  ---------------------------------*!*!*/
-  /*!*}*!*/
+/* Vista en teléfono */
+@media (max-width: 920px) {
 
-  /*!*#check{*!*/
-  /*!*  display: block;*!*/
-  /*!*}*!*/
-
-  .hamburger-menu-container{
+  .hamburger-menu-container {
     display: flex;
   }
 
-  .nav-btn{
+  /* Menú en sí opciones */
+  .nav-btn {
     position: fixed;
     top: 4.45rem;
     width: 100%;
@@ -220,28 +220,32 @@ header {
     height: auto;
   }
 
-  .logo img{
+  /* Diseño imagen del logo */
+  .logo img {
     height: 100%;
     vertical-align: top;
     display: flex;
   }
 
-  #check:checked ~ .nav-btn{
+  /* Animaciones botones menu */
+  #check:checked ~ .nav-btn {
     transform: translateX(0);
   }
 
   #check:checked ~ .nav-btn .nav-link,
-  #check:checked ~ .nav-btn .butolog{
+  #check:checked ~ .nav-btn .butolog {
     animation: animation .5s ease forwards var(--i);
   }
 
-  .nav-links{
-
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+  /* Diseño links menu */
+  .nav-links {
     flex: initial;
     width: 100%;
   }
 
-  .nav-links > ul{
+  .nav-links > ul {
     display: flex;
     margin-top: 1px;
     margin-left: 0px;
@@ -249,13 +253,13 @@ header {
     justify-content: center;
   }
 
-  .nav-link{
+  .nav-link {
     width: 100%;
     opacity: 0;
     transform: translateY(15px);
   }
 
-  .nav-link > a{
+  .nav-link > a {
     color: white;
     line-height: 1;
     display: flex;
@@ -263,93 +267,91 @@ header {
     padding: 20px;
   }
 
-  .nav-link:hover > a{
+  .nav-link:hover > a {
     transform: scale(1);
     background-color: #820053;
   }
 
 
-  .nav-link > a > i{
+  .nav-link > a > i {
     font-size: 1.1rem;
     transform: rotate(-90deg);
     transition: .7s;
   }
 
-  .butolog{
-    /*flex: initial;*/
-    /*width: 100%;*/
-    /*padding: 1rem 1.9rem;*/
-    /*transform: translateY(15px);*/
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
-    /*flex: 1;*/
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+  /*Boton incio sesion escritorio no se muestra en telefono*/
+  .butolog {
     display: none;
   }
 
-}
-.overlay__content a{
-  font-weight: 600;
-  color: white;
-  text-decoration: none;
-}
-/*Salida del menú en teléfono */
-.overlay {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  overflow-x: hidden;
-  /*transition: all 0.3s ease 0s;*/
+  .overlay__content a {
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+  }
+
+  /*Salida del menú en teléfono */
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    /*transition: all 0.3s ease 0s;*/
+
+  }
+
+  /*Salida del menú en teléfono */
+  /*Tamaño del menú extensible verticalmente */
+  .overlay--active {
+    width: 100%;
+    height: 100%;
+    /*opacity: 90%;*/
+    /*filter: blur(4px);*/
+  }
+
+  /*Tamaño del menú extensible verticalmente */
+  /* Contenido del menú */
+  .overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Contenido del menú */
+  .overlay .close {
+    padding: 15px;
+    font-size: 25px;
+    display: block;
+    transition: all 0.3s ease 0s;
+  }
+
+  /* Color al accionar */
+  .overlay > div > a:hover,
+  .overlay > div > a:focus {
+    color: black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+
+  }
+
+  /* Edición de cruz para cerrar */
+  .overlay .close {
+    position: absolute;
+    top: 50px;
+    right: 25px;
+    font-size: 45px;
+    color: #edf0f1;
+    cursor: pointer;
+  }
 
 }
-/*Salida del menú en teléfono */
-/*Tamaño del menú extensible verticalmente */
-.overlay--active {
-  width: 100%;
-  height: 100%;
-  /*opacity: 90%;*/
-  /*filter: blur(4px);*/
-}
-/*Tamaño del menú extensible verticalmente */
-/* Contenido del menú */
-.overlay__content {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-/* Contenido del menú */
-.overlay .close {
-  padding: 15px;
-  font-size: 25px;
-  display: block;
-  transition: all 0.3s ease 0s;
-}
-/* Color al accionar */
-.overlay >div> a:hover,
-.overlay >div> a:focus {
-  color: black;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-
-}
-/* Color al accionar */
-
 /* Edición de cruz para cerrar */
-.overlay .close {
-  position: absolute;
-  top: 50px;
-  right: 25px;
-  font-size: 45px;
-  color: #edf0f1;
-  cursor: pointer;
-}
-/* Edición de Cruz para cerrar */
-
 @media screen and (max-height: 450px) {
   .overlay a {
     font-size: 20px;
@@ -360,3 +362,4 @@ header {
     right: 35px;
   }
 }
+/* ------------------------------------------------------------------------------------------------------------------------ */

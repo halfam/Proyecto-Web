@@ -5,6 +5,8 @@
     box-sizing: border-box;
     font-family: 'Varela Round', sans-serif;
 }
+/*-------------------------------------------------------------------------------------------------------------------*/
+/* Vista en teléfono */
 @media screen and (max-width: 900px) {
     .titulo {
         text-align: center;
@@ -13,12 +15,41 @@
         margin-top: 5px;
 
     }
+    /*-------------------------------------------------------------------------------------------------------------------*/
 
-    /*.texto-explicativo{*/
-    /*    font-family: 'Varela Round', sans-serif;*/
-    /*    font-size: 15px;*/
-    /*}*/
+    /*-------------------------------------------------------------------------------------------------------------------*/
+    /*Apartado Servicios inicial*/
+    .servicios-encabezado {
+        font-family: 'Varela Round', sans-serif;
+        margin: 0 auto;
+        text-align: center;
+    }
 
+    #servicios-img {
+        width: 100%;
+        height: auto;
+        margin-bottom: -3px;
+    }
+    .servicios-principal{
+        position: relative;
+        display: inline-block;
+    }
+
+    .dentro{
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2px;
+        font-size: 20px;
+        background: #EAEAEA80;
+        width: 100%;
+        color: black;
+    }
+    /*-------------------------------------------------------------------------------------------------------------------*/
+
+    /*-------------------------------------------------------------------------------------------------------------------*/
+    /*Apartado explicación de sensores*/
     .display{
         display: flex;
         text-align: center;
@@ -50,7 +81,10 @@
         text-align: center;
         margin-bottom: 5%;
     }
+    /*-------------------------------------------------------------------------------------------------------------------*/
 
+    /*-------------------------------------------------------------------------------------------------------------------*/
+    /*Apartado como adquirir servicios*/
     .contacto {
         padding-top: 2%;
         padding-left: 20%;
@@ -58,7 +92,6 @@
         text-align: center;
         align-items: center;
     }
-
     .img1{
        margin-bottom: -4%;
         width: 65%;
@@ -112,6 +145,15 @@
         margin-bottom: -4%;
         width: 65%;
     }
+
+    .sencillo{
+        padding-top: 15%;
+    }
+    /*-------------------------------------------------------------------------------------------------------------------*/
+
+
+    /*-------------------------------------------------------------------------------------------------------------------*/
+    /*Diseño de los textos*/
     .text{
         font-size: 15px;
     }
@@ -121,49 +163,19 @@
         margin-bottom: 5px;
     }
 
-.masinfo{
+    .masinfo{
     text-align: center;
     margin: -30px 0px 20px 0px;
     padding-left: 16%;
     padding-right: 16%;
     font-size: 15px;
-}
+    }
 
-.a{
+   .a{
     color: #820053;
     text-decoration: underline;
     font-size: 15px;
 }
+    /*-------------------------------------------------------------------------------------------------------------------*/
 
-    .sencillo{
-        padding-top: 15%;
-    }
-
-    .servicios-encabezado {
-        font-family: 'Varela Round', sans-serif;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    #servicios-img {
-        width: 100%;
-        height: auto;
-        margin-bottom: -3px;
-    }
-    .servicios-principal{
-        position: relative;
-        display: inline-block;
-    }
-
-    .dentro{
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 2px;
-        font-size: 20px;
-        background: #EAEAEA80;
-        width: 100%;
-        color: black;
-    }
 }
