@@ -11,7 +11,7 @@
 /*Primera parte del texto y foto*/
 .contacto-encabezado {
     background-color: #D0DCE5;
-    border-bottom: solid 4px #820153;
+    border-bottom: solid 4px #820053;
     margin-top: -0.2rem;
 }
 
@@ -58,6 +58,7 @@ p {
     width: 100%;
     height: auto;
     margin-bottom: -5px;
+    margin-top: -3px;
 }
 
 /*diseño del formulario*/

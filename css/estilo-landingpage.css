@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
   font-family: 'Varela Round', sans-serif;
+  scroll-behavior: smooth;
   }
 
 /*Imagen de fondo y estilo*/
@@ -12,17 +13,16 @@
     background-image: url(../img/fondo.jpg);
     background-position: center center;
     background-size: cover;
-  padding-bottom: 25%;
   }
 
 /*Diseño del fondo en vista de pantalla*/
 .fondo{
-  height: 100%;
+  height: 100vh;
 }
 
 /*Diseño del texto principal (texto de reclamo)*/
 .texto-encabezado{
-  padding-bottom:40%;
+  padding-bottom:25%;
   align-items: center;
   text-align: center;
   justify-content: center;
@@ -41,7 +41,7 @@
 
 /*Diseño del contenedor promoción*/
 .promocion{
-  padding-bottom: 20%;
+  margin-top: 30%;
   align-items: center;
   text-align: center;
 }
@@ -58,7 +58,7 @@
   .boton_personalizado{
     text-decoration: none;
     padding: 15px 60px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 17px;
     color: white;
     background-color: #8b9ec8;
@@ -87,5 +87,88 @@
 
 
 
+
+
+
+
+
+.scroll-down {
+  height: 20px;
+  width: 100%;
+  position: absolute;
+  bottom: 40px;
+  border-radius: 50px;
+}
+
+.finscroll {
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+
+}
+
+.scroll-down::before,
+.scroll-down::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  height: 25px;
+  width: 25px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border: 4px solid white;
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1s ease-in-out infinite;
+}
+
+
+@keyframes scroll-down {
+  0% {
+    /* top:20%; */
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    top: 90%;
+    opacity: 0;
+  }
+}
+
+
+
+.servicios-encabezado {
+  font-family: 'Varela Round', sans-serif;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#nosotros-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: -3px;
+}
+.servicios-principal{
+  position: relative;
+  display: inline-block;
+}
+
+.dentro{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2px;
+  font-size: 20px;
+  background: #EAEAEA80;
+  width: 100%;
+  color: black;
+}
 
 

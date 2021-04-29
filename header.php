@@ -47,7 +47,7 @@
                     </li>
 
                     <li class="nav-link" style="--i: 0.3s">
-                        <a href="#">Servicios</a>
+                        <a href="#sensores">Servicios</a>
 
                     </li>
 
