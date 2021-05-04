@@ -1,0 +1,9 @@
+#map{
+    width: 100%;
+    height: 60vh;
+    border: solid 1px black;
+}
+#buscar {
+    position: fixed;
+    z-index: 1;
+}

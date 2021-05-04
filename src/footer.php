@@ -1,3 +1,6 @@
+<!--<head>-->
+<!--    <link rel="stylesheet" href="css/estilo-header.css">-->
+<!--</head>-->
 <footer style="z-index: 10">
 <!-- ------------------------------------------------------------------------------------------------------------------------ -->
 	    <div class="contenedor-footer">

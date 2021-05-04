@@ -1,36 +1,6 @@
-<head>
-    <link rel="stylesheet" href="css/estilo-header+footer.css">
-    <link rel="stylesheet" href="css/iniciosesion.css">
-</head>
-<script>
-    /* ------------------------------------------------------------------------------------------------------------------------ */
-    /* Para el login y que el fondo se ponga borroso al abrir la página */
-    function checkit() {
-        var elem = document.getElementById("check");
-        if (elem.checked)
-            elem.checked=false
-        else
-            elem.checked=true
-
-    }
-    function loginBlur(loginpopup) {
-        var elems = document.getElementsByClassName("blur");
-        if (loginpopup) {
-            for (const elem1 of elems) {
-                elem1.setAttribute("style", "filter: blur(5px);")
-            }
-        }else{
-            for (const elem1 of elems) {
-                elem1.setAttribute("style", "filter: blur(0);")
-            }
-        }
-    }
-    /* ------------------------------------------------------------------------------------------------------------------------ */
-</script>
 <header style="z-index: 10;">
-
 <!-- -------------------------------------------------------------------------------------------------------------------------- -->
-    <div class="contenedor" >
+<!--    <div class="contenedor">-->
         <input type="checkbox" name="" id="check" hidden>
 
         <div class="logo">
@@ -38,23 +8,23 @@
         </div>
 
         <!-- Secciones del menú -->
-        <div class="nav-btn">
+        <div class="nav-btn" id="menu">
             <div class="nav-links blur">
-                <ul>
-                    <li class="nav-link" style="--i: 0.3s">
+                <ul id="lista-menu">
+                    <li class="nav-link" >
                         <a href="index.php">Inicio</a>
                     </li>
 
-                    <li class="nav-link" style="--i: 0.3s">
+                    <li class="nav-link" >
                         <a href="nosotros.php">Nosotros</a>
                     </li>
 
-                    <li class="nav-link" style="--i: 0.3s">
+                    <li class="nav-link">
                         <a href="index.php#sensores">Servicios</a>
 
                     </li>
 
-                    <li class="nav-link" style="--i: 0.3s">
+                    <li class="nav-link">
                         <a href="contacto.php">Contacto</a>
                     </li>
                 </ul>
@@ -63,14 +33,15 @@
 
             <!-- Botón de login -->
             <div class="butolog" style="--i: 0.3s">
-                <a class="buto solid menu" onclick="loginBlur(true)">Iniciar Sesión</a>
+                <a class="buto solid login " id="login" onclick="loginBlur(true)">Iniciar Sesión</a>
             </div>
         </div>
         <!-- -------------------------------------------------------------------------------------------------------------------------- -->
 
         <!-- Botón menú -->
         <div class="hamburger-menu-container">
-            <a class="picuser menu" onclick="loginBlur(true)"><img src="img/bx-user.svg" alt="userpic"></a>
+            <a class="close-sesion" id="close_sesion" onclick="logout()"><img src="img/close-sesion.png" alt="cerrar sesion"></a>
+            <a class="picuser login" id="picuser" onclick="loginBlur(true)"><img src="img/bx-user.svg" alt="userpic"></a>
             <div class="hamburger-menu" onclick="checkit()"></div>
         </div>
 
@@ -115,9 +86,9 @@
 
                         <!-- Recuérdame -->
                         <div class="contenedor-inferior">
-                        <label for="recuerdame" >
+                        <label for="recuerdame" class="contenedor-recuerdame">
                             <input type="checkbox" id="recuerdame" value="Recuerdame_checkbox">
-                            <h5 style="display: inline">Recuérdame</h5>
+                            <h5 style="display: inline; padding-left: 5px">Recuérdame</h5>
                         </label>
 
                         <!-- ¿Has olvidado tu contraseña?   -->
@@ -134,8 +105,9 @@
             </div>
         </div>
         <script src="js/mobile.js"></script>
+        <script>comprobarSesion()</script>
 <!--        termina el menun desplegable-->
         <script type="text/javascript" src="js/main.js"></script>
-
+<!--    </div>-->
 </header>
 
