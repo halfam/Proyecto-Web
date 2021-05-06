@@ -8,7 +8,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Contáctanos</title>
     <link rel="stylesheet" href="css/contacto.css">
-    <link rel="stylesheet" href="css/estilo-header.css">
+    <link rel="stylesheet" href="css/estilo-header_footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600;800&family=Varela+Round&display=swap" rel="stylesheet">
 </head>
 

@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width,shrink-to-fit=no,initial-scale=1" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<link rel="stylesheet" type="text/css" href="css/footer.css">
-    <link rel="stylesheet" href="css/estilo-header.css">
+    <link rel="stylesheet" href="css/estilo-header_footer.css">
 
 </head>
 <body>

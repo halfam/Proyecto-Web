@@ -1,0 +1,812 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Varela Round', sans-serif;
+}
+/* ------------------------------------------------------------------------------------------------------------------------ */
+                                                      /* HEADER */
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/*Para que no se vea en forma de lista en versión ordenador*/
+ul{
+  list-style: none;
+}
+/*Botón sin decoración no deseada*/
+a{
+  text-decoration: none;
+}
+
+/*Diseño del header*/
+header {
+  align-items: center;
+  background-color: #EAEAEA;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+
+}
+header,
+.contenedor{
+  max-width: 100%;
+    max-height: 100%;
+  display: flex;
+  justify-content: space-between;
+    align-items: stretch;
+}
+
+.nav-btn{
+  display: flex;
+}
+
+/* Opciones de los links */
+.nav-links{
+  /*flex: 2 1 0px;*/
+}
+
+.nav-link:hover{
+  text-decoration:underline;
+}
+/* Diseño del botón */
+.butolog{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  text-align-all: end;
+  margin-right: 10px;
+}
+
+/* Diseño del botón */
+.buto{
+  padding: .5rem 1.3rem;
+  font-size: 1rem;
+  border: 2px solid #820053;
+  border-radius: 10px;
+  line-height: 1;
+  transition: .3s;
+}
+
+.img-logo {
+  height: 30px;
+  width: 160px;
+  height: 100%;
+  vertical-align: top;
+  display: flex;
+}
+/* Diseño del botón */
+.btn{
+  padding: .5rem 1.3rem;
+  font-size: 1rem;
+  border: 2px solid #820053;
+  border-radius: 10px;
+  line-height: 1;
+  transition: .3s;
+}
+
+.buto.solid, .buto.transparent:hover{
+  background-color: #fff;
+  color: #820053;
+}
+
+.buto.transparent, .buto.solid:hover{
+  background-color: #820053;
+  color: #fff;
+}
+
+/* Opciones de los links */
+.nav-links > ul{
+  display: flex;
+  margin-top: 10px;
+}
+
+.nav-link > a{
+  line-height: 3rem;
+  color: black;
+  padding: 0 10px;
+  font-size: .95rem;
+  transition: .5s;
+}
+
+.nav-link:hover > a{
+  transform: scale(1.1);
+}
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* Diseño y estilo del botón del menu */
+.hamburger-menu-container{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 1em;
+  display: none;
+}
+
+.hamburger-menu{
+  width: 2.5rem;
+  height: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hamburger-menu{
+  width: 1.5rem;
+  height: 3px;
+  border-radius: 3px;
+  background-color: black;
+  position: relative;
+  transition: .5s;
+}
+
+.hamburger-menu:before,
+.hamburger-menu:after{
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: black;
+  border-radius: 3px;
+  transition: .5s;
+}
+
+.hamburger-menu:before{
+  transform: translateY(-7px);
+}
+
+.hamburger-menu:after{
+  transform: translateY(7px);
+}
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* Opciones de la imagen de iniciar sesion */
+.picuser{
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
+  height: 25px;
+
+}
+.picuser > img{
+  height: 25px;
+  width: 25px;
+}
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* Movimiento a X del menú al presionar */
+#check:checked ~ .hamburger-menu-container .hamburger-menu {
+  background-color: transparent;
+}
+
+#check:checked ~ .hamburger-menu-container .hamburger-menu:before{
+  transform: translateY(0) rotate(-45deg);
+}
+
+#check:checked ~ .hamburger-menu-container .hamburger-menu:after{
+  transform: translateY(0) rotate(45deg);
+}
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+@keyframes animation{
+  from{
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Vista en teléfono */
+@media (max-width: 920px) {
+
+  .hamburger-menu-container {
+    display: flex;
+  }
+
+  /* Menú en sí opciones */
+  .nav-btn {
+    position: fixed;
+    top: 4.45rem;
+    width: 100%;
+    background-color: #820053;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transform: translateY(-135%);
+    transition: .65s;
+    height: auto;
+  }
+
+  /* Diseño imagen del logo */
+  .logo img {
+    height: 100%;
+    vertical-align: top;
+    display: flex;
+  }
+
+  /* Animaciones botones menu */
+  #check:checked ~ .nav-btn {
+    transform: translateX(0);
+  }
+
+  #check:checked ~ .nav-btn .nav-link,
+  #check:checked ~ .nav-btn .butolog {
+    animation: animation .5s ease forwards var(--i);
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+  /* Diseño links menu */
+  .nav-links {
+    flex: initial;
+    width: 100%;
+  }
+
+  .nav-links > ul {
+    display: flex;
+    margin-top: 1px;
+    margin-left: 0px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .nav-link {
+    width: 100%;
+    opacity: 0;
+    transform: translateY(15px);
+      --i: 0.3s;
+  }
+
+  .nav-link > a {
+    color: white;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .nav-link:hover > a {
+    transform: scale(1);
+    background-color: #820053;
+  }
+
+
+  .nav-link > a > i {
+    font-size: 1.1rem;
+    transform: rotate(-90deg);
+    transition: .7s;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+  /*Boton incio sesion escritorio no se muestra en telefono*/
+  .butolog {
+    display: none;
+  }
+}
+
+/*--------------------------------------------------------------------------------------------*/
+/* empieza el contenido del "popup login"*/
+.overlay__content a {
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+
+/*Salida del menú en teléfono */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    /*transition: all 0.3s ease 0s;*/
+
+}
+
+/*Salida del menú en teléfono */
+/*Tamaño del menú extensible verticalmente */
+.overlay--active {
+    width: 100%;
+    height: 100%;
+    /*opacity: 90%;*/
+    /*filter: blur(4px);*/
+}
+
+/*Tamaño del menú extensible verticalmente */
+/* Contenido del menú */
+.overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenido del menú */
+.overlay .close {
+    padding: 15px;
+    font-size: 25px;
+    display: block;
+    transition: all 0.3s ease 0s;
+}
+
+/* Color al accionar */
+.overlay > div > a:hover,
+.overlay > div > a:focus {
+    color: black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+
+}
+
+/* Edición de cruz para cerrar */
+.overlay .close {
+    position: absolute;
+    top: 50px;
+    right: 25px;
+    font-size: 45px;
+    color: #edf0f1;
+    cursor: pointer;
+}
+.contenedor-recuerdame{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* termina el contenido del "popup login"*/
+/*------------------------------------------------------------------------------------------------*/
+
+
+/* Edición de cruz para cerrar */
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+
+                                                 /* INICIO SESION */
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* Para posición del login correcta*/
+.clickme,
+.login-content{
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+    font-family: 'Varela Round', sans-serif;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/* Para tamaño de la imagen de seguridad*/
+.login-content img{
+    display: flex;
+    width: 100%;
+    height: 120px;
+    margin-bottom: 1%;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/* Para cambios de la letra h2 */
+/*.login-content h2{*/
+/*	margin: 15px 0;*/
+/*	color: #333;*/
+/*	text-transform: uppercase;*/
+/*	font-size: 2rem;*/
+/*}*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/* Para diseño de nombre de usuario y contraseña (lineas inferiores) */
+.login-content .input-div{
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid #999;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/* Para espacio entre h2 y espacio de nombre y contraseña*/
+.login-content .input-div.one{
+    margin-top: 0;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/* Para color y posición de iconos de usuario y contraseña*/
+.login-content .i{
+    color: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-content .i i{
+    transition: .3s;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/* Para correcta posición de iconos de usuario y contraseña y posición de escribir*/
+.login-content .input-div > div{
+    position: relative;
+    height: 45px;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/* Para texto de nombre de usuario y contraseña acorde a lo demás */
+
+.input-div > div > h5{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    transition: .3s;
+}
+.login-content h2,h5{
+    color: #999;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/* Para el cambio al apretar en nombre de usuario y contraseña. Cambio de color a morado*/
+.login-content .input-div:before, .login-content .input-div:after{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: #820053;
+    transition: .4s;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/* Para que el cambio de color anterior sea fluido y al mismo tiempo*/
+.login-content .input-div:before{
+    right: 50%;
+}
+
+.login-content .input-div:after{
+    left: 50%;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*  Para ver la animación del cambio de color de la linea*/
+.login-content .input-div.focus:before, .login-content .input-div.focus:after{
+    width: 50%;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/* Para que al presionar las palabras de nombre de usuario y contraseña suban arriba*/
+.login-content .input-div.focus > div > h5{
+    top: -5px;
+    font-size: 15px;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/* Para que los iconos de usuario y contraseña cambien al color morado al presionar*/
+.login-content .input-div.focus > .i > i{
+    color: #820053;
+}
+/* --------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/* Para ocultar el cuadro de texto de cada apartado y ponerlo en la posición del diseño*/
+.login-content .input-div > div > input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 1rem;
+    color: #555;
+    font-family: "Times New Roman";
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/* Para el espacio entre eel "Has olvidado la contraseña" y la linea de contraseña*/
+.login-content .input-div.pass{
+    margin-bottom: 4px;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*diseño de los enlaces punto*/
+.login-content a{
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: #999;
+    font-size: 0.9rem;
+    transition: .3s;
+}
+
+.login-content a:hover{
+    color: #820053;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*diseño del boton*/
+.login-content .btn{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 23px;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to left, #82005380,#820053cc, #820053);
+    background-size: 200%;
+    font-size: 1.2rem;
+    color: #fff;
+    font-family: 'Varela Round', sans-serif;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.login-content .btn:hover{
+    background-position: right;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*Funcionamiento y visualización correcta del login*/
+.contenedor-inferior{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 3px;
+    flex: 1 1 0px;
+}
+
+form{
+    margin: 0 auto;
+    z-index: 5;
+    /*margin-right: 10px ;*/
+}
+
+.clickme{
+    color: rgba(0,0,0,1);
+    opacity: 0;
+    z-index: 4;
+}
+
+.login-content form{
+    width: 290px;
+    background: rgba(255,255,255,0.8);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+    rotation: initial;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*diseño para que se vea bien en el cambio de tamaño*/
+
+@media screen and (max-width: 1000px){
+
+    .login-content form{
+        width: 290px;
+        background: rgba(255,255,255,0.7);
+        padding: 20px;
+        border-radius: 20px;
+        margin-top: 20px;
+        rotation: initial;
+    }
+
+    .login-content h2{
+        font-size: 2rem;
+        margin: 8px 0;
+    }
+
+    .login-content .img img{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .login-content  .container{
+        grid-template-columns: 1fr;
+    }
+
+    .login-content .wave{
+        display: none;
+    }
+
+    .login-content .login-content{
+        justify-content: center;
+        color: black;
+        width: 100%;
+    }
+    .login-content form{
+        width: 100%;
+        margin-right: 20px;
+    }
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+                                                       /* FOOTER*/
+/* ------------------------------------------------------------------------------------------------------------------------ */ 
+/*Diseño de la organizacion del footer*/
+footer {
+    clear:both;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    height: 80px;
+    background: #D4CFE5;
+    align-items: center;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*quitamos los puntos para que la lista se vea aseado*/
+
+footer > ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*Tamaño de los iconos de redes sociales*/
+.iconos-redes{
+    width: 29px;
+    height: 29px;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*Posicionamos los elementos de la lista en horizontal*/
+footer li{
+    display: inline;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*Separamos los elementos del footer para que distingan*/
+.contenedor-footer{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*texto de copyright*/
+#copyright {
+    margin-block-start:0px;
+    margin-block-end:0px;
+    width: 100%;
+    text-align: end;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 10px;
+    font-family: 'Varela Round', sans-serif;
+
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+.contenedor-footer > ul{
+    display: flex;
+    justify-content: space-around;
+
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*Tamaño,posición y detalles de los iconos RRSS*/
+.redes{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: #f1f1f1;
+    margin: 5px;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    color: darkgrey;
+    overflow: hidden;
+    position: relative;
+}
+
+.redes{
+   display: inline-block;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.redes i{
+    line-height: 29px;
+    font-size: 15px;
+    transition: 0.2s linear;
+}
+
+.redes:hover i{
+    transform: scale(1.3);
+    color: white;
+}
+
+.redes::before{
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: grey;
+    transform: rotate(45deg);
+    left: -110%;
+    top:90%;
+}
+
+.redes:hover::before{
+    animation: aaa 0.8s 1;
+    top: -10%;
+    left: -10%;
+}
+
+
+@keyframes aaa {
+    0%{
+        left: -100%;
+        top: 90%;
+    }50% {
+         left: 10%;
+         top: -30%;
+     }75% {
+          right: -10%;
+          bottom: 30%;
+      }100% {
+           right: 100%;
+           bottom: -90%;
+       }
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+

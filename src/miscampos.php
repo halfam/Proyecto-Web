@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Google maps</title>
     <link rel="stylesheet" href="css/miscampos.css">
-    <link rel="stylesheet" href="css/estilo-header.css">
+    <link rel="stylesheet" href="css/estilo-header_footer.css">
     <script src="js/restringir-acceso.js"></script>
     <script>
         let map;
