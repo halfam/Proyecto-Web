@@ -10,8 +10,6 @@ fetch('api/v1.0/sesion', {
 }).then(function(data) {
     if (document.getElementById("admin") !== null && data.rol !== "admin")
         location.href = '../'
-    document.getElementById("bienvenida").innerText = "Hola "+ data.nombre;
-    document.getElementById("bienvenida").setAttribute("style", "font-size: 50px")
 })
 
 function logout() {

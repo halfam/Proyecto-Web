@@ -308,8 +308,6 @@ header,
     left: 0;
     top: 0;
     overflow-x: hidden;
-    /*transition: all 0.3s ease 0s;*/
-
 }
 
 /*Salida del menú en teléfono */
@@ -395,7 +393,6 @@ header,
     width: 100%;
     justify-self: center;
     align-self: center;
-    font-family: 'Varela Round', sans-serif;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -539,7 +536,6 @@ header,
     padding: 0.5rem 0.7rem;
     font-size: 1rem;
     color: #555;
-    font-family: "Times New Roman";
 }
 /*-------------------------------------------------------------------------------------------------------------------*/
 
@@ -579,7 +575,6 @@ header,
     background-size: 200%;
     font-size: 1.2rem;
     color: #fff;
-    font-family: 'Varela Round', sans-serif;
     text-transform: uppercase;
     margin: 1rem 0;
     cursor: pointer;
@@ -602,7 +597,7 @@ header,
     flex: 1 1 0px;
 }
 
-form{
+.login-content form{
     margin: 0 auto;
     z-index: 5;
     /*margin-right: 10px ;*/
@@ -681,19 +676,27 @@ footer {
     bottom: 0;
     width: 100%;
     display: flex;
-    flex-flow: row wrap;
-    height: 80px;
+    flex-flow: column nowrap;
+    height: 130px;
     background: #D4CFE5;
     align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    z-index: 10;
 }
 /*-------------------------------------------------------------------------------------------------------------------*/
 /*quitamos los puntos para que la lista se vea aseado*/
 
-footer > ul {
+footer ul {
     list-style-type: none;
     overflow: hidden;
+    justify-content: space-around;
 }
-
+/*-------------------------------------------------------------------------------------------------------------------*/
+.contenedor-paginas a {
+    color: black;
+    text-decoration: underline;
+}
 /*-------------------------------------------------------------------------------------------------------------------*/
 /*Tamaño de los iconos de redes sociales*/
 .iconos-redes{
@@ -705,7 +708,7 @@ footer > ul {
 /*-------------------------------------------------------------------------------------------------------------------*/
 
 /*Posicionamos los elementos de la lista en horizontal*/
-footer li{
+.contenedor-redes li{
     display: inline;
 }
 /*-------------------------------------------------------------------------------------------------------------------*/
@@ -713,34 +716,23 @@ footer li{
 /*-------------------------------------------------------------------------------------------------------------------*/
 
 /*Separamos los elementos del footer para que distingan*/
-.contenedor-footer{
-    width: 100%;
-    height: 75%;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-around;
-}
+/*footer{*/
+/*    width: 100%;*/
+/*    height: 75%;*/
+/*    display: flex;*/
+/*    flex-flow: row nowrap;*/
+/*    align-items: center;*/
+/*    justify-content: space-around;*/
+/*}*/
 /*-------------------------------------------------------------------------------------------------------------------*/
 /*texto de copyright*/
 #copyright {
-    margin-block-start:0px;
-    margin-block-end:0px;
     width: 100%;
-    text-align: end;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    font-size: 10px;
-    font-family: 'Varela Round', sans-serif;
-
+    font-size: 14px;
 }
 /*-------------------------------------------------------------------------------------------------------------------*/
 
-.contenedor-footer > ul{
-    display: flex;
-    justify-content: space-around;
 
-}
 /*-------------------------------------------------------------------------------------------------------------------*/
 
 /*Tamaño,posición y detalles de los iconos RRSS*/
@@ -758,7 +750,7 @@ footer li{
 }
 
 .redes{
-   display: inline-block;
+    display: inline-block;
     margin-right: 10px;
     text-align: center;
 }

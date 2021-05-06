@@ -27,26 +27,25 @@ function loginBlur(loginpopup) {
 }
 
 function comprobarSesion() {
+
     fetch('api/v1.0/sesion', {
         method: 'GET',
     }).then(function (respuesta) {
-        console.log(respuesta.ok)
         if (respuesta.ok) {
             let picuser = document.querySelectorAll(".login")
             picuser.forEach(function (elem) {
                 elem.setAttribute("onclick", "miperfil()")
             })
-
-            // picuser
             return respuesta.json();
         }
         document.getElementById("close_sesion").setAttribute("style", "display: none")
     }).then(function (data) {
-        console.log()
-        if (data != undefined || data != null)
+        if (data != undefined || data != null){
             getUser(data['id'])
-
+        }
     })
+    // console.log(sesion)
+    // return sesion
 }
 function getUser(id) {
     fetch('api/v1.0/user/'+id,{

@@ -34,12 +34,12 @@
 /*-------------------------------------------------------------------------------------------------------------------*/
 
 /*Diseño para textos*/
-h1 {
+.contacto-textos h1 {
     font-size: 24px;
     margin-bottom: 5px;
 }
-
-p {
+.contacto-formulario p,
+.contacto-textos p {
     margin: 0 1rem;
     font-size: 16.5px;
     font-weight: normal;
@@ -103,7 +103,7 @@ p {
     padding-left: 10px;
 }
 
-textarea {
+.contacto-formulario textarea {
     background-color: #EAEFF3;
     width: 99%;
     height: 100px;
@@ -128,7 +128,7 @@ textarea {
     border: 2px solid #820053;
 }
 
-::placeholder {
+.contacto-formulario ::placeholder {
     color: black;
 
 
