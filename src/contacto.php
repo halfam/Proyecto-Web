@@ -28,7 +28,7 @@
                     <p>Estamos aquí para darte más información, contestar cualquier pregunta que puedas tener, y crear una solución eficiente para tus necesidades.</p>
                 </div>
 
-                <form method="post" action="formulario.php">
+                <form id="formulario_txt" method="post" action="enviarcorreo.php">
                     <label>Nombre:</label>
                     <input type="text" name="nombre" id="nombre"  required="obligatorio" placeholder="Escribe tu nombre">
 
@@ -37,8 +37,13 @@
 
                     <label>Mensaje:</label>
                     <textarea name="mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="¿Cómo podemos ayudarte?"></textarea>
+                    <script>function f() {
+                            setTimeout(function (){ document.getElementById("formulario_txt").reset();},1000
+                            )
 
-                    <input type="submit" class="btn txt" name="enviar_formulario" value="ENVIAR">
+                        }</script>
+                    <input type="submit" class="btn txt" name="enviar_formulario" value="enviar" onclick=f()>
+
                 </form>
             </div>
         </section>
