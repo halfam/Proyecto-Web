@@ -36,8 +36,9 @@ try {
     $mail->send();
     echo '<script>
     alert("El mensaje se envió correctamente");
-    window.history.go(-1);
-    document.getElementById("formulario_txt").reset();
+    //window.history.go(-1);
+    location = "contacto.php"
+    //document.getElementById("formulario_txt").reset();
     </script>
     ';
 
