@@ -14,7 +14,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
             location.href = "."
         if (datos['rol'] === "admin")
             location.href = "."
-
+        location = "miscampos.php"
     }).catch(function (error) {
          // document.getElementById("picuser").setAttribute("onclick", "loginBlur(true)")
          console.log(error)

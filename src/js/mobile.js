@@ -36,9 +36,10 @@ function comprobarSesion() {
             picuser.forEach(function (elem) {
                 elem.setAttribute("onclick", "miperfil()")
             })
+            document.getElementById("close_sesion").setAttribute("style", "display: inline")
             return respuesta.json();
         }
-        document.getElementById("close_sesion").setAttribute("style", "display: none")
+
     }).then(function (data) {
         if (data != undefined || data != null){
             getUser(data['id'])
@@ -77,7 +78,7 @@ function cambiarMenu(rol) {
         case 'usuario':
              let misCampos = document.createElement('li')
              misCampos.classList.add('nav-link')
-             misCampos.innerHTML = "<a href='app/miscampos.php'>Mis campos</a>"
+             misCampos.innerHTML = "<a href='miscampos.php'>Mis campos</a>"
              menu.appendChild(misCampos)
             break;
         case 'admin':
