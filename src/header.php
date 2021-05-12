@@ -40,7 +40,7 @@
 
         <!-- Botón menú -->
         <div class="hamburger-menu-container">
-            <a class="close-sesion" id="close_sesion" onclick="logout()"><img src="img/close-sesion.png" alt="cerrar sesion"></a>
+            <a class="close-sesion" id="close_sesion" onclick="logout()" style="display: none"><img src="img/close-sesion.png" alt="cerrar sesion"></a>
             <a class="picuser login" id="picuser" onclick="loginBlur(true)"><img src="img/bx-user.svg" alt="userpic"></a>
             <div class="hamburger-menu" onclick="checkit()"></div>
         </div>
