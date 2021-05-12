@@ -8,11 +8,11 @@
                                                       /* HEADER */
 /* ------------------------------------------------------------------------------------------------------------------------ */
 /*Para que no se vea en forma de lista en versión ordenador*/
-ul{
+header ul{
   list-style: none;
 }
 /*Botón sin decoración no deseada*/
-a{
+header a{
   text-decoration: none;
 }
 
