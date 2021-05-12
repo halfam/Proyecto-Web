@@ -38,8 +38,7 @@
                     <label>Mensaje:</label>
                     <textarea name="mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="¿Cómo podemos ayudarte?"></textarea>
                     <script>function f() {
-                            setTimeout(function (){ document.getElementById("formulario_txt").reset();},1000
-                            )
+                            setTimeout(function (){ document.getElementById("formulario_txt").reset();},100)
 
                         }</script>
                     <input type="submit" class="btn txt" name="enviar_formulario" value="enviar" onclick=f()>
