@@ -1,10 +1,11 @@
+<?php if (!isset($path)) $path = "./"?>
 <header style="z-index: 10;">
 <!-- -------------------------------------------------------------------------------------------------------------------------- -->
 <!--    <div class="contenedor">-->
         <input type="checkbox" name="" id="check" hidden>
 
         <div class="logo">
-            <a href="index.php"><img src="img/logo.svg" alt="logo" class="img-logo"></a>
+            <a href="<?php echo $path?>index.php"><img src="<?php echo $path?>img/logo.svg" alt="logo" class="img-logo"></a>
         </div>
 
         <!-- Secciones del menú -->
@@ -12,20 +13,20 @@
             <div class="nav-links blur">
                 <ul id="lista-menu">
                     <li class="nav-link" >
-                        <a href="index.php">Inicio</a>
+                        <a href="<?php echo $path?>index.php">Inicio</a>
                     </li>
 
                     <li class="nav-link" >
-                        <a href="nosotros.php">Nosotros</a>
+                        <a href="<?php echo $path?>nosotros.php">Nosotros</a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="index.php#sensores">Servicios</a>
+                        <a href="<?php echo $path?>index.php#sensores">Servicios</a>
 
                     </li>
 
                     <li class="nav-link">
-                        <a href="contacto.php">Contacto</a>
+                        <a href="<?php echo $path?>contacto.php">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -40,8 +41,8 @@
 
         <!-- Botón menú -->
         <div class="hamburger-menu-container">
-            <a class="close-sesion" id="close_sesion" onclick="logout()" style="display: none"><img src="img/close-sesion.png" alt="cerrar sesion"></a>
-            <a class="picuser login" id="picuser" onclick="loginBlur(true)"><img src="img/bx-user.svg" alt="userpic"></a>
+            <a class="close-sesion" id="close_sesion" onclick="logout()" style="display: none"><img src="<?php echo $path?>img/close-sesion.png" alt="cerrar sesion"></a>
+            <a class="picuser login" id="picuser" onclick="loginBlur(true)"><img src="<?php echo $path?>img/bx-user.svg" alt="userpic"></a>
             <div class="hamburger-menu" onclick="checkit()"></div>
         </div>
 
@@ -60,7 +61,7 @@
                     <!-- Formulario de login -->
                     <form method="post">
                         <!-- Imagen GTI  y texto para login-->
-                        <a class="logologin"><img src="img/Security-amico.svg"></a>
+                        <a class="logologin"><img src="<?php echo $path?>img/Security-amico.svg"></a>
 
                         <!-- Nombre de Usuario -->
                         <div class="input-div one">
@@ -92,22 +93,22 @@
                         </label>
 
                         <!-- ¿Has olvidado tu contraseña?   -->
-                        <a href="#">¿Has olvidado tu contraseña?</a>
+                        <a href="<?php echo $path?>#">¿Has olvidado tu contraseña?</a>
                         </div>
                         <div id="output" style="color: red"></div>
                         <input type="submit" class="btn" value="Iniciar Sesión" >
                     </form>
                     <!-- -------------------------------------------------------------------------------------------------------------------------- -->
                     
-                    <script src="js/login.js"></script>
+                    <script src="<?php echo $path?>js/login.js"></script>
                     <!-- Fin de formulario para login -->
                 </div>
             </div>
         </div>
-        <script src="js/mobile.js"></script>
+        <script src="<?php echo $path?>js/mobile.js"></script>
         <script>comprobarSesion()</script>
 <!--        termina el menun desplegable-->
-        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="<?php echo $path?>js/main.js"></script>
 <!--    </div>-->
 </header>
 
