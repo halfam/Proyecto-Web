@@ -1,7 +1,15 @@
+var path;
+if (!location.pathname.includes("/app/")){
+    path = "./"
+}else{
+    path = "../"
+}
+
+
 document.querySelector("form").addEventListener("submit", function (event) {
     event.preventDefault()
     let dataLogin = new FormData(event.target);
-    let url="api/v1.0/" + "sesion"
+    let url=path+"api/v1.0/" + "sesion"
     fetch(url, {
         method: "POST",
         body: dataLogin,
@@ -14,7 +22,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
             location.href = "."
         if (datos['rol'] === "admin")
             location.href = "."
-        location = "miscampos.php"
+        location = path+"app/miscampos.php"
     }).catch(function (error) {
          // document.getElementById("picuser").setAttribute("onclick", "loginBlur(true)")
          console.log(error)
@@ -24,11 +32,11 @@ document.querySelector("form").addEventListener("submit", function (event) {
 })
 
 function logout() {
-    fetch('api/v1.0/sesion', {
+    fetch(path+'api/v1.0/sesion', {
         method: 'DELETE',
     }).then(function(respuesta) {
         if (respuesta.ok) {
-            location.href = 'index.php';
+            location.href = path+'index.php';
         }
     })
 }

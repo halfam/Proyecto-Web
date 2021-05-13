@@ -13,9 +13,3 @@ inputs.forEach(input => {
 	input.addEventListener("focus", addcl);
 	input.addEventListener("blur", remcl);
 });
-
-// let ruta = ''datos['fotoPerfil']['ruta']
-// document.getElementById('picuser').innerHTML= document.createElement('img')
-// 	.setAttribute('src',)
-
-

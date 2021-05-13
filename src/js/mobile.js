@@ -1,3 +1,10 @@
+var path;
+if (!location.pathname.includes("/app/")){
+    path = "./"
+}else{
+    path = "../"
+}
+
 const doc = document;
 const overlay = doc.querySelector(".overlay");
 /* ------------------------------------------------------------------------------------------------------------------------ */
@@ -28,7 +35,7 @@ function loginBlur(loginpopup) {
 
 function comprobarSesion() {
 
-    fetch('api/v1.0/sesion', {
+    fetch(path+'api/v1.0/sesion', {
         method: 'GET',
     }).then(function (respuesta) {
         if (respuesta.ok) {
@@ -49,7 +56,7 @@ function comprobarSesion() {
     // return sesion
 }
 function getUser(id) {
-    fetch('api/v1.0/user/'+id,{
+    fetch(path+'api/v1.0/user/'+id,{
         method: 'GET'
     }).then(function (respuesta){
         if (respuesta.ok){
@@ -59,26 +66,25 @@ function getUser(id) {
         cambiarMenu(data[0]['rol'])
         let picuser = document.querySelector("#picuser")
         let rt = data[0]['fotoPerfil']
-        let ruta = 'app/fotoperfil/' + rt
-        picuser.childNodes[0].setAttribute('src', ruta)
+        //todo en caso de que no este para el sprint la foto en la base de datos, quitar el path y poner app/
+        //let ruta = path+'fotoperfil/' + rt
+        //picuser.childNodes[0].setAttribute('src', path+ruta)
     })
 }
 
-function miperfil() {
-    console.log("hola")
-}
+
 
 function cambiarMenu(rol) {
     let menu = document.getElementById('lista-menu')
     let miPerfil = document.createElement('li')
     miPerfil.classList.add('nav-link')
-    miPerfil.innerHTML="<a href='app/miperfil.php'>Mi perfil</a>"
+    miPerfil.innerHTML="<a href='"+path+"app/miperfil.php'>Mi perfil</a>"
     menu.appendChild(miPerfil)
     switch (rol) {
         case 'usuario':
              let misCampos = document.createElement('li')
              misCampos.classList.add('nav-link')
-             misCampos.innerHTML = "<a href='miscampos.php'>Mis campos</a>"
+             misCampos.innerHTML = "<a href='"+path+"app/miscampos.php'>Mis campos</a>"
              menu.appendChild(misCampos)
             break;
         case 'admin':

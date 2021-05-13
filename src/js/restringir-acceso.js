@@ -1,5 +1,5 @@
 
-fetch('api/v1.0/sesion', {
+fetch('../api/v1.0/sesion', {
     method: 'GET',
 }).then(function(respuesta) {
     if (respuesta.ok) {

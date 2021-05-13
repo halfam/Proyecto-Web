@@ -1,3 +1,9 @@
+var path;
+if (!location.pathname.includes("/app/")){
+    path = "./"
+}else{
+    path = "../"
+}
 var map = '';
 var markers = [];
 //38.9838278,-0.1573639
@@ -41,7 +47,7 @@ function addMarker(lat, lng, id, nombreParcela) {
             let infoWindow = new google.maps.InfoWindow({
                 content: "Esta sonda no esta activada",
             });
-            fetch('api/v1.0/mediciones/'+id,{
+            fetch(path+'api/v1.0/mediciones/'+id,{
                 method: 'GET'
             }).then(function (respuesta){
                 if (respuesta.ok){
@@ -52,10 +58,10 @@ function addMarker(lat, lng, id, nombreParcela) {
                     '<h3>'+nombreParcela+'</h3>' +
                     '<h4>Valores</h4>' +
                     '<div class="imagenes">' +
-                    '<img src="img/salinidad.svg" >' +
-                    '<img src="img/luz.svg" >' +
-                    '<img src="img/temperatura.svg" >' +
-                    '<img src="img/humedad.svg" >' +
+                    '<img src="'+path+'img/salinidad.svg" >' +
+                    '<img src="'+path+'img/luz.svg" >' +
+                    '<img src="'+path+'img/temperatura.svg" >' +
+                    '<img src="'+path+'img/humedad.svg" >' +
                     '</div>'+
                     '<div class="valores">' +
                     '<label htmlFor="valor de salinidad" id="salinidad">'+data[0]["salinidad"]+'%</label>'+
@@ -63,7 +69,7 @@ function addMarker(lat, lng, id, nombreParcela) {
                     '<label htmlFor="valor de temperatura" id="temperatura">'+data[0]["temperatura"]+'ºC</label>'+
                     '<label htmlFor="valor de humedad" id="humedad">'+data[0]["humedad"]+'%</label>'+
                     '</div>'+
-                    '<div class="enlace"><a href="index.php">Información detallada >>> </a></div>'+
+                    '<div class="enlace"><a href="'+path+'index.php">Información detallada >>> </a></div>'+
                     '</div>'
 
                 )
@@ -96,7 +102,7 @@ function getValues(cadena) {
 }
 
 function cargarSondas(id, nombreParcela){
-    fetch('api/v1.0/sondas/'+id,{
+    fetch(path+'api/v1.0/sondas/'+id,{
         method: 'GET',
     }).then(function (respuesta){
         if (respuesta.ok){
@@ -112,8 +118,6 @@ function cargarSondas(id, nombreParcela){
             addMarker(lat,lng, nombre,nombreParcela)
 
         }
-
-
     })
 }
 
@@ -148,23 +152,14 @@ function dibujarParcela(latitudes, longitudes, color, id, nombreParcela) {
 
             map.fitBounds(bounds)
             map.setZoom(17)
-            // console.log(id)
             cargarSondas(id, nombreParcela)
         })
     }
 }
 
-function getInfo(infoWindow,posicion){
-    // var infoWindow
-    // Close the current InfoWindow.
-    // console.log(infoWindow)
-
-
-    // return infoWindow
-}
 
 function cargarParcelas() {
-    fetch('api/v1.0/sesion', {
+    fetch(path+'api/v1.0/sesion', {
         method: 'GET',
     }).then(function (respuesta) {
         if (respuesta.ok) {
@@ -173,7 +168,7 @@ function cargarParcelas() {
     }).then(function (data) {
         return data['id']
     }).then(function (id) {
-        fetch('api/v1.0/parcelas/' + id, {
+        fetch(path+'api/v1.0/parcelas/' + id, {
             method: 'GET'
         }).then(function (respuesta) {
             // console.log(respuesta)
@@ -181,6 +176,7 @@ function cargarParcelas() {
                 return respuesta.json()
             }
         }).then(function (data) {
+			console.log(data)
             if (data != null) {
                 var lista = document.getElementById("parcela");
                 for (let parcela in data) {
@@ -192,7 +188,6 @@ function cargarParcelas() {
                     let long = getValues(data[parcela]['longitud'])
                     let color = data[parcela]['color'];
                     let id = data[parcela]['id']
-
                     dibujarParcela(lat, long, color, id, nombre)
                 }
             }
