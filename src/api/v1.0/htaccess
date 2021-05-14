@@ -1,4 +1,0 @@
-#ErrorDocument 404 /path/mi404.php
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ %{ENV:BASE}index.php [QSA,L]
