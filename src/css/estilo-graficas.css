@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+
+}
+.tituloGraficas{
+    text-align: center;
+    margin: 2rem;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.cabecera_princ {
+    font-family: 'Varela Round', sans-serif;
+    margin: 0 auto;
+    text-align: center;
+}
+.graficas_princ{
+    position: relative;
+    display: inline-block;
+}
+#graficas-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: -3px;
+}
+.dentro{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2px;
+    font-size: 20px;
+    background: #EAEAEA80;
+    width: 100%;
+    color: black;
+}
+.texto_graficas{
+    width: 90%;
+    text-align: justify;
+    margin: 0 auto;
+    margin-top: 4%;
+}
+.flecha_atras_bonita_bonita{
+    display: flex;
+    text-decoration: none;
+    margin: 0.3rem 0;
+}
+.fa-arrow-circle-left{
+    margin-left: 5vw;
+    color: #820053;
+    font-size: 1.9rem;
+}
