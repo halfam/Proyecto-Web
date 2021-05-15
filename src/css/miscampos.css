@@ -1,0 +1,69 @@
+
+#mis-campos{
+    padding-top: 70px;
+}
+#map{
+    width: 100%;
+    height: 91.5vh;
+    border: solid 1px black;
+}
+#buscar {
+    position: absolute;
+    z-index: 1;
+    border-radius: 10px;
+    width: 80%;
+    margin-left: 10px;
+    margin-top: 3%;
+    height: 40px;
+}
+
+#infoContent{
+    width: 220px;
+    height: 130px;
+}
+
+#infoContent h3 {
+    display: block;
+    margin-block-start: 0px;
+    margin-block-end: 10px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-bottom: 2%;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#infoContent label{
+    font-size: 22px;
+    font-weight: normal;
+    padding-bottom: 3%;
+}
+.imagenes, .valores{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.valores label{
+    margin-top: 0.3rem;
+    font-weight: bold;
+}
+.valores label, .imagenes img{
+    flex: 1 1 40px;
+}
+.imagenes img{
+    height: 38px;
+    margin-bottom: 1%;
+}
+.divinfo{
+    text-align: center;
+}
+
+#infoContent .enlace{
+    display: flex;
+    justify-content: flex-end;
+}
+.informacion-detallada{
+    color: blue;
+    margin-right: 5px;
+    text-decoration: underline;
+}
