@@ -24,6 +24,10 @@
                     <li class="nav-link">
                         <a href="<?php echo $path?>contacto.php">Contacto</a>
                     </li>
+
+                    <li class="nav-link">
+                        <a href="<?php echo $path?>nosotros.php">Nosotros</a>
+                    </li>
                 </ul>
             </div>
             <!-- ----------------- -->
