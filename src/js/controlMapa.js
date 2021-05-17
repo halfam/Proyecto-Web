@@ -10,7 +10,7 @@ var markers = [];
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 39.071553, lng: -0.255688},
-        zoom: 15,
+        zoom: 17,
         mapTypeId: 'hybrid',
         styles: [
             {
