@@ -6,10 +6,10 @@ if (!location.pathname.includes("/app/")){
 }
 var map = '';
 var markers = [];
-//38.9838278,-0.1573639
+
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 38.9838278, lng: -0.1573639},
+        center: {lat: 39.071553, lng: -0.255688},
         zoom: 15,
         mapTypeId: 'hybrid',
         styles: [
@@ -33,9 +33,6 @@ function initMap() {
 }
 
 function addMarker(lat, lng, id, nombreParcela) {
-// let lat = parseFloat(document.getElementById('lat').value);
-// let lng = parseFloat(document.getElementById('lng').value);
-//38.9906798 -0.1687397
     setTimeout(() => {
         var marker = new google.maps.Marker({
             position: {lat: lat, lng: lng},
@@ -76,24 +73,17 @@ function addMarker(lat, lng, id, nombreParcela) {
             infoWindow.open(map,this);
         })
         markers.push(marker)
-        // marker.label.
-        // map.panTo(marker.getPosition());
-
     }, 200)
 
 }
 let sondas = [];
 function cargarGraficas(idSonda) {
-    // if (sessionStorage.getItem('sondas')!= null)
-    //     if (sessionStorage.getItem('sondas').length > 0)
-    //       sondas.push(sessionStorage.getItem('sondas'))
     sondas = []
     sondas.push(idSonda)
     sessionStorage.setItem('sondas', sondas)
     location.href = 'graficas.php'
 }
 function clearMarkers(){
-    // setMapOnAll(null)
     for (const markeer of markers) {
         markeer.setMap(null)
     }
