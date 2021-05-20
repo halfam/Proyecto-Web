@@ -86,6 +86,14 @@ function cambiarMenu(rol) {
              misCampos.classList.add('nav-link')
              misCampos.innerHTML = "<a href='"+path+"app/miscampos.php'>Mis campos</a>"
              menu.appendChild(misCampos)
+
+             let nosotros = document.getElementById('nosotros')
+             nstr = nosotros.parentNode;
+             nstr.removeChild(nosotros)
+
+             let servicios = document.getElementById('servicios')
+             serv = servicios.parentNode;
+             serv.removeChild(servicios)
             break;
         case 'admin':
 
