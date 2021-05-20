@@ -17,7 +17,7 @@
                     </li>
 
                     <li class="nav-link">
-                        <a href="<?php echo $path?>index.php#sensores">Servicios</a>
+                        <a href="<?php echo $path?>index.php#sensores" id="servicios">Servicios</a>
 
                     </li>
 
@@ -26,7 +26,7 @@
                     </li>
 
                     <li class="nav-link">
-                        <a href="<?php echo $path?>nosotros.php">Nosotros</a>
+                        <a href="<?php echo $path?>nosotros.php" id="nosotros">Nosotros</a>
                     </li>
                 </ul>
             </div>
