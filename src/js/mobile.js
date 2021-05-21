@@ -88,11 +88,11 @@ function cambiarMenu(rol) {
              menu.appendChild(misCampos)
 
              let nosotros = document.getElementById('nosotros')
-             nstr = nosotros.parentNode;
+             let nstr = nosotros.parentNode;
              nstr.removeChild(nosotros)
 
              let servicios = document.getElementById('servicios')
-             serv = servicios.parentNode;
+             let serv = servicios.parentNode;
              serv.removeChild(servicios)
             break;
         case 'admin':
