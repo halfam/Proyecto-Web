@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/estilo-header_footer.css">
     <link rel="stylesheet" href="css/nosotros.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600;800&family=Varela+Round&display=swap" rel="stylesheet">
 </head>
 
@@ -22,7 +23,10 @@
 
     <div class="nosotros-principal">
         <div class="dentro"><h1>Sobre Nosotros</h1></div>
-        <img src="img/staff.jpg" alt="nosotros-img" id="nosotros-img">
+        <img src="img/headermovil.png" alt="nosotros-img" id="nosotros-img">
+        <img src="img/headertablet.png" alt="nosotros-img" id="nosotros-img-tablet">
+        <img src="img/headermedio.png" alt="nosotros-img" id="nosotros-img-tabletpc">
+        <img src="img/headerpc.png" alt="nosotros-img" id="nosotros-img-pc">
     </div>
 </section>
 <!-- ------------------------------------------------------------------------------------------------------------------------ -->
@@ -66,6 +70,8 @@
         datos mostrados por los sensores.
     </h4>
         <img class="modelonegocio" src="img/modelonegocio.jpg" alt="modelo_de_negocio">
+        <img class="modelonegociotablet" src="img/modelonegociotablet.png" alt="modelo_de_negocio">
+        <img class="modelonegociopc" src="img/modelonegociopc.png" alt="modelo_de_negocio">
     </div>
 
     <!-- Ubicacion de las oficinas -->
