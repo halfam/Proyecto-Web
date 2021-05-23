@@ -3,50 +3,127 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
 }
-/*-------------------------------------------------------------------------------------------------------------------*/
-@media screen and (max-width: 900px) {
-    /*Primera parte del texto y foto*/
-    .nosotros-encabezado {
-        font-family: 'Varela Round', sans-serif;
-        margin: 0 auto;
-        text-align: center;
-    }
-    /*-------------------------------------------------------------------------------------------------------------------*/
 
-    /*-------------------------------------------------------------------------------------------------------------------*/
-    /*Primera parte del texto y foto*/
-    .nosotros-informacion {
-        font-family: 'Varela Round', sans-serif;
-        margin: 0 auto;
-        text-align: justify;
-    }
-    /*-------------------------------------------------------------------------------------------------------------------*/
+/*Primera parte del texto y foto*/
+.nosotros-encabezado {
+    margin: 0 auto;
+    text-align: center;
+}
 
-    /*-------------------------------------------------------------------------------------------------------------------*/
+/*Primera parte del texto y foto*/
+.nosotros-informacion {
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.nosotros-principal{
+    position: relative;
+    display: inline-block;
+}
+
+
+@media screen and (min-width: 1000px){
     /*Diseño de la imagen*/
-    #nosotros-img {
+    #nosotros-img-pc {
         width: 100%;
-        height: auto;
+        height: 220px;
         margin-bottom: -3px;
+        flex: 1 1 200px;
     }
-    /*-------------------------------------------------------------------------------------------------------------------*/
 
-    /*-------------------------------------------------------------------------------------------------------------------*/
+    .dentro{
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2px;
+        font-size: 24px;
+        background: #EAEAEA80;
+        width: 100%;
+        color: black;
+    }
+
     /*Diseño de cada uno de los textos*/
+
+
     h4{
         font-weight: normal;
+        font-size: 18px;
     }
 
     h2{
-        font-size: 20px;
+        /*text-align: center;*/
+        font-size: 23px;
         margin-bottom: 5px;
-        text-align: center;
+
     }
 
-    .nosotros-principal{
-        position: relative;
-        display: inline-block;
+    .quienes-somos{
+        margin: 30px 120px 25px 120px;
+        /*width: 30%;*/
+    }
+
+    .negocio{
+        margin: 30px 120px 5px 120px;
+    }
+
+    .modelonegociopc{
+        width: 60%;
+        margin-top: 25px;
+        margin-left: 20%;
+    }
+
+
+    .ubicacion{
+        margin: 20px 120px 25px 120px;
+    }
+
+    .mapa{
+        margin-bottom: 10px;
+        text-align: center;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .modelonegociotablet{
+        display: none;
+    }
+
+    .modelonegocio{
+        display: none;
+    }
+
+    #nosotros-img{
+        display: none;
+    }
+
+    #nosotros-img-tablet{
+        display: none;
+    }
+
+    #nosotros-img-tabletpc{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 833px) and (max-width: 1000px) {
+    #nosotros-img-tabletpc{
+        width: 100%;
+        height: 220px;
+        margin-bottom: -3px;
+}
+    #nosotros-img{
+        display: none;
+    }
+
+    #nosotros-img-pc{
+        display: none;
+    }
+
+    #nosotros-img-tablet{
+        display: none;
     }
 
     .dentro{
@@ -59,6 +136,175 @@
         background: #EAEAEA80;
         width: 100%;
         color: black;
+    }
+
+    /*Diseño de cada uno de los textos*/
+    h4{
+        font-weight: normal;
+        font-size: 18px;
+    }
+
+    h2{
+        font-size: 23px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    .quienes-somos{
+        margin: 20px 60px 25px 60px;
+    }
+
+    .negocio{
+        margin: 20px 60px 25px 60px;
+    }
+
+    .modelonegociotablet{
+        width: 100%;
+        margin-top: 15px;
+    }
+    .objetivos{
+        margin: 20px 60px 25px 60px;
+    }
+
+    .ubicacion{
+        margin: 20px 60px 25px 60px;
+    }
+
+    .mapa{
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .modelonegocio{
+        display: none;
+    }
+
+    .modelonegociopc{
+        display: none;
+    }
+
+}
+@media screen and (min-width: 610px) and (max-width: 833px) {
+    /*Diseño de la imagen*/
+    #nosotros-img{
+        display: none;
+    }
+
+    #nosotros-img-pc{
+        display: none;
+    }
+
+    #nosotros-img-tabletpc{
+        display: none;
+    }
+
+    #nosotros-img-tablet {
+        width: 100%;
+        height: 220px;
+        margin-bottom: -3px;
+    }
+
+    .dentro{
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2px;
+        font-size: 20px;
+        background: #EAEAEA80;
+        width: 100%;
+        color: black;
+    }
+
+    /*Diseño de cada uno de los textos*/
+    h4{
+        font-weight: normal;
+        font-size: 18px;
+    }
+
+    h2{
+        font-size: 23px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    .quienes-somos{
+        margin: 20px 60px 25px 60px;
+    }
+
+    .negocio{
+        margin: 20px 60px 25px 60px;
+    }
+
+    .modelonegociotablet{
+        width: 100%;
+        margin-top: 15px;
+    }
+    .objetivos{
+        margin: 20px 60px 25px 60px;
+    }
+
+    .ubicacion{
+        margin: 20px 60px 25px 60px;
+    }
+
+    .mapa{
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .modelonegocio{
+        display: none;
+    }
+
+    .modelonegociopc{
+        display: none;
+    }
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 610px) {
+    /*Diseño de la imagen*/
+    #nosotros-img-tablet{
+        display: none;
+    }
+
+    #nosotros-img-pc{
+        display: none;
+    }
+
+    #nosotros-img-tabletpc{
+        display: none;
+    }
+
+    #nosotros-img {
+        width: 100%;
+        height: 220px;
+        margin-bottom: -3px;
+    }
+
+    .dentro{
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2px;
+        font-size: 20px;
+        background: #EAEAEA80;
+        width: 100%;
+        color: black;
+    }
+
+    /*Diseño de cada uno de los textos*/
+    h4{
+        font-weight: normal;
+    }
+
+    h2{
+        font-size: 20px;
+        margin-bottom: 5px;
+        text-align: center;
     }
 
     .quienes-somos{
@@ -85,5 +331,16 @@
         margin-bottom: 10px;
         text-align: center;
     }
+
+    .modelonegociotablet{
+        display: none;
+    }
+
+    .modelonegociopc{
+        display: none;
+    }
+
+
+
     /*-------------------------------------------------------------------------------------------------------------------*/
 }
