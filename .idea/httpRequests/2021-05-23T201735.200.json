@@ -1,6 +1,0 @@
-{
-  "id": "2",
-  "nombre": "user",
-  "rol": "usuario"
-}<br />
-<b>Warning</b>:  Undefined array key "sessid" in <b>E: \xampp\htdocs\gitHub\Proyecto-Web\src\api\v1.0\modelos\post-sesion.php</b> on line <b>37</b><br />
