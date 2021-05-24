@@ -1,0 +1,6 @@
+<br />
+<b>Warning</b>:  Undefined variable $_SESSION in <b>E: \xampp\htdocs\gitHub\Proyecto-Web\src\api\v1.0\modelos\post-sesion.php</b> on line <b>13</b><br />
+<br />
+<b>Warning</b>: Trying to access array offset on value of type null in <b>E: \xampp\htdocs\gitHub\Proyecto-Web\src\api\v1.0\modelos\post-sesion.php</b> on line <b>13</b><br />
+{
+"id":"2", "nombre": "user", "rol": "usuario"}

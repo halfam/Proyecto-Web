@@ -1,0 +1,4 @@
+<br />
+<b>Warning</b>:  Undefined variable $_SESSION in <b>E: \xampp\htdocs\gitHub\Proyecto-Web\src\api\v1.0\modelos\post-sesion.php</b> on line <b>16</b><br />
+N;{"id": "2", "nombre": "user", "rol": "usuario"
+}
