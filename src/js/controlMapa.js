@@ -53,7 +53,7 @@ function addMarker(lat, lng, id, nombreParcela) {
                     return respuesta.json()
                 }
             }).then(function (data) {
-                infoWindow.setContent('<div id=infoContent class="divinfo"> ' +
+                infoWindow.setContent('<div id="infoContent" class="divinfo"> ' +
                     '<h3>'+nombreParcela+'</h3>' +
                     '<div class="imagenes">' +
                     '<img src="'+path+'img/salinidad.svg" >' +

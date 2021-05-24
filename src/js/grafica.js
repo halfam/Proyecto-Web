@@ -8,22 +8,23 @@ if (!location.pathname.includes("/app/")){
 //Este es el array en les id de les sondes que va a dibuixar
 
 let idSondas;
-
+let tiempo = 7;
 
 function cargarMediciones(id) {
-    fetch(path+'api/v1.0/modelos/get-mediciones.php?id=' + id, {
-        method: 'GET',
 
+    fetch(path+'api/v1.0/modelos/get-mediciones.php?id=' + id+"&tiempo="+tiempo, {
+        method: 'GET',
     }).then(function (respuesta) {
-        //console.log(respuesta);
         if (respuesta.ok) {
             return respuesta.json();
         }
     }).then(function (data) {
-        if (data != null) {
-            //console.log(data);
-            procesarDatos(data);
+
+        if (data == null) {
+            data =[];
+            data.push({idSonda: id, idPosicion: "", fecha:null,temperatura:0,humedad:0,salinidad:0,luminosidad:0})
         }
+        procesarDatos(data);
 
     })
 }
@@ -52,7 +53,6 @@ function procesarDatos(mediciones) {
             id = parseFloat(medicion.idSonda);
         }
     })
-
     datos.labels = fechas;
     datos.datasets[0].data = temperatura;
     datos.datasets[1].data = luminosidad;
@@ -129,10 +129,17 @@ let opciones = {
         }
     }
 };
-
+var miGrafica;
 function CrearGrafica(idSonda) {
-    if (document.getElementById("chart-container" + idSonda))
+
+    // console.log("hola")
+    var grafica =document.getElementById("chart" + idSonda)
+    if (grafica){
+        console.log(grafica)
+        miGrafica.update()
         return
+    }
+    // console.log("hola")
     var newDiv = document.createElement("div");
     newDiv.id = "chart-container" + idSonda;
 
@@ -152,10 +159,16 @@ function CrearGrafica(idSonda) {
 
 
     let ctx = document.getElementById('chart' + idSonda);
-    let miGrafica = new Chart(ctx, {
+    miGrafica = new Chart(ctx, {
         type: 'line',
         data: datos,
         options: opciones
     });
 
+}
+
+
+function cambiarTiempo(value) {
+    tiempo = parseInt(value);
+    checkSondas();
 }

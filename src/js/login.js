@@ -10,10 +10,6 @@ document.querySelector("form").addEventListener("submit", function (event) {
     event.preventDefault()
     let dataLogin = new FormData(event.target);
     dataLogin.set('recordar', document.getElementById("recuerdame").checked.toString())
-    console.log(dataLogin.get('recordar'))
-    if(document.getElementById("recuerdame").checked){
-
-    }
     let url=path+"api/v1.0/" + "sesion"
     fetch(url, {
         method: "POST",
@@ -24,10 +20,10 @@ document.querySelector("form").addEventListener("submit", function (event) {
         }
     }).then(function (datos) {
 
-        if (datos['rol'] === "usuario")
-            location.href = "."
-        if (datos['rol'] === "admin")
-            location.href = "."
+        // if (datos['rol'] === "usuario")
+        //     location.href = "."
+        // if (datos['rol'] === "admin")
+        //     location.href = "."
         location = path+"app/miscampos.php"
 
     }).catch(function (error) {
@@ -40,7 +36,6 @@ document.querySelector("form").addEventListener("submit", function (event) {
 
 
 function logout() {
-    console.log("hola")
     fetch(path+'api/v1.0/sesion', {
         method: 'DELETE',
     }).then(function(respuesta) {

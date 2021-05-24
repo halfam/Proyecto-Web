@@ -2,14 +2,18 @@
 
 $nombre = $_POST['nombre'];
 $contrasenya = $_POST['contrasenya'];
-
+if ($_POST['recordar']=="true")
+    session_start([
+        'cookie_lifetime' => 2592000,
+    ]);
+else
+    session_start();
 
 include 'includes/conexion.php';
 $sql = "SELECT `id`,`nombre`,`rol` FROM `usuario` WHERE `nombre` = '$nombre' AND `contrasenya` = '$contrasenya'";
 $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
-    session_start();
-    
+
     while ($fila = mysqli_fetch_assoc($result)) {
 	$respuesta = [];
         $respuesta['id'] = $fila['id'];

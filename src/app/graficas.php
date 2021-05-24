@@ -15,7 +15,14 @@
     <script src="https://cdn.jsdelivr.net/npm/luxon@1.26.0/build/global/luxon.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.0.0/dist/chartjs-adapter-luxon.min.js"></script>
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
-<!--    <script src="js/restringir-acceso.js"></script>-->
+    <script src="js/restringir-acceso.js"></script>
+
+<!--    bootstrapp -->
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">-->
+<!--    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>-->
+
+
 
 </head>
 
@@ -25,11 +32,17 @@
     $path = "../";
     include_once $path.'header.php';?>
     <div class="header" style="height: 70px"></div>
-    <section class="cabecera_princ">
+    <section class="cabecera_princ" >
         <div class="graficas_princ">
             <div class="dentro"><h1>Información detallada</h1></div>
             <img src="../img/grafic.jpg" alt="img-graficas" id="graficas-img">
             <a href="miscampos.php" class="flecha_atras_bonita_bonita"><i class="fas fa-arrow-circle-left"></i></a>
+            <select name="tiempo" id="tiempo" onchange="cambiarTiempo(this.value)">
+                <option value="1">1 dia</option>
+                <option value="7">1 semana</option>
+                <option value="30">1 mes</option>
+                <option value="365">1 año</option>
+            </select>
         </div>
     </section>
     <div class="graficas" id="base_graficas"></div>
@@ -40,12 +53,13 @@
 
     <script src="../js/grafica.js"></script>
     <script>
-        idSondas = sessionStorage.getItem('sondas')
-        console.log(idSondas)
-        for (let i = 0; i < idSondas.length; i++) {
-            cargarMediciones(idSondas[i]);
+        function checkSondas(){
+            idSondas = sessionStorage.getItem('sondas')
+            for (let i = 0; i < idSondas.length; i++) {
+                cargarMediciones(idSondas[i]);
+            }
         }
-
+        checkSondas();
     </script>
 </body>
 
