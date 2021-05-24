@@ -17,7 +17,7 @@
                     </li>
 
                     <li class="nav-link">
-                        <a href="<?php echo $path?>index.php#sensores" id="servicios">Servicios</a>
+                        <a href="<?php echo $path?>index.php#sensores">Servicios</a>
 
                     </li>
 
@@ -26,7 +26,7 @@
                     </li>
 
                     <li class="nav-link">
-                        <a href="<?php echo $path?>nosotros.php" id="nosotros">Nosotros</a>
+                        <a href="<?php echo $path?>nosotros.php">Nosotros</a>
                     </li>
                 </ul>
             </div>
@@ -34,7 +34,7 @@
 
             <!-- Botón de login -->
             <div class="butolog" style="--i: 0.3s">
-                <a class="buto solid login " id="login" onclick="loginBlur(true)">Iniciar Sesión</a>
+                <a class="buto solid login-dsk " id="login" onclick="loginBlur(true)">Iniciar Sesión</a>
             </div>
         </div>
         <!-- -------------------------------------------------------------------------------------------------------------------------- -->
@@ -88,7 +88,7 @@
                         <!-- Recuérdame -->
                         <div class="contenedor-inferior">
                         <label for="recuerdame" class="contenedor-recuerdame">
-                            <input type="checkbox" id="recuerdame" value="Recuerdame_checkbox">
+                            <input type="checkbox" id="recuerdame" value="Recuerdame_checkbox" name="recordar">
                             <h5 style="display: inline; padding-left: 5px">Recuérdame</h5>
                         </label>
 
@@ -106,9 +106,11 @@
             </div>
         </div>
         <script src="<?php echo $path?>js/mobile.js"></script>
-        <script>comprobarSesion()</script>
+        <script>
+                comprobarSesion();
+        </script>
 <!--        termina el menun desplegable-->
         <script type="text/javascript" src="<?php echo $path?>js/main.js"></script>
 <!--    </div>-->
-</header>
+</header onload="">
 
