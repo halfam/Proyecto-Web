@@ -1,4 +1,7 @@
-
+:root{
+    --widthBuscar: 20%;
+    --marginTopBuscar: 1rem;
+}
 #mis-campos{
     padding-top: 70px;
 }
@@ -11,12 +14,17 @@
     position: absolute;
     z-index: 1;
     border-radius: 10px;
-    width: 80%;
-    margin-left: 10px;
-    margin-top: 3%;
+    width: var(--widthBuscar);
+    margin: 0 10px;
+    margin-top: var(--marginTopBuscar);
     height: 40px;
 }
-
+@media (max-width: 920px) {
+:root{
+    --widthBuscar: 95%;
+    /*--marginTopBuscar: 30px;*/
+}
+}
 #infoContent{
     width: 220px;
     height: 130px;
