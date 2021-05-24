@@ -25,6 +25,8 @@ function initMap() {
         mapTypeControl: false,
         streetViewControl: false,
         rotateControl: false,
+        fullscreenControl: false,
+        disableDefaultUI: true,
     });
 
     map.setTilt(0);
