@@ -52,3 +52,8 @@
     color: #820053;
     font-size: 1.9rem;
 }
+
+.comparar{
+    display: flex;
+    justify-content: center;
+}

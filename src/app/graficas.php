@@ -46,7 +46,9 @@
         </div>
     </section>
     <div class="graficas" id="base_graficas"></div>
-
+    <div class="comparar" >
+        <i class="fas fa-plus-circle fa-2x" onclick="nuevaSonda()"></i>
+    </div>
     <?php include_once $path.'footer.php' ?>
 
 
@@ -60,6 +62,9 @@
             }
         }
         checkSondas();
+        function nuevaSonda(){
+            alert("hola")
+        }
     </script>
 </body>
 

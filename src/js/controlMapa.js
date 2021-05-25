@@ -67,7 +67,7 @@ function addMarker(lat, lng, id, nombreParcela) {
                     '<label htmlFor="valor de temperatura" id="temperatura">'+data[0]["temperatura"]+'ºC</label>'+
                     '<label htmlFor="valor de humedad" id="humedad">'+data[0]["humedad"]+'%</label>'+
                     '</div>'+
-                    '<div class="enlace"><a class="informacion-detallada" onclick="cargarGraficas('+id+')">Ver más >></div>'+
+                    '<div class="enlace"><a class="boton-comparar" onclick="cargarGraficas('+id+',true)">[+]Comparar</a><a class="informacion-detallada" onclick="cargarGraficas('+id+', false)">Ver más >></div>'+
                     '</div>'
 
                 )
@@ -79,10 +79,11 @@ function addMarker(lat, lng, id, nombreParcela) {
 
 }
 let sondas = [];
-function cargarGraficas(idSonda) {
+function cargarGraficas(idSonda, comparar) {
     sondas = []
     sondas.push(idSonda)
     sessionStorage.setItem('sondas', sondas)
+    if (!comparar)
     location.href = 'graficas.php'
 }
 function clearMarkers(){
