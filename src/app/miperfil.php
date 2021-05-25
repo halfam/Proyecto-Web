@@ -23,19 +23,20 @@ include_once $path.'header.php';?>
 <section class=" blur seccion-perfil-usuario">
     <div class="perfil-usuario-header">
         <div class="perfil-usuario-portada">
+                <a href="<?php echo $path?>index.php" id="volverinicio">Volver</a>
             <div class="perfil-usuario-avatar">
                 <img src="../img/perfil.png" alt="img-avatar" id="foto">
 <!--                <button type="button" class="boton-avatar" onclick="cargarImg()">-->
 <!--                    <input type="file" name="foto" id="cargarImagen" hidden onchange="changeIMG(this.files[0])"/>-->
 <!--                    <i class="far fa-image"></i>-->
-<!--                </button>-->
+<!--                </button> -->
             </div>
 
         </div>
     </div>
     <div class="perfil-usuario-body">
         <div class="perfil-usuario-bio">
-            <h3 class="titulo" id="nombre_usuario"></h3>
+        <h2>Bienvenido,</h2><h3 class="titulo" id="nombre_usuario"></h3>
 
         </div>
 
