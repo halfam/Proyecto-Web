@@ -35,9 +35,22 @@ Estilos de la utilidad
     display: block;
     position: relative;
     width: 90%;
-    height: 200px;
+    height: 180px;
     background: linear-gradient(25deg, #820053, #d991b1);
     border-radius: 0 0 20px 20px;
+}
+#volverinicio{
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    background-color: #d991b1;
+    text-decoration: none;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    border: 2px solid #651f4a;
 }
 
 .seccion-perfil-usuario .perfil-usuario-portada .boton-portada {
@@ -101,7 +114,6 @@ Estilos de la utilidad
     display: block;
     width: 100%;
     font-size: 35px;
-
 }
 
 .seccion-perfil-usuario .perfil-usuario-body .texto {
@@ -119,7 +131,11 @@ Estilos de la utilidad
     background-color: #fff;
     border-radius: 15px;
     width: 100%;
-    margin-bottom: 10%;
+    margin-bottom: 7%;
+}
+
+.perfil-usuario-footer{
+    margin-top: 3%;
 }
 
 .seccion-perfil-usuario .perfil-usuario-bio {
@@ -169,8 +185,7 @@ Estilos de la utilidad
     display: none;
 }
 
-/* Adaptacion a moviles */
-@media (max-width: 1050px) {
+
 
     .datospersonales{
         display: flex;
@@ -204,5 +219,5 @@ Estilos de la utilidad
     .tlf, .crreo, .direcc, .servs{
         font-weight: bold;
     }
-}
+
 
