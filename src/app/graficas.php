@@ -38,7 +38,7 @@
             <img src="../img/grafic.jpg" alt="img-graficas" id="graficas-img">
             <a href="miscampos.php" class="flecha_atras_bonita_bonita"><i class="fas fa-arrow-circle-left"></i></a>
             <select name="tiempo" id="tiempo" onchange="cambiarTiempo(this.value)">
-                <option value="1">1 dia</option>
+                <option value="1">1 día</option>
                 <option value="7">1 semana</option>
                 <option value="30">1 mes</option>
                 <option value="365">1 año</option>
