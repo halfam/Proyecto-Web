@@ -142,7 +142,7 @@
         </section>
 
             <!--¡ASÍ DE SENCILLO!-->
-            <section class="masinfo">
+            <section class="masinfo blur">
             <p>Si deseas conocer más información o adquirir nuestro servicio, no dudes
                 en contactarnos mediante nuestro:</p> <a href="contacto.php" class="a">Formulario
                 de contacto</a>
