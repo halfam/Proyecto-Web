@@ -8,18 +8,19 @@
     box-sizing: border-box;
 }
 
+
 body {
     color: #404040;
     font-family: 'Varela Round', sans-serif;
     background-color: rgba(194, 185, 185, 0.25);
 }
-
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 
-/*=====================================
-FALTA COMENTAR EL CÓDIGO
-=====================================*/
+/*-------------------------------------------DISEÑO DE LO VISIBLE-----------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------*/
+/*DISEÑOS GENERALES DE CONTENEDORES*/
 .seccion-perfil-usuario .perfil-usuario-body,
 .seccion-perfil-usuario {
     display: flex;
@@ -27,9 +28,10 @@ FALTA COMENTAR EL CÓDIGO
     flex-direction: column;
     align-items: center;
 }
+/*-------------------------------------------------------*/
 
 /*-------------------------------------------------------*/
-/*COLOR DE FONDO*/
+/*COLOR DE FONDO GENERAL*/
 .seccion-perfil-usuario .perfil-usuario-header {
     width: 100%;
     display: flex;
@@ -53,38 +55,17 @@ FALTA COMENTAR EL CÓDIGO
 
 /*-------------------------------------------------------*/
 /*DISEÑO BOTÓN VOLVER*/
-#volverinicio{
+.volver{
+    width: auto;
+    height: 35px;
     margin-top: 20px;
-    margin-left: 20px;
     display: flex;
-    width: 20%;
-    justify-content: center;
-    background-color: #d991b1;
-    text-decoration: none;
-    color: white;
-    padding: 10px 10px 10px 10px;
-    border-radius: 10px;
-    border: 2px solid #651f4a;
+    margin-left: 30px;
 }
 /*-------------------------------------------------------*/
 
-.seccion-perfil-usuario .perfil-usuario-portada .boton-portada {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    border: 0;
-    border-radius: 8px;
-    padding: 12px 25px;
-    background-color: rgba(0, 0, 0, .5);
-    color: #fff;
-    cursor: pointer;
-}
-
 /*-------------------------------------------------------*/
-/*DISEÑO CONTENEDORES DE LA INFORMACIÓN Y IMAGEN*/
-.seccion-perfil-usuario .perfil-usuario-portada .boton-portada i {
-    margin-right: 1rem;
-}
+/*DISEÑO CONTENEDORES DE LA IMAGEN DE PERFIL*/
 .seccion-perfil-usuario .perfil-usuario-avatar {
     display: flex;
     width: 180px;
@@ -105,33 +86,28 @@ FALTA COMENTAR EL CÓDIGO
     position: relative;
     border-radius: 50%;
 }
-.seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar {
-    position: absolute;
-    left: -2px;
-    top: -2px;
-    border: 0;
-    background-color: #fff;
-    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    cursor: pointer;
-}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*TAMAÑO DE LOS CUADRADOS BLANCOS*/
 .seccion-perfil-usuario .perfil-usuario-body {
     width: 70%;
     position: relative;
     max-width: 750px;
 }
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*OPCIONES DEL NOMBRE DEL USUARIO*/
 .seccion-perfil-usuario .perfil-usuario-body .titulo {
     display: block;
     width: 100%;
     font-size: 35px;
 }
-.seccion-perfil-usuario .perfil-usuario-body .texto {
-    color: #848484;
-    font-size: 0.95em;
-    width: 100%;
-}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*CREACIÓN DE LOS CONTENEDORES BLANCOS Y ESPACIOS*/
 .seccion-perfil-usuario .perfil-usuario-footer,
 .seccion-perfil-usuario .perfil-usuario-bio {
     display: flex;
@@ -146,10 +122,17 @@ FALTA COMENTAR EL CÓDIGO
 .perfil-usuario-footer{
     margin-top: 3%;
 }
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
 .seccion-perfil-usuario .perfil-usuario-bio {
     margin-bottom: 1.25rem;
     text-align: center;
 }
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*DISEÑO DE LOS APARTADOS DE DATOS PERSONALES*/
 .seccion-perfil-usuario .lista-datos {
     width: 50%;
     list-style: none;
@@ -157,33 +140,30 @@ FALTA COMENTAR EL CÓDIGO
 .seccion-perfil-usuario .lista-datos li {
     padding: 5px 0;
 }
+.tlf, .crreo, .direcc, .servs{
+    font-weight: bold;
+}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*EDICIÓN DE LOS ICONOS INDIVIDUALES*/
 .seccion-perfil-usuario .lista-datos li> .icono {
     margin-right: 10px;
     font-size: 1.2rem;
     vertical-align: middle;
 }
-.seccion-perfil-usuario .redes-sociales {
-    position: absolute;
-    right: calc(0px - 50px - 1rem);
-    top: 0;
-    display: flex;
-    flex-direction: column;
-}
-.seccion-perfil-usuario .redes-sociales .boton-redes {
-    border: 0;
-    background-color: #fff;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    color: #fff;
-    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
-    font-size: 1.3rem;
-}
 /*-------------------------------------------------------*/
+/*.seccion-perfil-usuario .redes-sociales {*/
+/*    position: absolute;*/
+/*    right: calc(0px - 50px - 1rem);*/
+/*    top: 0;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*EDICIÓN DE LA FRASE DE DATOS PERSONALES*/
     .datospersonales{
         display: flex;
         margin: 0 auto;
@@ -191,16 +171,21 @@ FALTA COMENTAR EL CÓDIGO
         text-decoration: underline;
         font-size: 20px;
     }
+/*-------------------------------------------------------*/
 
+/*-------------------------------------------------------*/
+/*OPCIONES DE TAMAÑO Y DISPOSICIÓN CUADRADOS BLANCOS*/
     .seccion-perfil-usuario .lista-datos {
         width: 100%;
     }
-
     .seccion-perfil-usuario .perfil-usuario-portada,
     .seccion-perfil-usuario .perfil-usuario-body {
         width: 95%;
     }
+/*-------------------------------------------------------*/
 
+/*-------------------------------------------------------*/
+/*UBICACIÓN DE LA INFORMACIÓN DATOS PERSONALES*/
     .seccion-perfil-usuario {
         position: relative;
         flex-direction: row;
@@ -212,9 +197,8 @@ FALTA COMENTAR EL CÓDIGO
         align-items: center;
         justify-content: center
     }
+/*-------------------------------------------------------*/
 
-    .tlf, .crreo, .direcc, .servs{
-        font-weight: bold;
-    }
-
+/*--------------------------------------------FIN DISEÑO DE LO VISIBLE------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
 
