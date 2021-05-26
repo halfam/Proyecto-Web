@@ -35,7 +35,7 @@
     justify-content: center;
     font-size: 20px;
     margin-top: 6vh;
-
+}
 
 /*Estilo del texto de relleno (información adicional)*/
 .texto_relleno{
@@ -44,7 +44,7 @@
     margin-left: 2vh;
     margin-right: 2vh;
 }
-}/*Diseño del contenedor promoción*/
+/*Diseño del contenedor promoción*/
 .promocion{
     text-align: center;
     margin-bottom: 20vh;
@@ -317,12 +317,9 @@
         margin-right:20px;
         margin-left: 20px;
     }
-    .sencillo{
-        font-size: 2rem;
-    }
-
-
 }
+
+/*Responsive para tablet*/
 @media  screen and (min-width: 800px) {
     .contenedor-sensores{
         display: flex;
@@ -339,6 +336,9 @@
     }
     .divisiones{
         margin: 20px;
+    }
+    .sencillo{
+        font-size: 2rem;
     }
 }
 
