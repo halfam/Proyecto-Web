@@ -1,47 +1,41 @@
 <?php if (!isset($path)) $path = "./"?>
-<header style="z-index: 10;">
+<header id="contenedor-header">
 <!-- -------------------------------------------------------------------------------------------------------------------------- -->
-<!--    <div class="contenedor">-->
         <input type="checkbox" name="" id="check" hidden>
-
-        <div class="logo">
-            <a href="<?php echo $path?>index.php"><img src="<?php echo $path?>img/logo.svg" alt="logo" class="img-logo"></a>
-        </div>
-
+<!-- -------------------------------------------------------------------------------------------------------------------------- -->
+        <a href="<?php echo $path?>index.php" class="logo"><img src="<?php echo $path?>img/logo.svg" alt="logo" ></a>
+<!-- -------------------------------------------------------------------------------------------------------------------------- -->
         <!-- Secciones del menú -->
         <nav class="nav-btn" id="menu">
-            <div class="nav-links blur">
-                <ul id="lista-menu">
-                    <li class="nav-link" >
-                        <a href="<?php echo $path?>index.php">Inicio</a>
-                    </li>
+            <ul id="lista-menu" class="nav-links blur">
+                <li class="nav-link" >
+                    <a href="<?php echo $path?>index.php">Inicio</a>
+                </li>
 
-                    <li class="nav-link">
-                        <a href="<?php echo $path?>index.php#sensores" id="servicios">Servicios</a>
+                <li class="nav-link">
+                    <a href="<?php echo $path?>index.php#sensores" id="servicios">Servicios</a>
 
-                    </li>
+                </li>
 
-                    <li class="nav-link">
-                        <a href="<?php echo $path?>contacto.php">Contacto</a>
-                    </li>
+                <li class="nav-link">
+                    <a href="<?php echo $path?>contacto.php">Contacto</a>
+                </li>
 
-                    <li class="nav-link">
-                        <a href="<?php echo $path?>nosotros.php" id="nosotros">Nosotros</a>
-                    </li>
-                </ul>
-            </div>
+                <li class="nav-link">
+                    <a href="<?php echo $path?>nosotros.php" id="nosotros">Nosotros</a>
+                </li>
+            </ul>
+
             <!-- ----------------- -->
 
             <!-- Botón de login -->
-            <div class="butolog" style="--i: 0.3s">
-                <a class="buto solid login-dsk " id="login" onclick="loginBlur(true)">Iniciar Sesión</a>
-            </div>
+            <a class="buto solid login-dsk butolog" id="login" onclick="loginBlur(true)">Iniciar Sesión</a>
         </nav>
         <!-- -------------------------------------------------------------------------------------------------------------------------- -->
 
         <!-- Botón menú -->
         <div class="hamburger-menu-container">
-            <a class="close-sesion" id="close_sesion" onclick="logout()" style="display: none"><img class="cerrarsesion" src="<?php echo $path?>img/cerrar-sesion.png" alt="cerrar sesion"></a>
+            <a class="close-sesion" id="close_sesion" onclick="logout()"><img class="cerrarsesion" src="<?php echo $path?>img/cerrar-sesion.png" alt="cerrar sesion"></a>
             <a class="picuser login" id="picuser" onclick="loginBlur(true)"><img src="<?php echo $path?>img/bx-user.svg" alt="userpic"></a>
             <div class="hamburger-menu" onclick="checkit()"></div>
         </div>
@@ -50,10 +44,9 @@
 
         <!-- -------------------------------------------------------------------------------------------------------------------------- -->
         <!--empieza el despegable-->
-        <div id="menutlf" class="overlay" style="z-index: 10">
+        <div id="menutlf" class="overlay ">
 
-            <div class="overlay--active">
-                <div class="login-content">
+            <div class="overlay--active login-content">
                     <a class="close cerrar" onclick="loginBlur(false)">&times;</a>
                     <div class="clickme cerrar" onclick="loginBlur(false)"></div>
 
@@ -89,20 +82,19 @@
                         <div class="contenedor-inferior">
                         <label for="recuerdame" class="contenedor-recuerdame">
                             <input type="checkbox" id="recuerdame" value="Recuerdame_checkbox" name="recordar">
-                            <h5 style="display: inline; padding-left: 5px">Recuérdame</h5>
+                            <h5 class="recuerdame-txt">Recuérdame</h5>
                         </label>
 
                         <!-- ¿Has olvidado tu contraseña?   -->
                         <a href="<?php echo $path?>#">¿Has olvidado tu contraseña?</a>
                         </div>
-                        <div id="output" style="color: red"></div>
+                        <div id="output"></div>
                         <input type="submit" class="btn" value="Iniciar Sesión" >
                     </form>
                     <!-- -------------------------------------------------------------------------------------------------------------------------- -->
                     
                     <script src="<?php echo $path?>js/login.js"></script>
                     <!-- Fin de formulario para login -->
-                </div>
             </div>
         </div>
         <script src="<?php echo $path?>js/mobile.js"></script>
@@ -112,5 +104,5 @@
 <!--        termina el menun desplegable-->
         <script type="text/javascript" src="<?php echo $path?>js/main.js"></script>
 <!--    </div>-->
-</header onload="">
+</header>
 

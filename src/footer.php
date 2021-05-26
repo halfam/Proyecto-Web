@@ -1,8 +1,5 @@
 <?php if (!isset($path)) $path = "./"?>
-<!--<head>-->
-<!--    <link rel="stylesheet" href="<?php echo $path?>css/estilo-header.css">-->
-<!--</head>-->
-<footer>
+<footer id="contenedor-footer">
 
 <!-- ------------------------------------------------------------------------------------------------------------------------ -->
 
