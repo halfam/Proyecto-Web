@@ -9,7 +9,7 @@
         </div>
 
         <!-- Secciones del menú -->
-        <div class="nav-btn" id="menu">
+        <nav class="nav-btn" id="menu">
             <div class="nav-links blur">
                 <ul id="lista-menu">
                     <li class="nav-link" >
@@ -36,7 +36,7 @@
             <div class="butolog" style="--i: 0.3s">
                 <a class="buto solid login-dsk " id="login" onclick="loginBlur(true)">Iniciar Sesión</a>
             </div>
-        </div>
+        </nav>
         <!-- -------------------------------------------------------------------------------------------------------------------------- -->
 
         <!-- Botón menú -->
