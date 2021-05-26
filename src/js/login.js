@@ -19,12 +19,11 @@ document.querySelector("form").addEventListener("submit", function (event) {
             return respuesta.json()
         }
     }).then(function (datos) {
+         if (datos['rol'] === "usuario")
+             location = path+"app/miscampos.php"
+         if (datos['rol'] === "admin")
+             location = "."
 
-        // if (datos['rol'] === "usuario")
-        //     location.href = "."
-        // if (datos['rol'] === "admin")
-        //     location.href = "."
-        location = path+"app/miscampos.php"
 
     }).catch(function (error) {
          // document.getElementById("picuser").setAttribute("onclick", "loginBlur(true)")
