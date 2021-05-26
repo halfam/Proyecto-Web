@@ -20,10 +20,14 @@ $path = '../';
 include_once $path.'header.php';?>
 <div class="header" style="height: 50px"></div>
 
+<!-----------------------------------------------INICIO SECCION PERFIL------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------->
 <section class=" blur seccion-perfil-usuario">
+    <!---------------------------------------------------------->
+    <!--PARTE SUPERIOR, FOTO PERFIL Y VOLVER-->
     <div class="perfil-usuario-header">
         <div class="perfil-usuario-portada">
-                <a href="<?php echo $path?>index.php" id="volverinicio">Volver</a>
+            <a href="<?php echo $path?>index.php" onclick="history.go(-1);return false;"><img class="volver" src="../img/volvermiperfil.png"></a>
             <div class="perfil-usuario-avatar">
                 <img src="../img/perfil.png" alt="img-avatar" id="foto">
 <!--                <button type="button" class="boton-avatar" onclick="cargarImg()">-->
@@ -31,42 +35,50 @@ include_once $path.'header.php';?>
 <!--                    <i class="far fa-image"></i>-->
 <!--                </button> -->
             </div>
-
         </div>
     </div>
+    <!---------------------------------------------------------->
+
+    <!---------------------------------------------------------->
+    <!--PARTE MEDIA E INFERIOR INFORMACIÓN USUARIO-->
     <div class="perfil-usuario-body">
         <div class="perfil-usuario-bio">
         <h2>Bienvenido,</h2><h3 class="titulo" id="nombre_usuario"></h3>
-
         </div>
+    <!---------------------------------------------------------->
 
+        <!---------------------------------------------------------->
+        <!--DATOS PERSONALES-->
         <div class="perfil-usuario-footer">
-           <h3 class="datospersonales">Datos Personales <!-- <a class="lapiz" href="edicion.php"><img src="../img/editar.png"></a>--></h3>
+           <h3 class="datospersonales">Datos Personales</h3>
 
             <div class="lista-datos">
-                <!--***********************Telefono*************************+-->
+                <!-------------------------TELEFONO----------------------------->
                 <li class="apartado tlf"><i class="icono fas fa-phone-alt"></i>Teléfono:</li>
                     <li class="tabla_item" id="telefono_usuario"></li>
                 <br>
 
-                <!--***********************Correo*****************************-->
+                <!--------------------------CORREO------------------------------>
                 <li class="apartado crreo"><i class="icono fas fa-envelope"></i>Correo:</li>
                 <li class="tabla_item" id="correo_usuario"></li>
                 <br>
 
-                <!--***********************Direccion*************************+-->
+                <!-------------------------DIRECCION---------------------------->
                 <li class="apartado direcc"><i class="icono fas fa-map-marker-alt"></i>Dirección:</li>
                 <li class="tabla_item" id="direccion_usuario"></li>
                 <br>
 
-                <!--***********************Servicios*************************+-->
+                <!-------------------------SERVICIOS---------------------------->
                 <li class="apartado servs"><i class="icono fas fa-calendar-alt"></i>Inicio de los servicios:</li>
                 <li class="tabla_item apartados" id="servicios_usuario"></li>
-
             </div>
-    </div>
-</section>
+            <!---------------------------------------------------------->
+        </div>
+        <!---------------------------------------------------------->
 
+</section>
+<!--------------------------------------------------FIN SECCION PERFIL------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------->
 <!--Footer -->
 <?php include_once $path.'footer.php' ?>
 <script src="../js/miperfil.js"></script>
