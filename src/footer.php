@@ -13,7 +13,7 @@
                 </li>
             </ul>
         </nav>
-        <!--    aqui empieza el contenedor de los iconos de redes sociales-->
+        <!--    AQUI EMPIEZA EL CONTENEDOR DE ICONOS DE REDES SOCIALES -->
         <nav class="contenedor-redes">
             <ul>
                 <li>
@@ -33,9 +33,9 @@
                 </li>
             </ul>
         </nav>
-        <!--    aqui termina el contenedor de los iconos de redes sociales-->
+        <!--    AQUI TERMINA EL CONTENEDOR DE ICONOS DE REDES SOCIALES -->
 
 <!-- ------------------------------------------------------------------------------------------------------------------------ -->
-        <!--    texto de copyright-->
+        <!--    TEXTO DE COPYRIGHT-->
 		<p id="copyright">Copyright &#169 2021 GTI Todos los derechos reservados</p>
 	</footer>
