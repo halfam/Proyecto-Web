@@ -152,7 +152,7 @@
     .titulo {
         text-align: center;
         /*text-decoration: bold;*/
-        padding: 2% 5% 5% 5%;
+        padding: 2vh 5% 5vh 5vw;
         margin-top: 5px;
 
     }
@@ -286,18 +286,27 @@
 @media  screen and (min-width: 1000px) {
     .texto-encabezado {
         font-size: 30px;
+        margin-bottom: 27vh;
     }
+
     .texto_relleno{
         margin: 0 auto;
         font-size: 22px;
         width: 35%;
     }
     .boton_personalizado{
-        width: 400px;
-        height:70px;
+        width: 350px;
+        height:60px;
+    }
+    .dentro{
+        font-size: 2rem;
+        margin-bottom: 0px;
+    }
+    .titulo{
+        font-size: 1.8rem;
     }
     .info{
-        font-size: 35px;
+        font-size: 1.7rem;
     }
     #servicios-img1{
         display: initial;
@@ -325,6 +334,7 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        margin-top: 0px;
     }
     .contenedor-nuestro{
         display: flex;
