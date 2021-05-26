@@ -5,7 +5,7 @@
 <!-- -------------------------------------------------------------------------------------------------------------------------- -->
         <a href="<?php echo $path?>index.php" class="logo"><img src="<?php echo $path?>img/logo.svg" alt="logo" ></a>
 <!-- -------------------------------------------------------------------------------------------------------------------------- -->
-        <!-- Secciones del menú -->
+        <!-- SECCIONES DEL MENU -->
         <nav class="nav-btn" id="menu">
             <ul id="lista-menu" class="nav-links blur">
                 <li class="nav-link" >
@@ -28,12 +28,12 @@
 
             <!-- ----------------- -->
 
-            <!-- Botón de login -->
+            <!-- BOTÓN DE LOGIN -->
             <a class="buto solid login-dsk butolog" id="login" onclick="loginBlur(true)">Iniciar Sesión</a>
         </nav>
         <!-- -------------------------------------------------------------------------------------------------------------------------- -->
 
-        <!-- Botón menú -->
+        <!-- BOTON MENU -->
         <div class="hamburger-menu-container">
             <a class="close-sesion" id="close_sesion" onclick="logout()"><img class="cerrarsesion" src="<?php echo $path?>img/cerrar-sesion.png" alt="cerrar sesion"></a>
             <a class="picuser login" id="picuser" onclick="loginBlur(true)"><img src="<?php echo $path?>img/bx-user.svg" alt="userpic"></a>
@@ -43,7 +43,7 @@
         <!-- -------------------------------------------------------------------------------------------------------------------------- -->
 
         <!-- -------------------------------------------------------------------------------------------------------------------------- -->
-        <!--empieza el despegable-->
+        <!--EMPIEZA EL DESPLEGABLE-->
         <div id="menutlf" class="overlay ">
 
             <div class="overlay--active login-content">
@@ -51,12 +51,12 @@
                     <div class="clickme cerrar" onclick="loginBlur(false)"></div>
 
                     <!-- -------------------------------------------------------------------------------------------------------------------------- -->
-                    <!-- Formulario de login -->
+                    <!-- FORMULARIO LOGIN -->
                     <form method="post">
-                        <!-- Imagen GTI  y texto para login-->
+                        <!-- IMAGEN GTI Y TEXTO PARA LOGIN-->
                         <a class="logologin"><img src="<?php echo $path?>img/Security-amico.svg"></a>
 
-                        <!-- Nombre de Usuario -->
+                        <!-- NOMBRE DE USUARIO -->
                         <div class="input-div one">
                             <div class="i">
                                 <i class="fas fa-user"></i>
@@ -67,7 +67,7 @@
                             </div>
                         </div>
 
-                        <!-- Contraseña -->
+                        <!-- CONTRASEÑA -->
                         <div class="input-div pass">
                             <div class="i">
                                 <i class="fas fa-lock"></i>
@@ -78,14 +78,14 @@
                             </div>
                         </div>
 
-                        <!-- Recuérdame -->
+                        <!-- RECUERDAME -->
                         <div class="contenedor-inferior">
                         <label for="recuerdame" class="contenedor-recuerdame">
                             <input type="checkbox" id="recuerdame" value="Recuerdame_checkbox" name="recordar">
                             <h5 class="recuerdame-txt">Recuérdame</h5>
                         </label>
 
-                        <!-- ¿Has olvidado tu contraseña?   -->
+                        <!-- ¿HAS OLVIDADO TU CONTRASEÑA?   -->
                         <a href="<?php echo $path?>#">¿Has olvidado tu contraseña?</a>
                         </div>
                         <div id="output"></div>
@@ -94,14 +94,14 @@
                     <!-- -------------------------------------------------------------------------------------------------------------------------- -->
                     
                     <script src="<?php echo $path?>js/login.js"></script>
-                    <!-- Fin de formulario para login -->
+                    <!-- FIN DE PORMULARIO LOGIN -->
             </div>
         </div>
         <script src="<?php echo $path?>js/mobile.js"></script>
         <script>
                 comprobarSesion();
         </script>
-<!--        termina el menun desplegable-->
+<!--        TERMINA EL MENU DESPLEGABLE-->
         <script type="text/javascript" src="<?php echo $path?>js/main.js"></script>
 <!--    </div>-->
 </header>
