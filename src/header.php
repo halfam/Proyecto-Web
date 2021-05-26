@@ -101,7 +101,7 @@
         <script>
                 comprobarSesion();
         </script>
-<!--        TERMINA EL MENU DESPLEGABLE-->
+<!--        TERMINA EL MENU DESPLEGABLE -->
         <script type="text/javascript" src="<?php echo $path?>js/main.js"></script>
 <!--    </div>-->
 </header>
