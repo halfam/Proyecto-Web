@@ -21,13 +21,13 @@
   }
 
 /*!*Diseño del fondo en vista de pantalla*!*/
-/*#imagen-fondo{*/
-/*    position: absolute;*/
-/*    z-index: -2;*/
-/*}*/
-/*#imagen-fondo,.fondo{*/
-/*  height: 100vh;*/
-/*}*/
+#imagen-fondo{
+    position: absolute;
+    z-index: -2;
+}
+#imagen-fondo,.fondo{
+  height: 100vh;
+}
 
 .texto-encabezado {
     align-items: center;
@@ -36,13 +36,7 @@
     font-size: 20px;
     margin-top: 6vh;
 }
-/*Responsive para ordenador*/
-@media  screen and (min-width: 1000px) {
-    .texto-encabezado {
-        font-size: 30px;
-        margin-bottom: 27vh;
-    }
-}
+
 
 /*Estilo del texto de relleno (información adicional)*/
 .texto_relleno{
@@ -52,6 +46,10 @@
     margin-right: 2vh;
 }
 @media  screen and (min-width: 1000px) {
+     .texto-encabezado {
+        font-size: 30px;
+        margin-bottom: 27vh;
+    }
     .texto_relleno {
         margin: 0 auto;
         font-size: 22px;
@@ -311,7 +309,7 @@
         height:60px;
     }
     .dentro{
-        font-size: 2rem;
+        font-size: 1.8rem;
         margin-bottom: 0px;
     }
     .titulo{
@@ -362,12 +360,11 @@
     .sencillo{
         font-size: 2rem;
     }
+    #servicios-img{
+        display: none;
+    }
+    #servicios-img1{
+        display: initial;
+        width: 100%;
+    }
 }
-
-
-
-
-
-
-
-/*}*/
