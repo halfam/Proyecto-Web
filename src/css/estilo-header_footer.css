@@ -39,8 +39,20 @@
 #contenedor-header a{
     text-decoration: none;
 }
-/*----------------------------- FIN CONFIGURACION PRINCIPAL HEADER-----------------------*/
-/* ------------------------------------------------------------------------------------------------------------------------ */
+
+/*--------------------------------------------------------*/
+/*Orden al iniciar sesión de algunos elementos*/
+.miperfil{
+    order: 1;
+}
+.miscampos{
+    order:2;
+}
+#login2{
+    order: 3;
+}
+/*---------------------------------------- FIN CONFIGURACION PRINCIPAL HEADER-----------------------------------------*/
+/* ------------------------------------------------------------------------------------------------------------------ */
 /* Movimiento a X del menú al presionar */
 #check:checked ~ .hamburger-menu-container .hamburger-menu {
     background-color: transparent;
@@ -53,12 +65,14 @@
 #check:checked ~ .hamburger-menu-container .hamburger-menu:after{
     transform: translateY(0) rotate(45deg);
 }
-/* ------------------------------------------------------------------------------------------------------------------------ */
 
 .nav-btn{
   display: flex;
 }
+/* ------------------------------------------------------------------------------------------------------------------ */
 
+/* ------------------------------------------------------------------------------------------------------------------ */
+/*Vista para teléfono*/
 @media (max-width: 920px) {
     /* Menú en sí opciones */
     .nav-btn {
@@ -116,12 +130,6 @@
         justify-content: center;
     }
     /* ------------------------------------------------------------------------------------------------------------------------ */
-    /*Boton incio sesion escritorio no se muestra en telefono*/
-    .butolog {
-        display: none;
-        --i: 0.3s;
-    }
-
 }
 
 /* Opciones de los links */
@@ -130,21 +138,15 @@
     align-self: center;
 }
 
-
-.nav-link:hover{
-  text-decoration:underline;
-}
 /* Diseño del botón */
 .butolog{
   justify-self: center;
   align-self: center;
-  flex: 1;
   text-align-all: end;
-  margin-right: 10px;
 }
 
 /* Diseño del botón */
-.buto{
+.nav-links .buto{
   padding: .5rem 1.3rem;
   font-size: 1rem;
   border: 2px solid #820053;
@@ -152,7 +154,6 @@
   line-height: 1;
   transition: .3s;
 }
-
 
 /* Diseño del botón */
 .btn{
@@ -160,13 +161,15 @@
   font-size: 1rem;
   border: 2px solid #820053;
   border-radius: 10px;
-  line-height: 1;
   transition: .3s;
 }
 
 .buto.solid, .buto.transparent:hover{
   background-color: #fff;
   color: #820053;
+    margin: 10px 10px;
+    padding: 10px;
+    text-align: center;
 }
 
 .buto.transparent, .buto.solid:hover{
@@ -175,16 +178,17 @@
 }
 
 .nav-link > a{
-  line-height: 3rem;
   color: black;
   padding: 0 10px;
   font-size: .95rem;
   transition: .5s;
+
 }
 
 .nav-link:hover > a{
   transform: scale(1.1);
 }
+
 /* ------------------------------------------------------------------------------------------------------------------------ */
 
 /* ------------------------------------------------------------------------------------------------------------------------ */
@@ -281,7 +285,6 @@
       opacity: 0;
       transform: translateY(15px);
       --i: 0.3s;
-      border-bottom: 2px solid #97095e;
       margin: 0 auto;
   }
 
@@ -291,6 +294,7 @@
     display: flex;
     justify-content: center;
     padding: 20px;
+      border-bottom: 2px solid #97095e;
   }
 
   .nav-link:hover > a {
@@ -304,6 +308,7 @@
     transform: rotate(-90deg);
     transition: .7s;
   }
+
 
 
 }
@@ -810,5 +815,4 @@
        }
 }
 /*-------------------------------------------------------------------------------------------------------------------*/
-
 
