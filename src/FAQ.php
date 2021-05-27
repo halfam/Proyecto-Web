@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,shrink-to-fit=no,initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Nosotros</title>
+    <title>Preguntas Frecuentes</title>
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <link rel="stylesheet" href="css/estilo-header_footer.css">
     <link rel="stylesheet" href="css/FAQ.css">
