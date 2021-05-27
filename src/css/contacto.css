@@ -9,7 +9,7 @@
 /*-------------------------------------------------------------------------------------------------------------------*/
 
 
-@media screen and (min-width: 610px) {
+@media screen and (min-width: 1000px) {
 
     /*--------------------------------------------------*/
     /*OPCIONES DE LAS IMÁGENES DE ENCABEZADO*/
@@ -21,7 +21,8 @@
     /*--------------------------------------------------*/
 
     .contacto-textos,
-    .contacto-textos-2 {
+    .contacto-textos-2,
+    .texto-tablet {
         display: none;
     }
 
@@ -175,7 +176,170 @@
 
 /*---------------------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------DISEÑO TABLET---------------------------------------------------*/
-/*@media screen and (min-width: 610px) and (max-width: 1000px) {}*/
+@media screen and (min-width: 610px) and (max-width: 1000px) {
+
+
+
+    /*--------------------------------------------------*/
+    /*OPCIONES DE LAS IMÁGENES DE ENCABEZADO*/
+    #contacto-elipse,
+    #contacto-img {
+        display: none;
+    }
+
+    /*--------------------------------------------------*/
+
+    .contacto-textos,
+
+    .verticalLine,
+    .texto-pc {
+        display: none;
+    }
+
+    .contacto_princ {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+
+    #contacto-img-princ {
+        width: 100%;
+        height: 150px;
+    }
+
+    .dentro {
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        padding: 2px;
+        font-size: 20px;
+        background: #EAEAEA80;
+        width: 100%;
+        color: black;
+    }
+
+    .formulario {
+        position: relative;
+        margin: 0 auto;
+        width: 550px;
+        height: auto;
+    }
+
+    /*diseño del formulario*/
+    .contacto-formulario {
+        height: auto;
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+
+    .contacto-formulario form {
+        width: 65vh;
+        height: 360px;
+        padding: 20px;
+        border-radius: 20px;
+        margin: 0px auto;
+        border-radius: 20px;
+    }
+
+    .contacto-formulario input,
+    .txt {
+        background-color: #EAEFF3;
+        width: 100%;
+        height: 40px;
+        border-radius: 13px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #D0DCE5;
+        margin: 3px auto;
+    }
+
+    .contacto-formulario input {
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
+
+    .contacto-formulario textarea {
+        background-color: #EAEFF3;
+        width: 99%;
+        height: 100px;
+        border-radius: 15px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #D0DCE5;
+        margin: 5px auto 10px auto;
+        padding-top: 15px;
+        padding-left: 10px;
+        resize: none;
+    }
+
+    .formulario input:focus {
+        outline: 0;
+        border: 2px solid #820053;
+    }
+
+
+    .formulario textarea:focus {
+        outline: 0;
+        border: 2px solid #820053;
+    }
+
+    .contacto-formulario ::placeholder {
+        color: black;
+
+
+    }
+
+    /*-------------------------------------------------------------------------------------------------------------------*/
+
+    /*-------------------------------------------------------------------------------------------------------------------*/
+
+    /*diseño del boton*/
+    .btn {
+        display: block;
+        width: 100%;
+        height: 50px;
+        border-radius: 50px;
+        outline: none;
+        border: none;
+        background-image: linear-gradient(to left, #820053, #8088, #820053);
+        background-size: 200%;
+        font-size: 1.2rem;
+        color: #fff;
+        margin: 0 auto;
+        cursor: pointer;
+        transition: .5s;
+    }
+
+    .btn:hover {
+        background-position: right;
+
+    }
+
+    /*--------------------------------------------------*/
+
+    .contacto-textos-2 {
+        margin: 0 auto;
+        text-align: center;
+        font-style: italic;
+        margin-bottom: 5px;
+    }
+
+    .texto-tablet {
+        margin: auto auto;
+        width: 65vh;
+        height: auto;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 16px;
+
+    }
+
+
+
+}
 
 /*-----------------------------------------------FIN DISEÑO TABLET------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------*/
@@ -189,7 +353,8 @@
         display: none;
     }
 
-    .texto-pc {
+    .texto-pc,
+    .texto-tablet {
         display: none;
     }
 
