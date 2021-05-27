@@ -17,7 +17,6 @@
     <body>
 
         <?php include_once 'header.php'?>
-<!--        <div style="padding-bottom: 70px"></div>-->
 
         <!-- Fin Botón scroll down-->
         <div class="fondo blur">
@@ -39,7 +38,7 @@
 <!-- --------------------------------------------------------------------------------------------------------------------- -->
 
         <!-- Botón scroll down Landing Page-->
-        <a class="desliz scroll-down blur" id="flecha" href="#sensores" style="z-index: 6"></a>
+        <a class="desliz scroll-down blur" id="flecha" href="#sensores"></a>
 
 
 <!-- --------------------------------------------------------------------------------------------------------------------- -->

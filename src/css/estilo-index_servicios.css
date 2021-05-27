@@ -20,14 +20,14 @@
     justify-content: space-between;
   }
 
-/*Diseño del fondo en vista de pantalla*/
-#imagen-fondo{
-    position: absolute;
-    z-index: -2;
-}
-#imagen-fondo,.fondo{
-  height: 100vh;
-}
+/*!*Diseño del fondo en vista de pantalla*!*/
+/*#imagen-fondo{*/
+/*    position: absolute;*/
+/*    z-index: -2;*/
+/*}*/
+/*#imagen-fondo,.fondo{*/
+/*  height: 100vh;*/
+/*}*/
 
 .texto-encabezado {
     align-items: center;
@@ -36,6 +36,13 @@
     font-size: 20px;
     margin-top: 6vh;
 }
+/*Responsive para ordenador*/
+@media  screen and (min-width: 1000px) {
+    .texto-encabezado {
+        font-size: 30px;
+        margin-bottom: 27vh;
+    }
+}
 
 /*Estilo del texto de relleno (información adicional)*/
 .texto_relleno{
@@ -43,6 +50,21 @@
     font-size: 18px;
     margin-left: 2vh;
     margin-right: 2vh;
+}
+@media  screen and (min-width: 1000px) {
+    .texto_relleno {
+        margin: 0 auto;
+        font-size: 22px;
+        width: 35%;
+    }
+}
+
+@media screen and (min-width: 610px) and (max-width: 833px) {
+    .texto_relleno{
+        margin: 0 auto;
+        font-size: 22px;
+        width: 35%;
+    }
 }
 /*Diseño del contenedor promoción*/
 .promocion{
@@ -93,6 +115,12 @@
 }
 
 /*-------------------------------------------------------------------------------------------------------------------*/
+.finscroll {
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
 
 /* Diseño Flecha indicadora abajo */
 .scroll-down {
@@ -100,13 +128,7 @@
     width: 100%;
     position: fixed;
     bottom: 25px;
-}
-
-.finscroll {
-  height: 60px;
-  width: 100%;
-  position: absolute;
-  bottom: 0px;
+    z-index: 6;
 }
 
 .scroll-down::before,
@@ -284,16 +306,6 @@
 
 /*Responsive para ordenador*/
 @media  screen and (min-width: 1000px) {
-    .texto-encabezado {
-        font-size: 30px;
-        margin-bottom: 27vh;
-    }
-
-    .texto_relleno{
-        margin: 0 auto;
-        font-size: 22px;
-        width: 35%;
-    }
     .boton_personalizado{
         width: 350px;
         height:60px;
@@ -353,13 +365,7 @@
 }
 
 
-@media screen and (min-width: 610px) and (max-width: 833px) {
-    .texto_relleno{
-        margin: 0 auto;
-        font-size: 22px;
-        width: 35%;
-    }
-}
+
 
 
 
