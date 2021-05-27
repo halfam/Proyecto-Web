@@ -155,7 +155,7 @@ function CrearGrafica(idSonda) {
     respuesta.appendChild(newCanvas);
 
     //CSS dels divs que contenen les grafiques
-    newDiv.setAttribute("style", "height:45vh; width:90vw; position:relative; margin: 0 auto; font-family: 'Varela Round', sans-serif; margin-bottom: 7%;  border-radius: 5px; box-shadow: 0px 0px 3px 1px black; padding: 1%; margin-top: 5%;");
+    newDiv.setAttribute("style", "height:55vh; width:90vw; position:relative; margin:0 auto; font-family: 'Varela Round', sans-serif; margin-top: 0px; margin-bottom: 3vh;  border-radius: 5px; box-shadow: 0px 0px 3px 1px black; padding: 1%; margin-top: 5%;");
 
 
     let ctx = document.getElementById('chart' + idSonda);

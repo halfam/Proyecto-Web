@@ -18,33 +18,58 @@
 
     <!-- Para que el fondo se vea borroso al iniciar sesión -->
     <div class="blur">
+        <div class="contacto_princ">
+            <div class="dentro">
+                <h1>¿Cómo podemos ayudarte?</h1>
+            </div>
+            <img src="img/contacto-img-encabezado.jpg" alt="img-contacto" id="contacto-img-princ">
+        </div>
 
         <!-- ------------------------------------------------------------------------------------------------------------------------ -->
         <!-- formulario de contacto en html y css -->
         <section class="contacto-formulario">
-            <div class="formulario">
-                <div class="contacto-textos">
-                    <h1>¿Cómo podemos ayudarte?</h1>
-                    <p>Estamos aquí para darte más información, contestar cualquier pregunta que puedas tener, y crear una solución eficiente para tus necesidades.</p>
+            <div class="contenedor-flex">
+                <div class="texto-pc">
+                    <h1>¿Quieres un producto personalizado?</h1>
+                    <br>
+                    Nosotros queremos adaptarnos a las necesidades de cada cliente, así que si tienes cualquier duda o necesidad no dudes en contactar con nosotros y explicárnosla. Le hablaremos de vuelta y concertaremos una cita para atenderle personalmente si fuera necesario.
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    *Quizás le interese ver las <a href="FAQ.php">preguntas frecuentes</a> antes de contactar con nosotros.
                 </div>
-                <script>function f() {
-                         document.getElementById("formulario_txt").reset()
-                    }
-                    f()
-                </script>
-                <form id="formulario_txt" method="post" action="enviarcorreo.php">
-                    <label>Nombre:</label>
-                    <input type="text" name="nombre" id="nombre"  required="obligatorio" placeholder="Escribe tu nombre">
+                <div class="texto-tablet">
+                    Nosotros queremos adaptarnos a las necesidades de cada cliente, así que si tienes cualquier duda o necesidad no dudes en contactar con nosotros y explicárnosla.
+                </div>
+                <div class="verticalLine"></div>
+                <div class="formulario">
+                    <div class="contacto-textos">
+                        <h1>¿Cómo podemos ayudarte?</h1>
+                        <p>Estamos aquí para darte más información, contestar cualquier pregunta que puedas tener, y crear una solución eficiente para tus necesidades.</p>
+                    </div>
+                    <script>
+                        function f() {
+                            document.getElementById("formulario_txt").reset()
+                        }
+                        f()
 
-                    <label>Email:</label>
-                    <input type="email" name="email" id="email"required="obligatorio" placeholder="Escribe tu Email">
+                    </script>
+                    <form id="formulario_txt" method="post" action="enviarcorreo.php">
+                        <label>Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
 
-                    <label>Mensaje:</label>
-                    <textarea name="mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="¿Cómo podemos ayudarte?"></textarea>
+                        <label>Email:</label>
+                        <input type="email" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email">
 
-                    <input type="submit" class="btn txt" name="enviar_formulario" value="enviar" >
+                        <label>Mensaje:</label>
+                        <textarea name="mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="¿Cómo podemos ayudarte?"></textarea>
 
-                </form>
+                        <input type="submit" class="btn txt" name="enviar_formulario" value="enviar">
+
+                    </form>
+                </div>
+
             </div>
         </section>
         <!-- ------------------------------------------------------------------------------------------------------------------------ -->

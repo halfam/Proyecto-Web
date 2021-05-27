@@ -1,18 +1,20 @@
-/*Para borde y diseño del conjunto */
+/*-----------------------------------------------DISEÑO GENERAL-----------------------------------------------*/
+/*--------------------------------------------------*/
+/*PARA BORDE Y DISEÑO DEL CONJUNTO */
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Varela Round', sans-serif;
 }
+/*--------------------------------------------------*/
 
-/*Primera parte del texto y foto*/
+/*--------------------------------------------------*/
+/*PRIMERA PARTE DEL TEXTO Y FOTO*/
 .nosotros-encabezado {
     margin: 0 auto;
     text-align: center;
 }
-
-/*Primera parte del texto y foto*/
 .nosotros-informacion {
     margin: 0 auto;
     text-align: justify;
@@ -22,17 +24,38 @@
     position: relative;
     display: inline-block;
 }
+/*--------------------------------------------------*/
+
+/*--------------------------------------------------*/
+/*TAMAÑO DEL MAPA UBICACIÓN*/
+.mapa{
+    margin-bottom: 10px;
+    text-align: center;
+}
+/*--------------------------------------------------*/
+/*----------------------------------------------FIN DISEÑO GENERAL-----------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------*/
 
 
+
+/*----------------------------------------------DISEÑO ORDENADOR-------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------*/
 @media screen and (min-width: 1000px){
-    /*Diseño de la imagen*/
+    /*--------------------------------------------------*/
+    /*OPCIONES DE LAS IMÁGENES DE ENCABEZADO*/
     #nosotros-img-pc {
         width: 100%;
         height: 220px;
         margin-bottom: -3px;
         flex: 1 1 200px;
     }
+    #nosotros-img,#nosotros-img-tablet, #nosotros-img-tabletpc {
+        display: none;
+    }
+    /*--------------------------------------------------*/
 
+    /*--------------------------------------------------*/
+    /*DISEÑO DE CADA UNO DE LOS TEXTOS*/
     .dentro{
         position: absolute;
         top: 70%;
@@ -44,88 +67,65 @@
         width: 100%;
         color: black;
     }
-
-    /*Diseño de cada uno de los textos*/
-
-
     h4{
         font-weight: normal;
         font-size: 18px;
     }
-
     h2{
-        /*text-align: center;*/
         font-size: 23px;
         margin-bottom: 5px;
 
     }
-
-    .quienes-somos{
+    .quienes-somos,.negocio,.ubicacion{
         margin: 30px 120px 25px 120px;
         /*width: 30%;*/
     }
+    /*--------------------------------------------------*/
 
-    .negocio{
-        margin: 30px 120px 5px 120px;
-    }
-
-    .modelonegociopc{
-        width: 60%;
-        margin-top: 25px;
-        margin-left: 20%;
-    }
-
-
-    .ubicacion{
-        margin: 20px 120px 25px 120px;
-    }
-
+    /*--------------------------------------------------*/
+    /*TAMAÑO DEL MAPA UBICACIÓN*/
     .mapa{
         margin-bottom: 10px;
         text-align: center;
         margin-left: 40px;
         margin-right: 40px;
     }
+    /*--------------------------------------------------*/
 
-    .modelonegociotablet{
+    /*--------------------------------------------------*/
+    /*OPCIONES DE LAS IMÁGENES DE MODELO*/
+    .modelonegociotablet,.modelonegocio{
         display: none;
     }
-
-    .modelonegocio{
-        display: none;
+    .modelonegociopc{
+        width: 60%;
+        margin-top: 25px;
+        margin-left: 20%;
     }
-
-    #nosotros-img{
-        display: none;
-    }
-
-    #nosotros-img-tablet{
-        display: none;
-    }
-
-    #nosotros-img-tabletpc{
-        display: none;
-    }
+    /*--------------------------------------------------*/
 }
+/*----------------------------------------------FIN DISEÑO ORDENADOR---------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------*/
 
+
+
+/*---------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------DISEÑO TABLET-ORDENADOR-----------------------------------------*/
 @media screen and (min-width: 833px) and (max-width: 1000px) {
+    /*--------------------------------------------------*/
+    /*OPCIONES DE LAS IMÁGENES DE ENCABEZADO*/
+    #nosotros-img, #nosotros-img-pc,#nosotros-img-tablet{
+        display: none;
+    }
     #nosotros-img-tabletpc{
         width: 100%;
         height: 220px;
         margin-bottom: -3px;
 }
-    #nosotros-img{
-        display: none;
-    }
+    /*--------------------------------------------------*/
 
-    #nosotros-img-pc{
-        display: none;
-    }
-
-    #nosotros-img-tablet{
-        display: none;
-    }
-
+    /*--------------------------------------------------*/
+    /*DISEÑO DE CADA UNO DE LOS TEXTOS*/
     .dentro{
         position: absolute;
         top: 70%;
@@ -137,72 +137,53 @@
         width: 100%;
         color: black;
     }
-
-    /*Diseño de cada uno de los textos*/
     h4{
         font-weight: normal;
         font-size: 18px;
     }
-
     h2{
         font-size: 23px;
         margin-bottom: 5px;
         text-align: center;
     }
-
-    .quienes-somos{
+    .quienes-somos,.negocio,.ubicacion{
         margin: 20px 60px 25px 60px;
     }
+    /*--------------------------------------------------*/
 
-    .negocio{
-        margin: 20px 60px 25px 60px;
+    /*--------------------------------------------------*/
+    /*OPCIONES DE LAS IMÁGENES DE MODELO*/
+    .modelonegocio,.modelonegociopc{
+        display: none;
     }
-
     .modelonegociotablet{
         width: 100%;
         margin-top: 15px;
     }
-    .objetivos{
-        margin: 20px 60px 25px 60px;
-    }
-
-    .ubicacion{
-        margin: 20px 60px 25px 60px;
-    }
-
-    .mapa{
-        margin-bottom: 10px;
-        text-align: center;
-    }
-    .modelonegocio{
-        display: none;
-    }
-
-    .modelonegociopc{
-        display: none;
-    }
-
+    /*--------------------------------------------------*/
 }
+/*-------------------------------------------FIN DISEÑO TABLET-ORDENADOR-----------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*---------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------DISEÑO TABLET---------------------------------------------------*/
 @media screen and (min-width: 610px) and (max-width: 833px) {
-    /*Diseño de la imagen*/
-    #nosotros-img{
+    /*--------------------------------------------------*/
+    /*OPCIONES DE LAS IMÁGENES DE ENCABEZADO*/
+    #nosotros-img,#nosotros-img-pc,#nosotros-img-tabletpc{
         display: none;
     }
-
-    #nosotros-img-pc{
-        display: none;
-    }
-
-    #nosotros-img-tabletpc{
-        display: none;
-    }
-
     #nosotros-img-tablet {
         width: 100%;
         height: 220px;
         margin-bottom: -3px;
     }
+    /*--------------------------------------------------*/
 
+    /*--------------------------------------------------*/
+    /*DISEÑO DE CADA UNO DE LOS TEXTOS*/
     .dentro{
         position: absolute;
         top: 70%;
@@ -214,76 +195,53 @@
         width: 100%;
         color: black;
     }
-
-    /*Diseño de cada uno de los textos*/
     h4{
         font-weight: normal;
         font-size: 18px;
     }
-
     h2{
         font-size: 23px;
         margin-bottom: 5px;
         text-align: center;
     }
-
-    .quienes-somos{
+    .quienes-somos,.negocio,.ubicacion{
         margin: 20px 60px 25px 60px;
     }
+    /*--------------------------------------------------*/
 
-    .negocio{
-        margin: 20px 60px 25px 60px;
+    /*--------------------------------------------------*/
+    /*OPCIONES DE LAS IMÁGENES DE MODELO*/
+    .modelonegocio,.modelonegociopc{
+        display: none;
     }
-
     .modelonegociotablet{
         width: 100%;
         margin-top: 15px;
     }
-    .objetivos{
-        margin: 20px 60px 25px 60px;
-    }
-
-    .ubicacion{
-        margin: 20px 60px 25px 60px;
-    }
-
-    .mapa{
-        margin-bottom: 10px;
-        text-align: center;
-    }
-    .modelonegocio{
-        display: none;
-    }
-
-    .modelonegociopc{
-        display: none;
-    }
+    /*--------------------------------------------------*/
 }
-/*-------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------FIN DISEÑO TABLET------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------*/
 
 
 
-/*-------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------DISEÑO MÓVIL--------------------------------------------------*/
 @media screen and (max-width: 610px) {
-    /*Diseño de la imagen*/
-    #nosotros-img-tablet{
+    /*--------------------------------------------------*/
+    /*OPCIONES DE LAS IMÁGENES DE ENCABEZADO*/
+    #nosotros-img-tablet,#nosotros-img-pc,#nosotros-img-tabletpc{
         display: none;
     }
-
-    #nosotros-img-pc{
-        display: none;
-    }
-
-    #nosotros-img-tabletpc{
-        display: none;
-    }
-
     #nosotros-img {
         width: 100%;
         height: 220px;
         margin-bottom: -3px;
     }
+    /*--------------------------------------------------*/
 
+    /*--------------------------------------------------*/
+    /*DISEÑO DE CADA UNO DE LOS TEXTOS*/
     .dentro{
         position: absolute;
         top: 75%;
@@ -295,52 +253,29 @@
         width: 100%;
         color: black;
     }
-
-    /*Diseño de cada uno de los textos*/
     h4{
         font-weight: normal;
     }
-
     h2{
         font-size: 20px;
         margin-bottom: 5px;
         text-align: center;
     }
-
-    .quienes-somos{
+    .quienes-somos,.negocio,.modelonegocio,.ubicacion{
         margin: 20px 32px 25px 32px;
     }
+    /*--------------------------------------------------*/
 
-    .negocio{
-        margin: 20px 32px 25px 32px;
+    /*--------------------------------------------------*/
+    /*OPCIONES DE LAS IMÁGENES DE MODELO*/
+    .modelonegociotablet,.modelonegociopc{
+        display: none;
     }
-
     .modelonegocio{
         width: 100%;
-        margin-top: 15px;
+        margin: 0 auto;
     }
-    .objetivos{
-        margin: 20px 32px 25px 32px;
-    }
-
-    .ubicacion{
-        margin: 20px 32px 25px 32px;
-    }
-
-    .mapa{
-        margin-bottom: 10px;
-        text-align: center;
-    }
-
-    .modelonegociotablet{
-        display: none;
-    }
-
-    .modelonegociopc{
-        display: none;
-    }
-
-
-
-    /*-------------------------------------------------------------------------------------------------------------------*/
+    /*--------------------------------------------------*/
 }
+/*-----------------------------------------------FIN DISEÑO MÓVIL------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------*/

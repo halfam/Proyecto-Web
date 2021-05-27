@@ -1,89 +1,40 @@
-/*Para borde y diseño del conjunto */
-*{
+/*--------------------------------------------------ESTILO GENERAL----------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------*/
+/*PARA BORDE Y DISEÑO DEL CONJUNTO */
+{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Varela Round', sans-serif;
 }
-/*-------------------------------------------------------------------------------------------------------------------*/
-@media screen and (max-width: 900px) {
-    /*Primera parte del texto y foto*/
-    .FAQ-encabezado {
-        margin: 0 auto;
-        text-align: center;
-    }
-    /*-------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------*/
 
-    /*-------------------------------------------------------------------------------------------------------------------*/
-    /*Primera parte del texto y foto*/
-    .FAQ-informacion {
-        text-align: start;
-    }
-    /*-------------------------------------------------------------------------------------------------------------------*/
-
-    /*-------------------------------------------------------------------------------------------------------------------*/
-    /*Diseño de la imagen*/
-    #FAQ-img {
-        width: 100%;
-        height: auto;
-        margin-bottom: -3px;
-    }
-    /*-------------------------------------------------------------------------------------------------------------------*/
-
-    /*-------------------------------------------------------------------------------------------------------------------*/
-    /*Diseño de cada uno de los textos*/
-
-    h2{
-        font-size: 20px;
-    }
-
-    .FAQ-principal{
-        position: relative;
-        display: inline-block;
-    }
-
-    .dentroFAQ{
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 2px;
-        font-size: 20px;
-        background: #EAEAEA80;
-        width: 100%;
-        color: black;
-    }
-
-    .preguntas{
-        margin: 10px 25px 10px 25px;
-    }
-
-    .preguntafinal{
-        margin: 20px 32px 25px 32px;
-    }
-
-    .ccto{
-        color: #820053;
-        text-decoration: underline;
-    }
-
-    .preguntafinal h2{
-        text-align: center;
-        margin: 2% 0 2% 0;
-    }
-
-    .preguntafinal p{
-        text-align: justify;
-    }
-
-
-    /*-------------------------------------------------------------------------------------------------------------------*/
-    .preguntas-respuestas {
-        width: 100%;
-    }
-
+/*--------------------------------------------------*/
+/*POSICION PARA EL TITULO*/
+.FAQ-encabezado {
+    margin: 0 auto;
+    text-align: center;
 }
+.FAQ-principal{
+    position: relative;
+    display: inline-block;
+}
+.dentroFAQ{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2px;
+    font-size: 20px;
+    background: #EAEAEA80;
+    width: 100%;
+    color: black;
+}
+/*--------------------------------------------------*/
 
+/*--------------------------------------------------*/
+/*COLORES ESTABLECIDOS */
 :root {
     --softRed: hsl(14, 88%, 65%);
     --veryDarkGrayBlue: hsl(237, 12%, 33%);
@@ -91,62 +42,172 @@
     --lightGrayBlue: hsl(240, 5%, 91%);
     --fontSize: 12px;
 }
+/*--------------------------------------------------*/
 
-.preguntas-respuestas > .respuestas {
-    display: none;
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------DISEÑO ORDENADOR---------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 900px) {
+/*    opciones para la imagen de arriba*/
+    #FAQ-img {
+        display: none;
+    }
+    #FAQ-imgpc{
+        height: 210px;
+        width: 100%;
+    }
+
+    /*--------------------------------------------------*/
+    /*POSICION DE LAS PREGUNTAS Y RESPUESTAS*/
+    .titulopreguntas{
+        margin: 30px 120px 10px 120px;
+        font-size: 23px;
+    }
+    .respuestas{
+        text-align: justify;
+        font-size: 19px;
+        margin: 0 120px 40px 125px;
+    }
+    .preguntafinal{
+        text-align: center;
+        font-size: 19px;
+        margin: 0 120px 20px 120px;
+    }
+    .preguntafinal p{
+        margin-bottom: 60px;
+        margin-left: 5px;
+    }
+    .preguntafinal h2{
+        margin-bottom: 10px;
+        font-size: 23px;
+    }
+    .ccto{
+        color: #820053;
+        text-decoration: underline;
+    }
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*HACER QUE LA FLECHA NO APAREZCA*/
+    .flechaFAQ{
+        display: none;
+    }
+    /*--------------------------------------------------*/
 }
 
-.active > .respuestas {
-    display: block;
-    padding-bottom: 1.3rem;
-    margin: 0px 7% 0px 7%;
-    text-align: justify;
+/*-----------------------------------------------FIN DISEÑO ORDENADOR-------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------DISEÑO TELEFONO----------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 900px) {
+    /*--------------------------------------------------*/
+    /*EDICION PARA LA IMAGEN*/
+    #FAQ-img {
+        width: 100%;
+        height: auto;
+        margin-bottom: -3px;
+    }
+    #FAQ-imgpc{
+        display: none;
+    }
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*ESTILOS Y POSICION DE LOS TEXTOS Y RESPUESTAS*/
+    .preguntas{
+        margin: 10px 25px 10px 25px;
+    }
+    .preguntafinal{
+        margin: 20px 32px 25px 32px;
+    }
+    .ccto{
+        color: #820053;
+        text-decoration: underline;
+    }
+    .preguntafinal h2{
+        text-align: center;
+        margin: 2% 0 2% 0;
+    }
+    .preguntafinal p{
+        text-align: justify;
+    }
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*HACER QUE LAS RESPUESTAS NO SE VEAN PRIMERO*/
+    .preguntas-respuestas > .respuestas {
+        display: none;
+    }
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*HACER QUE AL PRESIONAR LA PREGUNTA APAREZCA LA RESPUESTA*/
+    .active > .respuestas {
+        display: block;
+        padding-bottom: 1.3rem;
+        margin: 0px 7% 0px 7%;
+        text-align: justify;
+    }
+    .respuestas{
+        margin: 0 auto;
+    }
+    /*LA FLECHA SE MEUEVE AL PRESIONAR LA PREGUNTA*/
+    .active img {
+        transform: rotate(180deg);
+        transition: all 0.3s ease-in;
+    }
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*VISUALIZACIÓN PREGUNTAS*/
+    .preguntas-acordeon {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*LINEA SEPARATORIA ENTRE PREGUNTAS*/
+    .preguntas-respuestas {
+        width: 100%;
+        border-bottom: 2px solid #d5d5dc;
+    }
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*OPCIONES DEL TEXTO DE LAS PREGUNTAS*/
+    .titulopreguntas {
+        font-weight: 100;
+        font-size: 1.2rem;
+        color: (var(--veryDarkGrayBlue));
+        margin: 1.4rem;
+    }
+    .active h2 {
+        font-weight: 600;
+    }
+
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*DISEÑO FLECHAS DESPLEGABLE*/
+    .preguntas {
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    .preguntas img {
+        align-self: center;
+    }
+    /*--------------------------------------------------*/
+
 }
-
-.active img {
-    transform: rotate(180deg);
-    transition: all 0.3s ease-in;
-}
-
-
-.preguntas-acordeon {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.preguntas-respuestas {
-    width: 100%;
-    border-bottom: 2px solid #d5d5dc;
-}
-
-
-.titulopreguntas {
-    font-weight: 100;
-    font-size: 1.2rem;
-    color: (var(--veryDarkGrayBlue));
-    margin: 1.4rem;
-}
-
-.preguntas {
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-.active h2 {
-    font-weight: 600;
-}
-
-.preguntas img {
-    align-self: center;
-}
-
-.respuestas{
-    margin: 0 auto;
-}
-
+/*---------------------------------------------FIN DISEÑO TELEFONO----------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
 
 

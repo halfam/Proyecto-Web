@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,shrink-to-fit=no,initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Nosotros</title>
+    <title>Preguntas Frecuentes</title>
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <link rel="stylesheet" href="css/estilo-header_footer.css">
     <link rel="stylesheet" href="css/FAQ.css">
@@ -23,6 +23,8 @@
     <div class="FAQ-principal">
         <div class="dentroFAQ"><h1>Preguntas Frecuentes</h1></div>
         <img src="img/FAQ.jpg" alt="Imagen FAQ" id="FAQ-img">
+        <img src="img/preguntaspc.png" alt="Imagen FAQ" id="FAQ-imgpc">
+
     </div>
 </section>
 <!-- ------------------------------------------------------------------------------------------------------------------------ -->
@@ -39,7 +41,7 @@
 
                 <!--  Pregunta   -->
                 <h2 class="titulopreguntas">¿Qué productos vendemos?</h2>
-                <img src="img/icon-arrow-down.svg" >
+                <img src="img/icon-arrow-down.svg" class="flechaFAQ">
             </div>
 
             <!--  Respuesta   -->
@@ -58,7 +60,7 @@
 
                 <!--  Pregunta   -->
                 <h2 class="titulopreguntas">¿Qué abarca nuestro servicio?</h2>
-                <img src="img/icon-arrow-down.svg" >
+                <img src="img/icon-arrow-down.svg" class="flechaFAQ">
             </div>
 
             <!--  Respuesta   -->
@@ -67,14 +69,14 @@
                 ver los datos de su campo, por lo que el servicio que ofrecemos se puede resumir en tres simples pasos.
                 <br>
                 <br>
-                1. Nos desplazamos hasta el terreno que se desea monitorizar para revisarlo y ver los sensores que son necesarios
+                1-. Nos desplazamos hasta el terreno que se desea monitorizar para revisarlo y ver los sensores que son necesarios
                 utilizar.
                 <br>
                 <br>
-                2. Instalamos los sensores acordados en las posiciones óptimas del terreno.
+                2-. Instalamos los sensores acordados en las posiciones óptimas del terreno.
                 <br>
                 <br>
-                3. Le entregamos las credenciales para acceder a nuestra apliación web y poder ver los datos de su terreno en
+                3-. Le entregamos las credenciales para acceder a nuestra apliación web y poder ver los datos de su terreno en
                 tiempo real.
             </div>
         </div>
@@ -88,7 +90,7 @@
 
                 <!--  Pregunta   -->
                 <h2 class="titulopreguntas">¿Qué datos son capaces de ofrecer las sondas?</h2>
-                <img src="img/icon-arrow-down.svg" >
+                <img src="img/icon-arrow-down.svg" class="flechaFAQ">
             </div>
 
             <!--  Respuesta   -->
@@ -107,7 +109,7 @@
 
                 <!--  Pregunta   -->
                 <h2 class="titulopreguntas">¿Qué datos podemos visualizar en la web?</h2>
-                <img src="img/icon-arrow-down.svg" >
+                <img src="img/icon-arrow-down.svg" class="flechaFAQ">
             </div>
 
             <!--  Respuesta   -->

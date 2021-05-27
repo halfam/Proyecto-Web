@@ -49,6 +49,7 @@
             <div class="servicios-principal">
                 <div class="dentro"><h1>Servicios</h1></div>
                 <img src="img/servicios.jpg" alt="servicios-img" id="servicios-img">
+                <img src="img/servicios1.jpg" alt="servicios-img" id="servicios-img1">
             </div>
         </section>
 
@@ -57,6 +58,7 @@
             <h2 class="titulo" >Nuestros Sensores</h2>
 
             <!-- Humedad -->
+            <div class="contenedor-sensores">
             <div class="display">
                 <div class="divisiones">
                 <img src="img/humedad.svg" alt="humedad" class="sens">
@@ -87,55 +89,60 @@
                     <p>Obtiene el porcentaje de luminosidad en cualquier momento del día.</p>
                 </div>
             </div>
+            </div>
 
 <!-- --------------------------------------------------------------------------------------------------------------------- -->
         </section>
 
         <!-- Sección Adquirir Servicio -->
         <section class="adquirir_servicios blur" id="adquirir_servicios">
-            <h2 class="titulo">¿Cómo adquirir nuestro servicio?</h2>
 
+            <h2 class="titulo">¿Cómo adquirir nuestro servicio?</h2>
             <!-- CONTÁCTANOS -->
-            <div class="contacto">
-                <h4><b>CONTÁCTANOS</b></h4>
-                <img src="img/contacto.svg" alt="contacto" class="img1">
+            <div class="contenedor-nuestro">
+            <div class="contenedor-servicios">
+                <h4><b>1-. CONTÁCTANOS</b></h4>
+                <img src="img/contacto.svg" alt="contacto" class="img-guia">
                 <p class="text">Póngase en contacto con nosotros mediante el formulario de contacto.</p>
             </div>
 
             <!--ESPERA NUESTRA RESPUESTA-->
-            <div class="espera">
-                <h4><b>ESPERA NUESTRA RESPUESTA</b></h4>
-                <img src="img/email.svg" alt="espera" class="img2">
+            <div class="contenedor-servicios">
+                <h4><b>2-. ESPERA NUESTRA RESPUESTA</b></h4>
+                <img src="img/email.svg" alt="espera" class="img-guia">
                 <p class="text">Nos pondremos en contacto contigo en menos de 24/48h.</p>
             </div>
 
             <!--SELECCIONA LA FECHA DE REUNIÓN-->
-            <div class="cita">
-                <h4><b>SELECCIONA LA FECHA DE REUNIÓN</b></h4>
-                <img src="img/cita.svg" alt="cita" class="img3">
+            <div class="contenedor-servicios">
+                <h4><b>3-. SELECCIONA LA FECHA DE REUNIÓN</b></h4>
+                <img src="img/cita.svg" alt="cita" class="img-guia">
                 <p class="text">Elegiremos una fecha que se adapte a tu horario para poder revisar tu terreno y
                     elegir los sensores necesarios.</p>
             </div>
 
+
             <!--RECIBE LA INSTALACIÓN-->
-            <div class="instalacion">
-                <h4><b>RECIBE LA INSTALACIÓN</b></h4>
-                <img src="img/instalation.svg" alt="instalación" class="img4">
+            <div class="contenedor-servicios">
+                <h4><b>4-. RECIBE LA INSTALACIÓN</b></h4>
+                <img src="img/instalation.svg" alt="instalación" class="img-guia">
                 <p class="text">Una vez acordados los sensores necesarios, uno de nuestros profesionales
                     realizará la instalación.</p>
             </div>
 
             <!--ACCEDE A LA PÁGINA WEB-->
-            <div class="credenciales">
-                <h4><b>ACCEDE A LA PÁGINA WEB</b></h4>
-                <img src="img/password.svg" alt="credenciales" class="img5">
+            <div class="contenedor-servicios">
+                <h4><b>5-. ACCEDE A LA PÁGINA WEB</b></h4>
+                <img src="img/password.svg" alt="credenciales" class="img-guia">
                 <p class="text">Finalmente, te otorgaremos tus credenciales para poder consultar en la web todos los
                     datos de tu terreno.</p>
-                <h4 class="sencillo"><b>¡ASÍ DE SENCILLO!</b></h4>
             </div>
+            </div>
+            <h4 class="sencillo"><b>¡ASÍ DE SENCILLO!</b></h4>
+        </section>
 
             <!--¡ASÍ DE SENCILLO!-->
-            <section class="masinfo">
+            <section class="masinfo blur">
             <p>Si deseas conocer más información o adquirir nuestro servicio, no dudes
                 en contactarnos mediante nuestro:</p> <a href="contacto.php" class="a">Formulario
                 de contacto</a>

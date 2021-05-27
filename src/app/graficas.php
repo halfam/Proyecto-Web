@@ -36,19 +36,22 @@
         <div class="graficas_princ">
             <div class="dentro"><h1>Información detallada</h1></div>
             <img src="../img/grafic.jpg" alt="img-graficas" id="graficas-img">
-            <a href="miscampos.php" class="flecha_atras_bonita_bonita"><i class="fas fa-arrow-circle-left"></i></a>
+            <div class="interracion-usuario">
+                <a href="miscampos.php" class="flecha_atras_bonita_bonita"><i class="fas fa-arrow-circle-left"></i></a>
+            <p class="mostrar-mis-datos">Mostrar datos desde: </p>
             <select name="tiempo" id="tiempo" onchange="cambiarTiempo(this.value)">
                 <option value="1">1 día</option>
                 <option value="7">1 semana</option>
                 <option value="30">1 mes</option>
                 <option value="365">1 año</option>
             </select>
+            </div>
         </div>
     </section>
     <div class="graficas" id="base_graficas"></div>
-    <div class="comparar" >
+    <!--<div class="comparar" >
         <i class="fas fa-plus-circle fa-2x" onclick="nuevaSonda()"></i>
-    </div>
+    </div>-->
     <?php include_once $path.'footer.php' ?>
 
 
