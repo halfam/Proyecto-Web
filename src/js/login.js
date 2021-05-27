@@ -39,7 +39,7 @@ function logout() {
         method: 'DELETE',
     }).then(function(respuesta) {
         if (respuesta.ok) {
-            var opcion = confirm("Estás seguro vas a cerrar la sesión?")
+            var opcion = confirm("¿Estás seguro de que quieres cerrar sesión?")
             if (!opcion){
                 return
             }
