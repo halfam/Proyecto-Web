@@ -39,6 +39,9 @@
                     <br>
                     *Quizás le interese ver las <a href="FAQ.php">preguntas frecuentes</a> antes de contactar con nosotros.
                 </div>
+                <div class="texto-tablet">
+                    Nosotros queremos adaptarnos a las necesidades de cada cliente, así que si tienes cualquier duda o necesidad no dudes en contactar con nosotros y explicárnosla.
+                </div>
                 <div class="verticalLine"></div>
                 <div class="formulario">
                     <div class="contacto-textos">
