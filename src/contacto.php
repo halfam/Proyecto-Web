@@ -39,9 +39,6 @@
                     <br>
                     *Quizás le interese ver las <a href="FAQ.php">preguntas frecuentes</a> antes de contactar con nosotros.
                 </div>
-                <div class="texto-tablet">
-                    Nosotros queremos adaptarnos a las necesidades de cada cliente, así que si tienes cualquier duda o necesidad no dudes en contactar con nosotros y explicárnosla.
-                </div>
                 <div class="verticalLine"></div>
                 <div class="formulario">
                     <div class="contacto-textos">
@@ -65,7 +62,7 @@
                         <label>Mensaje:</label>
                         <textarea name="mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="¿Cómo podemos ayudarte?"></textarea>
 
-                        <input type="submit" class="btn txt" name="enviar_formulario" value="enviar">
+                        <input type="submit" class="btn txt" name="enviar_formulario" value="Enviar">
 
                     </form>
                 </div>
