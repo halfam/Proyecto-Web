@@ -24,19 +24,22 @@
                 <li class="nav-link">
                     <a href="<?php echo $path?>nosotros.php" id="nosotros">Nosotros</a>
                 </li>
+
+                <li class="nav-link" id="login2">
+                    <a class="buto solid login-dsk butolog" id="login" onclick="loginBlur(true)">Iniciar Sesión</a>
+                </li>
+
+
             </ul>
 
             <!-- ----------------- -->
-
-            <!-- BOTÓN DE LOGIN -->
-            <a class="buto solid login-dsk butolog" id="login" onclick="loginBlur(true)">Iniciar Sesión</a>
         </nav>
         <!-- -------------------------------------------------------------------------------------------------------------------------- -->
 
         <!-- BOTON MENU -->
         <div class="hamburger-menu-container">
-            <a class="close-sesion" id="close_sesion" onclick="logout()"><img class="cerrarsesion" src="<?php echo $path?>img/cerrar-sesion.png" alt="cerrar sesion"></a>
-            <a class="picuser login" id="picuser" onclick="loginBlur(true)"><img src="<?php echo $path?>img/bx-user.svg" alt="userpic"></a>
+<!--            <a class="close-sesion" id="close_sesion" onclick="logout()"><img class="cerrarsesion" src="--><?php //echo $path?><!--img/cerrar-sesion.png" alt="cerrar sesion"></a>-->
+<!--            <a class="picuser login" id="picuser" onclick="loginBlur(true)"><img src="--><?php //echo $path?><!--img/bx-user.svg" alt="userpic"></a>-->
             <div class="hamburger-menu" onclick="checkit()"></div>
         </div>
 
