@@ -35,7 +35,9 @@
     <section class="cabecera_princ" >
         <div class="graficas_princ">
             <div class="dentro"><h1>Información detallada</h1></div>
-            <img src="../img/grafic.jpg" alt="img-graficas" id="graficas-img">
+            <img src="../img/grafic.png" alt="img-graficas" id="graficas-img">
+            <img src="../img/grafic2.png" alt="img-graficas" id="graficas-img2">
+            <img src="../img/grafic3.png" alt="img-graficas" id="graficas-img3">
             <div class="interracion-usuario">
                 <a href="miscampos.php" class="flecha_atras_bonita_bonita"><i class="fas fa-arrow-circle-left"></i></a>
             <p class="mostrar-mis-datos">Mostrar datos desde: </p>
