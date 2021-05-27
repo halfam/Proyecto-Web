@@ -39,6 +39,10 @@ function logout() {
         method: 'DELETE',
     }).then(function(respuesta) {
         if (respuesta.ok) {
+            var opcion = confirm("Estás seguro vas a cerrar la sesión?")
+            if (!opcion){
+                return
+            }
             sessionStorage.clear();
             location.href = path+'index.php';
         }
