@@ -14,7 +14,7 @@
 
 <body>
 <?php include_once 'header.php'?>
-<div class="headerFAQ" style="height: 70px"></div>
+<div class="header"></div>
 
 <!-- ------------------------------------------------------------------------------------------------------------------------ -->
 <!-- Sección imagen y titulo Nosotros -->

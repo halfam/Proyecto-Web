@@ -1,4 +1,4 @@
-var path;
+var path = "";
 if (!location.pathname.includes("/app/")){
     path = "./"
 }else{
@@ -44,13 +44,13 @@ function comprobarSesion() {
     }).then(function (data) {
         if (data != undefined || data != null){
             getUser(data['id'])
+
         }
     })
-    // console.log(sesion)
-    // return sesion
+
 }
+
 function getUser(id) {
-    var user = [];
     fetch(path+'api/v1.0/user/'+id,{
         method: 'GET'
     }).then(function (respuesta){
@@ -59,15 +59,16 @@ function getUser(id) {
         }
     }).then(function (data){
         cambiarMenu(data[0]['rol'])
-        user['id']= data['id'];
-        user['nombre']= data['nombre'];
-        user['rol']= data['rol'];
+        if (location.pathname.includes("contacto.php")){
+            document.getElementById("nombre").setAttribute("value", data[0]['Apodo'])
+            document.getElementById("email").setAttribute("value", data[0]['correo'])
+        }
+
         let picuser = document.querySelectorAll(".login")
         picuser.forEach(function (elem) {
             elem.setAttribute("href", path+"app/miperfil.php" )
             // elem.setAttribute("onclick", "")
         })
-        document.getElementById("close_sesion").setAttribute("style", "display: inline")
         /*
        // let picuser = document.querySelector("#picuser")
         let rt = data[0]['fotoPerfil']
@@ -76,7 +77,8 @@ function getUser(id) {
         //picuser.childNodes[0].setAttribute('src', path+ruta)
         */
     })
-    return user;
+
+
 }
 
 
