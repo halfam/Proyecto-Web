@@ -22,7 +22,8 @@
             <div class="dentro">
                 <h1>¿Cómo podemos ayudarte?</h1>
             </div>
-            <img src="img/contacto-img-encabezado.jpg" alt="img-contacto" id="contacto-img-princ">
+            <img src="img/contacto-img-encabezado.png" alt="img-contacto" id="contacto-img-princ">
+            <img src="img/contacto-img-encabezado2.png" alt="img-contacto" id="contacto-img-princ2">
         </div>
 
         <!-- ------------------------------------------------------------------------------------------------------------------------ -->
