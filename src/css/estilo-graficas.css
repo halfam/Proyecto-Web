@@ -7,25 +7,29 @@
     font-family: 'Varela Round', sans-serif;
 
 }
+/*Diseño título de la gráfica*/
 .tituloGraficas{
     text-align: center;
     margin: 2rem;
 }
-
+/*Estilo de la section*/
 .cabecera_princ {
     margin: 0 auto;
     text-align: center;
 }
+/*Elementos de arriba de la gráfica*/
 .graficas_princ{
     position: relative;
     display: inline-block;
 }
+/*Imágen título*/
 #graficas-img {
     width: 100vw;
     height: 20vh;
     margin-bottom: -3px;
 
 }
+/*Dentro de la imagen del título*/
 .dentro{
     position: absolute;
     top: 38%;
@@ -37,12 +41,14 @@
     width: 100%;
     color: black;
 }
+/*Texto de las gráficas*/
 .texto_graficas{
     width: 90%;
     text-align: justify;
     margin: 0 auto;
     margin-top: 4%;
 }
+/*Botón atrás*/
 .flecha_atras_bonita_bonita{
     text-decoration: none;
     margin-top: 2%;
@@ -50,20 +56,22 @@
     margin-left: 0px;
     text-align: left;
 }
+/*Texto para la lista*/
 .mostrar-mis-datos{
     margin-left: auto;
     margin-right: 10px;
 }
+/*Desplegable del tiempo*/
 .tiempo{
     padding-right: 20px;
 }
-
+/*Círculo de la flecha de atrás*/
 .fa-arrow-circle-left{
     margin-left: 4vw;
     color: #820053;
     font-size: 1.9rem;
 }
-
+/*Contenedor*/
 .interracion-usuario{
     width: 100vw;
     display: flex;
@@ -76,7 +84,6 @@
     display: flex;
     justify-content: center;
 }*/
-
 #graficas-img2{
     display: none;
 }
@@ -90,17 +97,21 @@
 /*----------------------------------------------DISEÑO ORDENADOR-------------------------------------------------*/
 /*---------------------------------------------------------------------------------------------------------------*/
 @media  screen and (min-width: 800px) {
+    /*Interacción del usuario*/
     .interracion-usuario {
         margin-bottom: 0px;
     }
+    /*Imagen 1 de la cabecera de la página*/
     #graficas-img{
         display: none;
     }
+    /*Imagen 2 para PC*/
     #graficas-img2{
         display: initial;
         width: 100%;
         height: 160px;
     }
+    /*Imagen 3*/
     #graficas-img3{
         display: none;
     }
@@ -109,6 +120,7 @@
 /*---------------------------------------------FIN DISEÑO TABLET-------------------------------------------------*/
 /*---------------------------------------------------------------------------------------------------------------*/
 @media  screen and (min-width: 520px) and (max-width: 800px){
+    /*Cambios de imagen de la cabecera*/
     #graficas-img{
         display: none;
     }

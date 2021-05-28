@@ -45,18 +45,21 @@
     margin-left: 2vh;
     margin-right: 2vh;
 }
+/*Estilos para PC*/
 @media  screen and (min-width: 1000px) {
+    /*Estilo del texto del encabezado*/
      .texto-encabezado {
         font-size: 30px;
         margin-bottom: 27vh;
     }
+    /*Estilo del texto adicional*/
     .texto_relleno {
         margin: 0 auto;
         font-size: 22px;
         width: 35%;
     }
 }
-
+/*Diseño para tablet*/
 @media screen and (min-width: 610px) and (max-width: 833px) {
     .texto_relleno{
         margin: 0 auto;
