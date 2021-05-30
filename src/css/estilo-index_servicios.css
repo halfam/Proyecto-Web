@@ -285,6 +285,9 @@
         font-size: 25px;
         margin-bottom: 5px;
     }
+    h4::first-letter{
+        font-size: 1.5rem;
+    }
 
     .masinfo{
         text-align: center;
