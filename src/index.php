@@ -138,7 +138,7 @@
                 datos de tu terreno.</p>
         </div>
     </div>
-    <h4 class="sencillo"><b>¡ASÍ DE SENCILLO!</b></h4>
+    <h3 class="sencillo"><b>¡ASÍ DE SENCILLO!</b></h3>
 </section>
 
 <!--¡ASÍ DE SENCILLO!-->
