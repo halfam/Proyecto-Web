@@ -165,11 +165,15 @@
 }
 
 .buto.solid, .buto.transparent:hover{
-  background-color: #fff;
-  color: #820053;
+  /*background-color: #fff;*/
+  /*color: #820053;*/
     margin: 10px 10px;
     padding: 10px;
     text-align: center;
+}
+
+a, button{
+    cursor: pointer;
 }
 
 .buto.transparent, .buto.solid:hover{
