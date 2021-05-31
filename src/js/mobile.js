@@ -60,8 +60,13 @@ function getUser(id) {
     }).then(function (data){
         cambiarMenu(data[0])
         if (location.pathname.includes("contacto.php")){
-            document.getElementById("nombre").setAttribute("value", data[0]['Apodo'])
-            document.getElementById("email").setAttribute("value", data[0]['correo'])
+            let inputNombre = document.getElementById("nombre")
+            inputNombre.setAttribute("value", data[0]['Apodo'])
+            inputNombre.setAttribute("readonly", "")
+
+            let inputEmail = document.getElementById("email")
+            inputEmail.setAttribute("value", data[0]['correo'])
+            inputEmail.setAttribute("readonly", "")
         }
 
         let picuser = document.querySelectorAll(".login")
