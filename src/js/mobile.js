@@ -58,7 +58,7 @@ function getUser(id) {
             return respuesta.json()
         }
     }).then(function (data){
-        cambiarMenu(data[0]['rol'])
+        cambiarMenu(data[0])
         if (location.pathname.includes("contacto.php")){
             document.getElementById("nombre").setAttribute("value", data[0]['Apodo'])
             document.getElementById("email").setAttribute("value", data[0]['correo'])
@@ -83,15 +83,16 @@ function getUser(id) {
 
 
 
-function cambiarMenu(rol) {
+function cambiarMenu(user) {
+    let rol = user['rol'];
+    let nombre = user['Apodo']
     let menu = document.getElementById('lista-menu')
     let miPerfil = document.createElement('li')
     miPerfil.classList.add('nav-link')
-    miPerfil.innerHTML="<a href='"+path+"app/miperfil.php'>Mi perfil</a>"
+    miPerfil.innerHTML="<a href='"+path+"app/miperfil.php'>"+nombre+"</a>"
     menu.appendChild(miPerfil)
     document.getElementById("login").innerText="Cerrar sesión";
     document.getElementById("login").setAttribute("onclick", "logout()");
-
 
     switch (rol) {
         case 'usuario':
