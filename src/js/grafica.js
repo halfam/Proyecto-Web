@@ -1,18 +1,18 @@
 var path;
-if (!location.pathname.includes("/app/")){
+if (!location.pathname.includes("/app/")) {
     path = "./"
-}else{
+} else {
     path = "../"
 }
 
-//Este es el array en les id de les sondes que va a dibuixar
 
 let idSondas;
 let tiempo = 7;
+let auxTiempo = 0;
 
 function cargarMediciones(id) {
 
-    fetch(path+'api/v1.0/modelos/get-mediciones.php?id=' + id+"&tiempo="+tiempo, {
+    fetch(path + 'api/v1.0/modelos/get-mediciones.php?id=' + id + "&tiempo=" + tiempo, {
         method: 'GET',
     }).then(function (respuesta) {
         if (respuesta.ok) {
@@ -21,8 +21,34 @@ function cargarMediciones(id) {
     }).then(function (data) {
 
         if (data == null) {
-            data =[];
-            data.push({idSonda: id, idPosicion: "", fecha:null,temperatura:0,humedad:0,salinidad:0,luminosidad:0})
+            data = [];
+            data.push({
+                idSonda: id,
+                idPosicion: "",
+                fecha: null,
+                temperatura: 0,
+                humedad: 0,
+                salinidad: 0,
+                luminosidad: 0
+            })
+            let selectTiempo = document.getElementById("tiempo");
+            switch (auxTiempo) {
+                case 0:
+                    cambiarTiempo(7);
+                    auxTiempo++;
+                    selectTiempo.options[1].setAttribute("selected", true)
+                    break;
+                case 1:
+                    cambiarTiempo(30);
+                    auxTiempo++;
+                    selectTiempo.options[2].setAttribute("selected", true)
+                    break;
+                case 2:
+                    cambiarTiempo(365);
+                    auxTiempo++;
+                    selectTiempo.options[3].setAttribute("selected", true)
+                    break;
+            }
         }
         procesarDatos(data);
 
@@ -54,11 +80,11 @@ function procesarDatos(mediciones) {
         }
     })
     datos.labels = fechas;
-    datos.datasets[0].data = temperatura;
-    datos.datasets[1].data = luminosidad;
-    datos.datasets[2].data = salinidad;
-    datos.datasets[3].data = humedad;
-    opciones.plugins.title.text = "Los datos obtenidos por la sonda " +id;
+    datos.datasets[0].data = humedad;
+    datos.datasets[1].data = salinidad;
+    datos.datasets[2].data = luminosidad;
+    datos.datasets[3].data = temperatura;
+    opciones.plugins.title.text = "Los datos obtenidos por la sonda " + id;
     CrearGrafica(id);
 }
 
@@ -73,21 +99,24 @@ let datos = {
             pointStyle: 'point',
             pointRadius: 5,
         },
-        { label: 'Salinidad (%)',
+        {
+            label: 'Salinidad (%)',
             backgroundColor: 'rgb(25,100,255)',
             borderColor: 'rgb(25,100,255)',
             tension: 0.3,
             pointStyle: 'point',
             pointRadius: 5,
         },
-        { label: 'Luminosidad (%)',
+        {
+            label: 'Luminosidad (%)',
             backgroundColor: 'rgb(245,241,19)',
             borderColor: "rgb(245,241,19)",
             tension: 0.3,
             pointStyle: 'point',
             pointRadius: 5,
         },
-        { label: 'Temperatura (ºC)',
+        {
+            label: 'Temperatura (ºC)',
             backgroundColor: 'rgb(255, 0, 0)',
             borderColor: "rgb(255, 0, 0)",
             tension: 0.3,
@@ -116,7 +145,7 @@ let opciones = {
 
         },
         title: {
-            display:true,
+            display: true,
             text: ' ',
         },
         tooltips: {
@@ -130,11 +159,12 @@ let opciones = {
     }
 };
 var miGrafica;
+
 function CrearGrafica(idSonda) {
 
     // console.log("hola")
-    var grafica =document.getElementById("chart" + idSonda)
-    if (grafica){
+    var grafica = document.getElementById("chart" + idSonda)
+    if (grafica) {
         console.log(grafica)
         miGrafica.update()
         return
