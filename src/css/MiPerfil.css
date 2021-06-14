@@ -88,6 +88,21 @@ body {
     position: relative;
     border-radius: 50%;
 }
+
+/*-------------------------------------------------------*/
+/*DISEÑO BOTÓN CAMBIAR FOTO DE PERFIL*/
+.seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar {
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    border: 0;
+    background-color: #fff;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
 /*-------------------------------------------------------*/
 
 /*-------------------------------------------------------*/
@@ -203,4 +218,6 @@ body {
 
 /*--------------------------------------------FIN DISEÑO DE LO VISIBLE------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------------*/
+
+
 
