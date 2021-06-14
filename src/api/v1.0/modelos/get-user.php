@@ -1,7 +1,9 @@
 <?php
 if (!isset($conn)) $conn = "";
 
-$sql = "SELECT `id`, `nombre`, `rol`, `fotoPerfil`, `correo`, `fechaAlta`, `telefono`, `Apodo`, `Direccion` FROM  `usuario` WHERE `id` = '$parametrosPath[0]'" ;
+$sql = "SELECT `id`, `nombre`, `rol`, `fotoPerfil`, `correo`, `fechaAlta`, `telefono`, `Apodo`, `Direccion` FROM  `usuario` " ;
+
+if (isset($parametrosPath[0]) && $parametrosPath[0]!="") $sql .= "WHERE `id` = '$parametrosPath[0]'";
 
 $result = mysqli_query($conn, $sql);
 $salida = [];
