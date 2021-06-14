@@ -80,10 +80,10 @@
     width: 90%;
 }
 
-/*.comparar{
+.comparar{
     display: flex;
     justify-content: center;
-}*/
+}
 #graficas-img2{
     display: none;
 }

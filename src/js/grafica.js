@@ -11,15 +11,14 @@ let tiempo = 7;
 let auxTiempo = 0;
 
 function cargarMediciones(id) {
-
-    fetch(path + 'api/v1.0/modelos/get-mediciones.php?id=' + id + "&tiempo=" + tiempo, {
+    console.log("cargando mediciones de la sonda " + id)
+    fetch(path + 'api/v1.0/modelos/get-mediciones.php?id=' + id + "&tiempo=" + 365, {
         method: 'GET',
     }).then(function (respuesta) {
         if (respuesta.ok) {
             return respuesta.json();
         }
     }).then(function (data) {
-
         if (data == null) {
             data = [];
             data.push({
@@ -50,8 +49,9 @@ function cargarMediciones(id) {
                     break;
             }
         }
-        procesarDatos(data);
 
+
+        procesarDatos(data);
     })
 }
 
@@ -67,8 +67,9 @@ function procesarDatos(mediciones) {
     let salinidad = [];
     let humedad = [];
     let id;
-
+    console.log(mediciones)
     mediciones.forEach(function (medicion) {
+        console.log("la medicion es de la sonda: " + medicion.idSonda)
         let i = fechas.indexOf(medicion.fecha);
         if (i < 0) {
             fechas.push(medicion.fecha);
@@ -84,9 +85,15 @@ function procesarDatos(mediciones) {
     datos.datasets[1].data = salinidad;
     datos.datasets[2].data = luminosidad;
     datos.datasets[3].data = temperatura;
+    console.log(datos.datasets[0].data)
     opciones.plugins.title.text = "Los datos obtenidos por la sonda " + id;
+
+    dts.push(datos)
+    ops.push(opciones)
     CrearGrafica(id);
 }
+var dts = []
+var ops = []
 
 let datos = {
     labels: [],
@@ -162,14 +169,12 @@ var miGrafica;
 
 function CrearGrafica(idSonda) {
 
-    // console.log("hola")
     var grafica = document.getElementById("chart" + idSonda)
     if (grafica) {
         console.log(grafica)
         miGrafica.update()
         return
     }
-    // console.log("hola")
     var newDiv = document.createElement("div");
     newDiv.id = "chart-container" + idSonda;
 
@@ -186,13 +191,14 @@ function CrearGrafica(idSonda) {
 
     //CSS dels divs que contenen les grafiques
     newDiv.setAttribute("style", "height:55vh; width:90vw; position:relative; margin:0 auto; font-family: 'Varela Round', sans-serif; margin-top: 0px; margin-bottom: 3vh;  border-radius: 5px; box-shadow: 0px 0px 3px 1px black; padding: 1%; margin-top: 3%;");
-
-
+    // console.info( dts[0].datasets[0].data)
+    // console.info( dts[1].datasets[0].data)
+    // console.info(datos)
     let ctx = document.getElementById('chart' + idSonda);
     miGrafica = new Chart(ctx, {
         type: 'line',
-        data: datos,
-        options: opciones
+        data: dts.pop(),
+        options: ops.pop()
     });
 
 }

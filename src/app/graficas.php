@@ -51,9 +51,9 @@
         </div>
     </section>
     <div class="graficas" id="base_graficas"></div>
-    <!--<div class="comparar" >
+    <div class="comparar" >
         <i class="fas fa-plus-circle fa-2x" onclick="nuevaSonda()"></i>
-    </div>-->
+    </div>
     <?php include_once $path.'footer.php' ?>
 
 
@@ -62,13 +62,20 @@
     <script>
         function checkSondas(){
             idSondas = sessionStorage.getItem('sondas')
+            console.log("graficas php " + idSondas)
+            idSondas.replace(",",'')
             for (let i = 0; i < idSondas.length; i++) {
+                if (!isNaN(idSondas[i]))
                 cargarMediciones(idSondas[i]);
+
             }
         }
         checkSondas();
         function nuevaSonda(){
-            alert("hola")
+            if (idSondas.length <= 2 ){
+                location.href = 'miscampos.php'
+            }
+            alert(idSondas.length)
         }
     </script>
 </body>
