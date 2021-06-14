@@ -21,13 +21,13 @@
   }
 
 /*!*Diseño del fondo en vista de pantalla*!*/
-/*#imagen-fondo{*/
-/*    position: absolute;*/
-/*    z-index: -2;*/
-/*}*/
-/*#imagen-fondo,.fondo{*/
-/*  height: 100vh;*/
-/*}*/
+#imagen-fondo{
+    position: absolute;
+    z-index: -2;
+}
+#imagen-fondo,.fondo{
+  height: 100vh;
+}
 
 .texto-encabezado {
     align-items: center;
@@ -44,6 +44,7 @@
     }
 }
 
+
 /*Estilo del texto de relleno (información adicional)*/
 .texto_relleno{
     padding-top: 6vh;
@@ -51,14 +52,21 @@
     margin-left: 2vh;
     margin-right: 2vh;
 }
+/*Estilos para PC*/
 @media  screen and (min-width: 1000px) {
+    /*Estilo del texto del encabezado*/
+     .texto-encabezado {
+        font-size: 30px;
+        margin-bottom: 27vh;
+    }
+    /*Estilo del texto adicional*/
     .texto_relleno {
         margin: 0 auto;
         font-size: 22px;
         width: 35%;
     }
 }
-
+/*Diseño para tablet*/
 @media screen and (min-width: 610px) and (max-width: 833px) {
     .texto_relleno{
         margin: 0 auto;
@@ -284,6 +292,9 @@
         font-size: 25px;
         margin-bottom: 5px;
     }
+    h4::first-letter{
+        font-size: 1.5rem;
+    }
 
     .masinfo{
         text-align: center;
@@ -311,7 +322,7 @@
         height:60px;
     }
     .dentro{
-        font-size: 2rem;
+        font-size: 1.8rem;
         margin-bottom: 0px;
     }
     .titulo{
@@ -362,12 +373,11 @@
     .sencillo{
         font-size: 2rem;
     }
+    #servicios-img{
+        display: none;
+    }
+    #servicios-img1{
+        display: initial;
+        width: 100%;
+    }
 }
-
-
-
-
-
-
-
-/*}*/

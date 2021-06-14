@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,7 @@
 
 <body>
     <?php include_once 'header.php'?>
-    <div class="header" style="height: 70px"></div>
+    <div class="header" ></div>
 
     <!-- Para que el fondo se vea borroso al iniciar sesión -->
     <div class="blur">
@@ -22,7 +22,8 @@
             <div class="dentro">
                 <h1>¿Cómo podemos ayudarte?</h1>
             </div>
-            <img src="img/contacto-img-encabezado.jpg" alt="img-contacto" id="contacto-img-princ">
+            <img src="img/contacto-img-encabezado.png" alt="img-contacto" id="contacto-img-princ">
+            <img src="img/contacto-img-encabezado2.png" alt="img-contacto" id="contacto-img-princ2">
         </div>
 
         <!-- ------------------------------------------------------------------------------------------------------------------------ -->
@@ -45,6 +46,20 @@
                         <h1>¿Cómo podemos ayudarte?</h1>
                         <p>Estamos aquí para darte más información, contestar cualquier pregunta que puedas tener, y crear una solución eficiente para tus necesidades.</p>
                     </div>
+
+                    <form id="formulario_txt" method="post" action="enviarcorreo.php">
+                        <label>Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+
+                        <label>Email:</label>
+                        <input type="email" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email" >
+
+                        <label>Mensaje:</label>
+                        <textarea name="mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="¿Cómo podemos ayudarte?"></textarea>
+
+                        <input type="submit" class="btn txt" name="enviar_formulario" value="Enviar">
+
+                    </form>
                     <script>
                         function f() {
                             document.getElementById("formulario_txt").reset()
@@ -52,19 +67,6 @@
                         f()
 
                     </script>
-                    <form id="formulario_txt" method="post" action="enviarcorreo.php">
-                        <label>Nombre:</label>
-                        <input type="text" name="nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
-
-                        <label>Email:</label>
-                        <input type="email" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email">
-
-                        <label>Mensaje:</label>
-                        <textarea name="mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="¿Cómo podemos ayudarte?"></textarea>
-
-                        <input type="submit" class="btn txt" name="enviar_formulario" value="enviar">
-
-                    </form>
                 </div>
 
             </div>
@@ -84,7 +86,6 @@
         </section>
         <!-- ------------------------------------------------------------------------------------------------------------------------ -->
     </div>
-
     <!--Footer -->
     <?php include 'footer.php' ?>
 </body>

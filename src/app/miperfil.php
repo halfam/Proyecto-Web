@@ -18,7 +18,7 @@
 <?php
 $path = '../';
 include_once $path.'header.php';?>
-<div class="header" style="height: 50px"></div>
+<div class="header"></div>
 
 <!-----------------------------------------------INICIO SECCION PERFIL------------------------------------------------->
 <!--------------------------------------------------------------------------------------------------------------------->
@@ -43,7 +43,7 @@ include_once $path.'header.php';?>
     <!--PARTE MEDIA E INFERIOR INFORMACIÓN USUARIO-->
     <div class="perfil-usuario-body">
         <div class="perfil-usuario-bio">
-        <h2>Bienvenido,</h2><h3 class="titulo" id="nombre_usuario"></h3>
+        <h3 class="titulo" id="nombre_usuario"></h3>
         </div>
     <!---------------------------------------------------------->
 

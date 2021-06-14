@@ -8,7 +8,9 @@
     font-family: 'Varela Round', sans-serif;
 }
 /*--------------------------------------------------*/
-
+.header{
+    height: 70px;
+}
 /*--------------------------------------------------*/
 /*PRIMERA PARTE DEL TEXTO Y FOTO*/
 .nosotros-encabezado {

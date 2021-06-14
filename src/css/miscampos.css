@@ -68,7 +68,7 @@
 
 #infoContent .enlace{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 .informacion-detallada{
     color: blue;

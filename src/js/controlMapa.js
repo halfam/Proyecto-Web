@@ -46,13 +46,14 @@ function addMarker(lat, lng, id, nombreParcela) {
             let infoWindow = new google.maps.InfoWindow({
                 content: "Esta sonda no esta activada",
             });
-            fetch(path+'api/v1.0/ultimamedicion/'+id,{
+            fetch(path+'api/v1.0/modelos/get-mediciones.php?id=' + id+"&ultima="+"true",{
                 method: 'GET'
             }).then(function (respuesta){
                 if (respuesta.ok){
                     return respuesta.json()
                 }
             }).then(function (data) {
+                console.log(data)
                 infoWindow.setContent('<div id="infoContent" class="divinfo"> ' +
                     '<h3>'+nombreParcela+'</h3>' +
                     '<div class="imagenes">' +
@@ -67,7 +68,8 @@ function addMarker(lat, lng, id, nombreParcela) {
                     '<label htmlFor="valor de temperatura" id="temperatura">'+data[0]["temperatura"]+'ºC</label>'+
                     '<label htmlFor="valor de humedad" id="humedad">'+data[0]["humedad"]+'%</label>'+
                     '</div>'+
-                    '<div class="enlace"><a class="boton-comparar" onclick="cargarGraficas('+id+',true)">[+]Comparar</a><a class="informacion-detallada" onclick="cargarGraficas('+id+', false)">Ver más >></div>'+
+                    // '<div class="enlace"><a class="boton-comparar" onclick="cargarGraficas('+id+',true)">[+]Comparar</a><a class="informacion-detallada" onclick="cargarGraficas('+id+', false)">Ver más >></div>'+
+                    '<div class="enlace"><a class="informacion-detallada" onclick="cargarGraficas('+id+', false)">Ver más >></div>'+
                     '</div>'
 
                 )
@@ -82,8 +84,11 @@ let sondas = [];
 function cargarGraficas(idSonda, comparar) {
     sondas = []
     sondas.push(idSonda)
+    // if (comparar){
+    //     sondas.push(idSonda)
+    //     sessionStorage.setItem('sondas', sondas)
+    // }
     sessionStorage.setItem('sondas', sondas)
-    if (!comparar)
     location.href = 'graficas.php'
 }
 function clearMarkers(){
