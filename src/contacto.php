@@ -82,7 +82,6 @@
             <div class="contacto-textos-2">
                 <p>Nos pondremos en contacto con usted en menos de 48 horas laborales.</p>
             </div>
-            <img src="img/img-contacto.png" alt="" id="contacto-img">
         </section>
         <!-- ------------------------------------------------------------------------------------------------------------------------ -->
     </div>
