@@ -212,9 +212,11 @@
     }
 
     .contacto-textos-2 {
-        margin: 0 auto;
+        padding-top: 25px;
+        margin: 0px 15px 40px 15px;
         text-align: center;
         font-style: italic;
+        font-size: 18px;
     }
 
     /*-------------------------------------------------------------------------------------------------------------------*/
@@ -224,13 +226,14 @@
     /*Diseño para textos*/
     .contacto-textos h1 {
         font-size: 24px;
+        margin-top: 10px;
         margin-bottom: 5px;
     }
 
     .contacto-formulario p,
     .contacto-textos p {
         margin: 0 1rem;
-        font-size: 16.5px;
+        font-size: 18px;
         font-weight: normal;
     }
 
@@ -253,7 +256,7 @@
     #contacto-elipse {
         width: 100%;
         height: auto;
-        margin-bottom: -5px;
+        margin-bottom: -3px;
         margin-top: -3px;
     }
 
@@ -272,11 +275,11 @@
 
     .contacto-formulario form {
         width: 85%;
-        height: 360px;
+        height: 370px;
         background: rgba(255, 255, 255, 0.7);
         padding: 20px;
         border-radius: 20px;
-        margin: 10px auto 0px auto;
+        margin: 30px auto 20px auto;
     }
 
     .contacto-formulario input,
