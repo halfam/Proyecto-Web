@@ -34,6 +34,8 @@ function initMap() {
 
 }
 
+let infoWindows = [];
+
 function addMarker(lat, lng, id, nombreParcela) {
     setTimeout(() => {
         var marker = new google.maps.Marker({
@@ -42,8 +44,11 @@ function addMarker(lat, lng, id, nombreParcela) {
             animation: google.maps.Animation.DROP,
             map: map
         });
+
         marker.addListener('click', function () {
-            let infoWindow = new google.maps.InfoWindow({
+            let infoWindow = new google.maps.InfoWindow();
+            cerrarInfowindows(infoWindows)
+            infoWindow = new google.maps.InfoWindow({
                 content: "Esta sonda no esta activada",
             });
             fetch(path + 'api/v1.0/modelos/get-mediciones.php?id=' + id + "&ultima=" + "true", {
@@ -53,31 +58,49 @@ function addMarker(lat, lng, id, nombreParcela) {
                     return respuesta.json()
                 }
             }).then(function (data) {
-                console.log(data)
-                infoWindow.setContent('<div id="infoContent" class="divinfo"> ' +
-                    '<h3>' + nombreParcela + '</h3>' +
-                    '<div class="imagenes">' +
-                    '<img src="' + path + 'img/salinidad.svg" >' +
-                    '<img src="' + path + 'img/luz.svg" >' +
-                    '<img src="' + path + 'img/temperatura.svg" >' +
-                    '<img src="' + path + 'img/humedad.svg" >' +
-                    '</div>' +
-                    '<div class="valores">' +
-                    '<label htmlFor="valor de salinidad" id="salinidad">' + data[0]["salinidad"] + '%</label>' +
-                    '<label htmlFor="valor de luminosidad" id="luminosidad">' + data[0]["luminosidad"] + '%</label>' +
-                    '<label htmlFor="valor de temperatura" id="temperatura">' + data[0]["temperatura"] + 'ºC</label>' +
-                    '<label htmlFor="valor de humedad" id="humedad">' + data[0]["humedad"] + '%</label>' +
-                    '</div>' +
-                    '<div class="enlace"><a class="boton-comparar" onclick="cargarGraficas('+id+',true)">[+]Comparar</a><a class="informacion-detallada" onclick="cargarGraficas('+id+', false)">Ver más >></div>'+
-                    // '<div class="enlace"><a class="informacion-detallada" onclick="cargarGraficas(' + id + ', false)">Ver más >></div>' +
-                    '</div>'
-                )
+
+                if (data == undefined)
+                    infoWindow.setContent("Esta sonda no esta activada")
+
+                else
+                    infoWindow.setContent('<div id="infoContent" class="divinfo"> ' +
+                        '<h3>' + nombreParcela + '</h3>' +
+                        '<div class="imagenes">' +
+                        '<img src="' + path + 'img/salinidad.svg" >' +
+                        '<img src="' + path + 'img/luz.svg" >' +
+                        '<img src="' + path + 'img/temperatura.svg" >' +
+                        '<img src="' + path + 'img/humedad.svg" >' +
+                        '</div>' +
+                        '<div class="valores">' +
+                        '<label htmlFor="valor de salinidad" id="salinidad">' + data[0]["salinidad"] + '%</label>' +
+                        '<label htmlFor="valor de luminosidad" id="luminosidad">' + data[0]["luminosidad"] + '%</label>' +
+                        '<label htmlFor="valor de temperatura" id="temperatura">' + data[0]["temperatura"] + 'ºC</label>' +
+                        '<label htmlFor="valor de humedad" id="humedad">' + data[0]["humedad"] + '%</label>' +
+                        '</div>' +
+                        '<div class="enlace"><a class="boton-comparar" onclick="cargarGraficas(' + id + ',true)">[+]Comparar</a><a class="informacion-detallada" onclick="cargarGraficas(' + id + ', false)">Ver más >></div>' +
+                        // '<div class="enlace"><a class="informacion-detallada" onclick="cargarGraficas(' + id + ', false)">Ver más >></div>' +
+                        '</div>'
+                    )
             })
             infoWindow.open(map, this);
+            infoWindows.push(infoWindow)
+            // setTimeout(()=>{
+            //     infoWindow.close()
+            // },5000)
+        })
+        google.maps.event.addListener(map, 'click', function () {
+            cerrarInfowindows(infoWindows)
         })
         markers.push(marker)
     }, 200)
 
+}
+
+function cerrarInfowindows(infowindows) {
+    if (infowindows.length != 0)
+        infowindows.forEach(function (infowindow) {
+            infowindow.close()
+        })
 }
 
 let sondas = [];
@@ -86,7 +109,7 @@ function cargarGraficas(idSonda, comparar) {
     if (!comparar) sondas = []
     if (sessionStorage.getItem('sondas').length <= 2)
         sondas.push(sessionStorage.getItem('sondas'))
-     sondas.push(idSonda)
+    sondas.push(idSonda)
     // if (comparar){
     //     sondas.push(idSonda)
     //     sessionStorage.setItem('sondas', sondas)
@@ -164,7 +187,7 @@ function dibujarParcela(latitudes, longitudes, color, id, nombreParcela) {
     }
 }
 
-function ponerTitulo(path,nombre) {
+function ponerTitulo(path, nombre) {
     var bounds = new google.maps.LatLngBounds();
 
     path.forEach(function (v) {
