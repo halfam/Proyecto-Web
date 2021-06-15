@@ -32,12 +32,38 @@ function llenarTabla() {
             return respuesta.json();
         }
     }).then(function (data) {
-        document.getElementById("tablaUsuarios")
+        let tabla = document.getElementById("tablaBody")
         console.log(data)
+        data.forEach(function (usuario) {
+            let fila = tabla.insertRow(0)
+            var nombre = fila.insertCell(0)
+            nombre.setAttribute("data-titulo","Nombre:")
+            nombre.innerHTML =  usuario['nombre']
+            var rol = fila.insertCell(1)
+            rol.setAttribute("data-titulo","Rol:")
+            rol.innerHTML =  usuario['rol']
+            var apodo = fila.insertCell(2)
+            apodo.setAttribute("data-titulo","Apodo:")
+            apodo.innerHTML =  usuario['Apodo']
+            var contrasenya = fila.insertCell(3)
+            contrasenya.setAttribute("data-titulo","Contrasenya:")
+            contrasenya.innerHTML =  usuario['contrasenya']
+            var correo = fila.insertCell(4)
+            correo.setAttribute("data-titulo","Correo:")
+            correo.innerHTML =  usuario['correo']
+            var modificaciones = fila.insertCell(5)
+            modificaciones.setAttribute("class","modificaciones")
+            modificaciones.innerHTML =  `<a href="#" onclick="">Editar</a> /
+                            <a href="#">Eliminar</a>`
+            // fila.contentEditable;
+        })
         // document.getElementById('nombre_usuario').innerText = data[0]['Apodo']
         // document.getElementById('telefono_usuario').innerText = data[0]['telefono']
         // document.getElementById('correo_usuario').innerText = data[0]['correo']
         // document.getElementById('servicios_usuario').innerText = data[0]['fechaAlta']
         // document.getElementById('direccion_usuario').innerText = data[0]['Direccion']
     })
+}
+function updateUser(){
+
 }

@@ -43,8 +43,7 @@ include_once $path.'header.php';?>
             <table class="tabla" id="tablaUsuarios">
                 <caption class="caption">Panel de Control</caption>
                 <thead>
-                 <tr>
-                        <th>ID</th>
+                 <tr id="titulos">
                         <th>Nombre</th>
                         <th>Rol</th>
                         <th>Apodo</th>
@@ -54,32 +53,30 @@ include_once $path.'header.php';?>
                 </tr>
                 </thead>
 
-                <tbody>
-                <tr>
-                        <td data-titulo="ID:"></td>
-                        <td data-titulo="Nombre:">user</td>
-                        <td data-titulo="Rol:">Usuario</td>
-                        <td data-titulo="Apodo:">Federico</td>
-                        <td data-titulo="Contraseña:">XXXXXXX</td>
-                        <td data-titulo="Correo:">federico@gmail.com</td>
-                        <td class="modificaciones">
-                            <a href="#">Editar</a> /
-                            <a href="#">Eliminar</a>
-                        </td>
-                </tr>
-
-                <tr>
-                        <td data-titulo="ID:"> 22323</td>
-                        <td data-titulo="Nombre:" id="nombre_usuario"></td>
-                        <td data-titulo="Rol:">Usuario</td>
-                        <td data-titulo="Apodo:">Antoini</td>
-                        <td data-titulo="Contraseña:">XXXXXXX</td>
-                        <td data-titulo="Correo:">anotni@gmail.com</td>
-                        <td class="modificaciones">
-                            <a href="#">Editar</a> /
-                            <a href="#">Eliminar</a>
-                        </td>
-                </tr>
+                <tbody id="tablaBody">
+<!--                <tr>-->
+<!--                        <td data-titulo="Nombre:"></td>-->
+<!--                        <td data-titulo="Rol:">Usuario</td>-->
+<!--                        <td data-titulo="Apodo:">Federico</td>-->
+<!--                        <td data-titulo="Contraseña:">XXXXXXX</td>-->
+<!--                        <td data-titulo="Correo:">federico@gmail.com</td>-->
+<!--                        <td class="modificaciones">-->
+<!--                            <a href="#">Editar</a> /-->
+<!--                            <a href="#">Eliminar</a>-->
+<!--                        </td>-->
+<!--                </tr>-->
+<!---->
+<!--                <tr>-->
+<!--                        <td data-titulo="Nombre:" id="nombre_usuario"></td>-->
+<!--                        <td data-titulo="Rol:">Usuario</td>-->
+<!--                        <td data-titulo="Apodo:">Antoini</td>-->
+<!--                        <td data-titulo="Contraseña:">XXXXXXX</td>-->
+<!--                        <td data-titulo="Correo:">anotni@gmail.com</td>-->
+<!--                        <td class="modificaciones">-->
+<!--                            <a href="#">Editar</a> /-->
+<!--                            <a href="#">Eliminar</a>-->
+<!--                        </td>-->
+<!--                </tr>-->
                 </tbody>
             </table>
         </div>
