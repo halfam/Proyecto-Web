@@ -113,9 +113,13 @@ function cambiarMenu(user) {
              let servicios = document.getElementById('servicios')
              let serv = servicios.parentNode;
              serv.removeChild(servicios)
-            
             break;
+
         case 'admin':
+            let admin = document.createElement('li')
+            admin.classList.add('nav-link')
+            admin.innerHTML = "<a href='"+path+"app/admin.php'>Panel de Control</a>"
+            menu.appendChild(admin)
 
         case 'empleado':
             break;
