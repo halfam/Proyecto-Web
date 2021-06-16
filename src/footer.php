@@ -5,7 +5,7 @@
 
         <nav class="contenedor-paginas">
             <ul>
-                <li>
+                <li class="enlacesfooternpf">
                     <a href="<?php echo $path?>nosotros.php">Nosotros</a>
                 </li>
                 <li>
