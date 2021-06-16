@@ -1,3 +1,12 @@
+var path;
+if (!location.pathname.includes("/app/")){
+    path = "./"
+}else{
+    path = "../"
+}
+
+
+
 function getUserInfo() {
     fetch('../api/v1.0/sesion', {
         method: 'GET',
@@ -22,7 +31,7 @@ function getUserInfo() {
         })
     })
 }
-
+var idUsuario;
 function llenarTabla() {
 
     fetch('../api/v1.0/user/', {
@@ -46,36 +55,120 @@ function llenarTabla() {
                 let fila = tabla.insertRow(0)
                 var nombre = fila.insertCell(0)
                 nombre.setAttribute("data-titulo","Nombre:")
-
                 nombre.innerHTML =  usuario['nombre']
+                nombre.classList.add("nombre")
                 var rol = fila.insertCell(1)
                 rol.setAttribute("data-titulo","Rol:")
                 rol.innerHTML =  usuario['rol']
+                rol.classList.add("rol")
+
                 var apodo = fila.insertCell(2)
                 apodo.setAttribute("data-titulo","Apodo:")
                 apodo.innerHTML =  usuario['Apodo']
+                apodo.classList.add("apodo")
                 var contrasenya = fila.insertCell(3)
                 contrasenya.setAttribute("data-titulo","Contrasenya:")
                 contrasenya.innerHTML =  usuario['contrasenya']
+                contrasenya.classList.add("contrasenya")
                 var correo = fila.insertCell(4)
                 correo.setAttribute("data-titulo","Correo:")
                 correo.innerHTML =  usuario['correo']
+                correo.classList.add("correo")
                 var modificaciones = fila.insertCell(5)
                 modificaciones.setAttribute("class","modificaciones")
-                modificaciones.innerHTML =  `<a href="#" onclick="editarUsuario(this)">Editar</a> /
-                            <a href="#">Eliminar</a>`
+                idUsuario = usuario['id']
+                modificaciones.innerHTML =  `<a href="#" onclick="editarUsuario(this,idUsuario)">Editar</a> /
+                            <a href="#" onclick="eliminarUsuario(idUsuario)">Eliminar</a>`
                 // fila.contentEditable;
             })
         }
 
     })
 }
-function editarUsuario(editar){
+function editarUsuario(editar, userID){
     editar.parentNode.parentNode.setAttribute("contenteditable","true");
-    editar.parentNode.innerHTML = "<a href='#' onclick='actualizarUsuario(this)'>Listo<a/>";
+    editar.parentNode.innerHTML = "<a href='#' onclick='actualizarUsuario(this,"+userID +")'>Listo<a/>";
 }
 
-function actualizarUsuario(editar) {
+function actualizarUsuario(editar,userID) {
+
     editar.parentNode.parentNode.setAttribute("contenteditable","false");
-    // fetch()
+    event.preventDefault()
+    let url=path+"api/v1.0/user/" + userID
+    let dataUser = new FormData();
+    let fila = editar.parentNode.parentNode
+
+    let campos = fila.childNodes
+    for (let i = 0; i < campos.length - 1; i++) {
+         dataUser.set(campos[i].classList.item(0), campos[i].textContent)
+        // console.log(campos[i].classList.item(0))
+        // console.log(campos[i].textContent)
+    }
+    fetch(url,{
+        method: "PUT",
+        body: JSON.stringify(Object.fromEntries(dataUser)),
+    }).then(function (respuesta) {})
+}
+
+
+function eliminarUsuario(userID){
+    let url=path+"api/v1.0/user/" + userID
+    fetch(url,{
+        method: 'DELETE'
+    }).then(function (respuesta) {
+        if (respuesta.ok){
+            location.reload()
+        }
+    })
+}
+
+function crearUsuario() {
+    let tabla = document.getElementById("tablaBody")
+    let fila = tabla.insertRow(0)
+    var nombre = fila.insertCell(0)
+    nombre.setAttribute("data-titulo","Nombre:")
+    nombre.innerHTML =  ""
+    nombre.classList.add("nombre")
+    var rol = fila.insertCell(1)
+    rol.setAttribute("data-titulo","Rol:")
+    rol.innerHTML =  ""
+    rol.classList.add("rol")
+
+    var apodo = fila.insertCell(2)
+    apodo.setAttribute("data-titulo","Apodo:")
+    apodo.innerHTML =  ""
+    apodo.classList.add("apodo")
+    var contrasenya = fila.insertCell(3)
+    contrasenya.setAttribute("data-titulo","Contrasenya:")
+    contrasenya.innerHTML =  ""
+    contrasenya.classList.add("contrasenya")
+    var correo = fila.insertCell(4)
+    correo.setAttribute("data-titulo","Correo:")
+    correo.innerHTML =  ""
+    correo.classList.add("correo")
+    var modificaciones = fila.insertCell(5)
+    modificaciones.setAttribute("class","modificaciones")
+    idUsuario = fila
+    modificaciones.innerHTML = '<a href="" onclick="addUser(idUsuario)">Crear usuario</a>'
+    fila.setAttribute("contenteditable","true");
+}
+
+function addUser(fila){
+    event.preventDefault()
+    let url=path+"api/v1.0/user/"
+    let dataUser = new FormData();
+    let campos = fila.childNodes
+    for (let i = 0; i < campos.length - 1; i++) {
+        dataUser.set(campos[i].classList.item(0), campos[i].textContent)
+        // console.log(campos[i].classList.item(0))
+        // console.log(campos[i].textContent)
+    }
+    fetch(url,{
+        method: 'POST',
+        body: dataUser
+    }).then(function (respuesta){
+        return respuesta.json()
+    }).then(function (json){
+        console.log(json)
+    })
 }
