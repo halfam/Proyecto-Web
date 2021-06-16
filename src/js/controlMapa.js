@@ -237,7 +237,10 @@ function centrarParcela(nombre) {
 }
 
 function hemosclicado(opcio) {
+
     centrarParcela(opcio.value)
+    setTimeout(()=>opcio.value = "", 1000)
+
 }
 
 function cargarParcelas() {
