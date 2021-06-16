@@ -60,7 +60,7 @@ function addMarker(lat, lng, id, nombreParcela) {
             }).then(function (data) {
 
                 if (data == undefined)
-                    infoWindow.setContent("Esta sonda no esta activada")
+                    infoWindow.setContent("Esta sonda no esta activada <br><br> <a href='../contacto.php'>Resolver incidencia>></a>")
 
                 else
                     infoWindow.setContent('<div id="infoContent" class="divinfo"> ' +
