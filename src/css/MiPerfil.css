@@ -150,6 +150,14 @@ body {
 
 /*-------------------------------------------------------*/
 /*DISEÑO DE LOS APARTADOS DE DATOS PERSONALES*/
+.apartado-editar{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.apartado-editar img{
+    align-self: end;
+}
 .seccion-perfil-usuario .lista-datos {
     width: 50%;
     list-style: none;
@@ -160,6 +168,13 @@ body {
 .tlf, .crreo, .direcc, .servs{
     font-weight: bold;
 }
+#boton-actualizar{
+    margin: 0 auto;
+}
+.editar{
+    display: none;
+}
+
 /*-------------------------------------------------------*/
 
 /*-------------------------------------------------------*/

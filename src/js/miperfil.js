@@ -22,6 +22,7 @@ function getUserInfo() {
                 return respuesta.json();
             }
         }).then(function (data) {
+
             // document.getElementById('nombre_usuario').innerText = data[0]['Apodo']
             // document.getElementById('telefono_usuario').innerText = data[0]['telefono']
             // document.getElementById('correo_usuario').innerText = data[0]['correo']
@@ -29,6 +30,7 @@ function getUserInfo() {
             // document.getElementById('direccion_usuario').innerText = data[0]['Direccion']
             llenarTabla()
         })
+        idUsuario = data['id']
     })
 }
 var idUsuario;
@@ -65,7 +67,7 @@ function llenarTabla() {
                 var apodo = fila.insertCell(2)
                 apodo.setAttribute("data-titulo","Apodo:")
                 apodo.innerHTML =  usuario['Apodo']
-                apodo.classList.add("apodo")
+                apodo.classList.add("Apodo")
                 var contrasenya = fila.insertCell(3)
                 contrasenya.setAttribute("data-titulo","Contrasenya:")
                 contrasenya.innerHTML =  usuario['contrasenya']
@@ -89,16 +91,29 @@ function editarUsuario(editar, userID){
     editar.parentNode.parentNode.setAttribute("contenteditable","true");
     editar.parentNode.innerHTML = "<a href='#' onclick='actualizarUsuario(this,"+userID +")'>Listo<a/>";
 }
-
+// function actualizarUsuario(datos, )
 function actualizarUsuario(editar,userID) {
-
-    editar.parentNode.parentNode.setAttribute("contenteditable","false");
-    event.preventDefault()
-    let url=path+"api/v1.0/user/" + userID
-    let dataUser = new FormData();
-    let fila = editar.parentNode.parentNode
-
-    let campos = fila.childNodes
+    let url;
+    let dataUser= new FormData();
+    let fila;
+    let campos;
+    if (editar !== null) {
+        editar.parentNode.parentNode.setAttribute("contenteditable", "false");
+        event.preventDefault()
+        fila = editar.parentNode.parentNode
+        campos = fila.childNodes
+    }
+    else{
+        // getUserInfo()
+        userID = idUsuario
+        campos = document.querySelectorAll('.tabla_item')
+        campos.forEach(function (campo){
+            if (campo.getAttribute('id') !== 'servicios_usuario')
+                campo.setAttribute("contenteditable", "false");
+        })
+        document.getElementById('boton-actualizar').classList.add('editar')
+    }
+    url = path + "api/v1.0/user/" + userID;
     for (let i = 0; i < campos.length - 1; i++) {
          dataUser.set(campos[i].classList.item(0), campos[i].textContent)
         // console.log(campos[i].classList.item(0))
@@ -137,7 +152,7 @@ function crearUsuario() {
     var apodo = fila.insertCell(2)
     apodo.setAttribute("data-titulo","Apodo:")
     apodo.innerHTML =  ""
-    apodo.classList.add("apodo")
+    apodo.classList.add("Apodo")
     var contrasenya = fila.insertCell(3)
     contrasenya.setAttribute("data-titulo","Contrasenya:")
     contrasenya.innerHTML =  ""

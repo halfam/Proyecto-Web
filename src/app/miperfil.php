@@ -50,22 +50,25 @@ include_once $path.'header.php';?>
         <!---------------------------------------------------------->
         <!--DATOS PERSONALES-->
         <div class="perfil-usuario-footer">
-           <h3 class="datospersonales">Datos Personales</h3>
+           <div class="apartado-editar">
+               <h3 class="datospersonales">Datos Personales</h3>
+               <img src="../img/editar.png" alt="Imagen de editar los campos de mi perfil" onclick="o()">
+           </div>    
 
             <div class="lista-datos">
                 <!-------------------------TELEFONO----------------------------->
                 <li class="apartado tlf"><i class="icono fas fa-phone-alt"></i>Teléfono:</li>
-                    <li class="tabla_item" id="telefono_usuario"></li>
+                    <li class="telefono tabla_item" id="telefono_usuario"></li>
                 <br>
 
                 <!--------------------------CORREO------------------------------>
                 <li class="apartado crreo"><i class="icono fas fa-envelope"></i>Correo:</li>
-                <li class="tabla_item" id="correo_usuario"></li>
+                <li class="correo tabla_item" id="correo_usuario"></li>
                 <br>
 
                 <!-------------------------DIRECCION---------------------------->
                 <li class="apartado direcc"><i class="icono fas fa-map-marker-alt"></i>Dirección:</li>
-                <li class="tabla_item" id="direccion_usuario"></li>
+                <li class="Direccion tabla_item" id="direccion_usuario"></li>
                 <br>
 
                 <!-------------------------SERVICIOS---------------------------->
@@ -73,6 +76,7 @@ include_once $path.'header.php';?>
                 <li class="tabla_item apartados" id="servicios_usuario"></li>
             </div>
             <!---------------------------------------------------------->
+            <button onclick="actualizarUsuario(null, -1)" id="boton-actualizar" class="editar">Listo</button>
         </div>
         <!---------------------------------------------------------->
 
@@ -83,5 +87,12 @@ include_once $path.'header.php';?>
 <?php include_once $path.'footer.php' ?>
 <script src="../js/miperfil.js"></script>
 <script>getUserInfo()</script>
+<script>function o(){
+        document.getElementById('boton-actualizar').classList.remove('editar')
+        document.querySelectorAll('.tabla_item').forEach(function(campo) {
+            if (campo.getAttribute('id') !== 'servicios_usuario')
+                campo.setAttribute("contenteditable","true");
+        })
+    }</script>
 </body>
 </html>
