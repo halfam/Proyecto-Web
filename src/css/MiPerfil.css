@@ -155,8 +155,9 @@ body {
     width: 100%;
     align-items: center;
 }
-.apartado-editar img{
+apartado-editar img {
     align-self: end;
+    cursor: pointer;
 }
 .seccion-perfil-usuario .lista-datos {
     width: 50%;
@@ -168,9 +169,18 @@ body {
 .tlf, .crreo, .direcc, .servs{
     font-weight: bold;
 }
-#boton-actualizar{
+#boton-actualizar {
     margin: 0 auto;
+    border: 2px solid #820053;
+    border-radius: 12px;
+    padding: 5px 15px;
+    background: #d380b5b8;
 }
+#boton-actualizar:hover{
+    background-color: #820053;
+    color: white;
+}
+
 .editar{
     display: none;
 }
@@ -207,9 +217,10 @@ body {
 
 /*-------------------------------------------------------*/
 /*OPCIONES DE TAMAÑO Y DISPOSICIÓN CUADRADOS BLANCOS*/
-    .seccion-perfil-usuario .lista-datos {
-        width: 100%;
-    }
+.seccion-perfil-usuario .lista-datos {
+    width: 100%;
+    margin-bottom: 15px;
+}
     .seccion-perfil-usuario .perfil-usuario-portada,
     .seccion-perfil-usuario .perfil-usuario-body {
         width: 95%;
