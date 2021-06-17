@@ -35,7 +35,7 @@ function initMap() {
 }
 
 let infoWindows = [];
-
+var parcela = "";
 function addMarker(lat, lng, id, nombreParcela) {
     setTimeout(() => {
         var marker = new google.maps.Marker({
@@ -58,11 +58,11 @@ function addMarker(lat, lng, id, nombreParcela) {
                     return respuesta.json()
                 }
             }).then(function (data) {
-
                 if (data == undefined)
                     infoWindow.setContent("Esta sonda no esta activada <br><br> <a href='../contacto.php'>Resolver incidencia>></a>")
 
-                else
+                else {
+                    parcela = nombreParcela;
                     infoWindow.setContent('<div id="infoContent" class="divinfo"> ' +
                         '<h3>' + nombreParcela + '</h3>' +
                         '<div class="imagenes">' +
@@ -77,10 +77,13 @@ function addMarker(lat, lng, id, nombreParcela) {
                         '<label htmlFor="valor de temperatura" id="temperatura">' + data[0]["temperatura"] + 'ºC</label>' +
                         '<label htmlFor="valor de humedad" id="humedad">' + data[0]["humedad"] + '%</label>' +
                         '</div>' +
-                        '<div class="enlace"><a class="boton-comparar" onclick="cargarGraficas(' + id + ',true)">[+]Comparar</a><a class="informacion-detallada" onclick="cargarGraficas(' + id + ', false)">Ver más >></div>' +
-                        // '<div class="enlace"><a class="informacion-detallada" onclick="cargarGraficas(' + id + ', false)">Ver más >></div>' +
+                        '<div class="enlace">' +
+                        '<a class="boton-comparar" onclick="cargarGraficas(' + id + ',' + true +','+'parcela'+ ')">[+]Comparar</a>' +
+                        '<a class="informacion-detallada" onclick="cargarGraficas(' + id + ',' + false +','+'parcela'+ ')">Ver más >></a>' +
                         '</div>'
+                        // '<div class="enlace"><a class="informacion-detallada" onclick="cargarGraficas(' + id + ', false)">Ver más >></div>' +
                     )
+                }
             })
             infoWindow.open(map, this);
             infoWindows.push(infoWindow)
@@ -105,16 +108,21 @@ function cerrarInfowindows(infowindows) {
 
 let sondas = [];
 
-function cargarGraficas(idSonda, comparar) {
-    if (!comparar) sondas = []
-    if (sessionStorage.getItem('sondas').length <= 2)
-        sondas.push(sessionStorage.getItem('sondas'))
+function cargarGraficas(idSonda, comparar,nombreParecela) {
+    console.log(nombreParecela)
+    idSonda = parseInt(idSonda)
+    if (!comparar){
+        sondas = []
+    } else{
+        if(sessionStorage.getItem('sondas') !== null){
+            if (sessionStorage.getItem('sondas').length <= 2 ){
+                sondas.push(parseInt(sessionStorage.getItem('sondas')))
+            }
+        }
+    }
     sondas.push(idSonda)
-    // if (comparar){
-    //     sondas.push(idSonda)
-    //     sessionStorage.setItem('sondas', sondas)
-    // }
     sessionStorage.setItem('sondas', sondas)
+    sessionStorage.setItem('campo', nombreParecela)
     location.href = 'graficas.php'
 }
 
@@ -183,6 +191,8 @@ function dibujarParcela(latitudes, longitudes, color, id, nombreParcela) {
         polygon.addListener('click', () => centrarParcela(nombreParcela))
         ponerTitulo(path, nombreParcela);
         parcelas.push({poly: polygon, id: id, nombre: nombreParcela})
+        if (sessionStorage.getItem('campo') !== null)
+        centrarParcela(sessionStorage.getItem('campo') )
 
     }
 }
@@ -229,10 +239,7 @@ function centrarParcela(nombre) {
     })
 
     map.fitBounds(bounds)
-    map.setZoom(17)
-
-    console.log(bounds.getCenter())
-
+    map.setZoom(19)
     cargarSondas(ident, nombreParcela)
 }
 

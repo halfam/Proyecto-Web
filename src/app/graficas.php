@@ -61,21 +61,20 @@
     <script src="../js/grafica.js"></script>
     <script>
         function checkSondas(){
-            idSondas = sessionStorage.getItem('sondas')
-            console.log("graficas php " + idSondas)
-            idSondas.replace(",",'')
+            let aux = sessionStorage.getItem('sondas').split(',')
+            aux.forEach(function (sonda) {
+                idSondas.push(parseInt(sonda))
+            })
             for (let i = 0; i < idSondas.length; i++) {
                 if (!isNaN(idSondas[i]))
                 cargarMediciones(idSondas[i]);
-
             }
         }
         checkSondas();
         function nuevaSonda(){
-            if (idSondas.length <= 2 ){
+            if (idSondas.length < 2 ){
                 location.href = 'miscampos.php'
             }
-            alert(idSondas.length)
         }
     </script>
 </body>
