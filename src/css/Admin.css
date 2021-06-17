@@ -146,6 +146,21 @@ body {
     margin-bottom: 1.25rem;
     margin-top: 2rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.crearusuarioadmin {
+    margin: 0 auto;
+    border: 2px solid #820053;
+    padding: 5px 10px;
+    border-radius: 12px;
+    background: #d380b5b8;
+    margin-top: 10px;
+}
+.crearusuarioadmin:hover{
+    background-color: #820053;
+    color: white;
 }
 /*-------------------------------------------------------*/
 
@@ -278,6 +293,17 @@ th, td{
 
     }
 
+    .crearusuarioadmin {
+        margin: 0 auto;
+        border: 2px solid #820053;
+        padding: 5px 10px;
+        border-radius: 12px;
+        background: #d380b5b8;
+    }
+    .crearusuarioadmin:hover{
+        background-color: #820053;
+        color: white;
+    }
 
 }
 
