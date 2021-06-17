@@ -8,14 +8,17 @@ if (!location.pathname.includes("/app/")){
 
 
 function getUserInfo() {
-    fetch('../api/v1.0/sesion', {
+    console.log("hola caracols")
+    fetch(path+'api/v1.0/sesion', {
         method: 'GET',
     }).then(function (respuesta) {
+
         if (respuesta.ok) {
             return respuesta.json();
         }
     }).then(function (data) {
-        fetch('../api/v1.0/user/' + data['id'], {
+        console.log(data['id'])
+        fetch(path+'api/v1.0/user/' + data['id'], {
             method: 'GET',
         }).then(function (respuesta) {
             if (respuesta.ok) {
@@ -36,7 +39,7 @@ function getUserInfo() {
 var idUsuario;
 function llenarTabla() {
 
-    fetch('../api/v1.0/user/', {
+    fetch('../api/v1.0/user/'+idUsuario, {
         method: 'GET',
     }).then(function (respuesta) {
         if (respuesta.ok) {

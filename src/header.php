@@ -96,16 +96,16 @@
                     </form>
                     <!-- -------------------------------------------------------------------------------------------------------------------------- -->
                     
-                    <script src="<?php echo $path?>js/login.js"></script>
+                    <script def src="<?php echo $path?>js/login.js"></script>
                     <!-- FIN DE PORMULARIO LOGIN -->
             </div>
         </div>
-        <script src="<?php echo $path?>js/mobile.js"></script>
+        <script def src="<?php echo $path?>js/mobile.js"></script>
         <script>
                 comprobarSesion();
         </script>
 <!--        TERMINA EL MENU DESPLEGABLE -->
-        <script type="text/javascript" src="<?php echo $path?>js/main.js"></script>
+        <script def type="text/javascript" src="<?php echo $path?>js/main.js"></script>
 <!--    </div>-->
 </header>
 

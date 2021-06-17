@@ -7,6 +7,9 @@
     font-family: 'Varela Round', sans-serif;
 
 }
+.header{
+    height: 70px
+}
 /*Diseño título de la gráfica*/
 .tituloGraficas{
     text-align: center;
