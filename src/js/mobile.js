@@ -121,6 +121,11 @@ function cambiarMenu(user) {
              let servicios = document.getElementById('servicios')
              let serv = servicios.parentNode;
              serv.removeChild(servicios)
+            
+            let misDatos = document.createElement('li')
+            misDatos.classList.add('nav-link')
+            misDatos.innerHTML = "<a href='" + path + "app/misdatos.php'>Mis datos</a>"
+            menu.appendChild(misDatos)
             break;
 
         case 'admin':
