@@ -8,6 +8,7 @@ if (!location.pathname.includes("/app/")){
 
 
 function getUserInfo() {
+    console.log("hola")
     fetch('../api/v1.0/sesion', {
         method: 'GET',
     }).then(function (respuesta) {
@@ -22,6 +23,7 @@ function getUserInfo() {
                 return respuesta.json();
             }
         }).then(function (data) {
+            console.log(data)
 
             // document.getElementById('nombre_usuario').innerText = data[0]['Apodo']
             // document.getElementById('telefono_usuario').innerText = data[0]['telefono']
@@ -44,11 +46,17 @@ function llenarTabla() {
         }
     }).then(function (data) {
         try{
-            document.getElementById('nombre_usuario').innerText = data[0]['Apodo']
-            document.getElementById('telefono_usuario').innerText = data[0]['telefono']
-            document.getElementById('correo_usuario').innerText = data[0]['correo']
-            document.getElementById('servicios_usuario').innerText = data[0]['fechaAlta']
-            document.getElementById('direccion_usuario').innerText = data[0]['Direccion']
+            for (const usuario of data) {
+                if (usuario["id"]== idUsuario){
+                    document.getElementById('nombre_usuario').innerText = usuario['Apodo']
+                    document.getElementById('telefono_usuario').innerText = usuario['telefono']
+                    document.getElementById('correo_usuario').innerText = usuario['correo']
+                    document.getElementById('servicios_usuario').innerText = usuario['fechaAlta']
+                    document.getElementById('direccion_usuario').innerText = usuario['Direccion']
+                }
+            }
+
+
         }catch (e){
 
             let tabla = document.getElementById("tablaBody")
