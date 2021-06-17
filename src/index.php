@@ -42,7 +42,7 @@
 <!-- --------------------------------------------------------------------------------------------------------------------- -->
 
 <!-- Botón scroll down Landing Page-->
-<a class="desliz scroll-down blur" id="flecha" href="#sensores"></a>
+<div class="flecha-bajar"><a href="#sensores"><i class="fas fa-angle-down"></i></a></div>
 
 
 <!-- --------------------------------------------------------------------------------------------------------------------- -->
@@ -94,11 +94,11 @@
 
     <!-- --------------------------------------------------------------------------------------------------------------------- -->
 </section>
-
+<div class="flecha-bajar2"><a href="#services"><i class="fas fa-angle-down"></i></a></div>
 <!-- Sección Adquirir Servicio -->
 <section class="adquirir_servicios blur" id="adquirir_servicios">
 
-    <h2 class="titulo">¿Cómo adquirir nuestro servicio?</h2>
+    <h2 class="titulo" id="services">¿Cómo adquirir nuestro servicio?</h2>
     <!-- CONTÁCTANOS -->
     <div class="contenedor-nuestro">
         <div class="contenedor-servicios">
