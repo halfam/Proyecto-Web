@@ -4,6 +4,7 @@ if (!location.pathname.includes("/app/")){
 }else{
     path = "../"
 }
+
 const passphrase= "La cookie de sesión";
 const doc = document;
 const overlay = doc.querySelector(".overlay");
@@ -34,6 +35,8 @@ function loginBlur(loginpopup) {
 }
 
 function comprobarSesion() {
+
+    // console.log(sessionStorage.getItem('activar'))
     fetch(path+'api/v1.0/sesion', {
         method: 'GET',
     }).then(function (respuesta) {
@@ -45,6 +48,11 @@ function comprobarSesion() {
         if (data != undefined || data != null){
             getUser(data['id'])
 
+        }else{
+            if (sessionStorage.getItem('activar')!=null){
+                loginBlur(true)
+                sessionStorage.clear()
+            }
         }
     })
 

@@ -23,7 +23,7 @@ $sql = 'INSERT INTO `usuario` '.$campos.' VALUES ('.$nombre. ','.$contrasenya. '
 
 $result = mysqli_query($conn, $sql);
 if ($result) {
-    $salida['href']='/vendedores'.mysqli_insert_id($conn);
+    $salida['href']='/user'.mysqli_insert_id($conn);
 
 } else {
     http_response_code(422);

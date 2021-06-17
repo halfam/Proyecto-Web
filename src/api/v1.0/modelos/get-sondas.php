@@ -2,7 +2,7 @@
 
 if (!isset($conn)) $conn = "";
 
-$sql = "SELECT sonda.id, posiciones.latitud, posiciones.longitud FROM  `parcela`, `posiciones`, `sonda`, `sondas_posiciones` WHERE posiciones.idParcela = '$parametrosPath[0]' AND posiciones.id = sondas_posiciones.idPosicion AND sondas_posiciones.idSonda = sonda.id GROUP BY sonda.id" ;
+$sql = "SELECT sonda.id, posiciones.latitud, posiciones.longitud, sonda.notificacion FROM  `parcela`, `posiciones`, `sonda`, `sondas_posiciones` WHERE posiciones.idParcela = '$parametrosPath[0]' AND posiciones.id = sondas_posiciones.idPosicion AND sondas_posiciones.idSonda = sonda.id GROUP BY sonda.id" ;
 
 $result = mysqli_query($conn, $sql);
 $salida = [];
