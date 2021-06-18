@@ -79,7 +79,7 @@ include_once $path.'header.php';?>
 <!--                </tr>-->
                 </tbody>
             </table>
-            <button onclick="crearUsuario()">Crear usuario</button>
+            <button onclick="crearUsuario()" class="crearusuarioadmin">Crear usuario</button>
         </div>
     <!---------------------------------------------------------->
         </div>
