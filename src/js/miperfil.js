@@ -39,7 +39,7 @@ function getUserInfo() {
 var idUsuario;
 function llenarTabla() {
 
-    fetch('../api/v1.0/user/'+idUsuario, {
+    fetch('../api/v1.0/user/', {
         method: 'GET',
     }).then(function (respuesta) {
         if (respuesta.ok) {
