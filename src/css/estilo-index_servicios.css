@@ -46,19 +46,7 @@
     margin-right: 2vh;
 }
 /*Estilos para PC*/
-@media  screen and (min-width: 1000px) {
-    /*Estilo del texto del encabezado*/
-     .texto-encabezado {
-        font-size: 30px;
-        margin-bottom: 27vh;
-    }
-    /*Estilo del texto adicional*/
-    .texto_relleno {
-        margin: 0 auto;
-        font-size: 22px;
-        width: 35%;
-    }
-}
+
 /*Diseño para tablet*/
 @media screen and (min-width: 610px) and (max-width: 833px) {
     .texto_relleno{
@@ -172,12 +160,16 @@
 /*-------------------------------------------------------------------------------------------------------------------*/
 /* Vista en teléfono */
 /*@media screen and (max-width: 900px) {*/
+
     .titulo {
         text-align: center;
         /*text-decoration: bold;*/
         padding: 2vh 5% 5vh 5vw;
         margin-top: 5px;
 
+    }
+    .primera-letra::first-letter{
+        font-size: 3rem;
     }
     /*-------------------------------------------------------------------------------------------------------------------*/
 
@@ -187,13 +179,10 @@
         font-family: 'Varela Round', sans-serif;
         margin: 0 auto;
         text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
     }
 
-    #servicios-img {
-        width: 100%;
-        height: 24vh;
-        margin-bottom: -3px;
-    }
     #servicios-img1{
         display: none;
     }
@@ -210,7 +199,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 2px;
-        font-size: 20px;
+        font-size: 50px;
         background: #EAEAEA80;
         width: 100%;
         color: black;
@@ -307,6 +296,16 @@
 
 /*Responsive para ordenador*/
 @media  screen and (min-width: 1000px) {
+    .texto-encabezado {
+        font-size: 30px;
+        margin-bottom: 27vh;
+    }
+    /*Estilo del texto adicional*/
+    .texto_relleno {
+        margin: 0 auto;
+        font-size: 22px;
+        width: 35%;
+    }
     .boton_personalizado{
         width: 350px;
         height:60px;
@@ -325,8 +324,9 @@
         display: initial;
         width: 100%;
     }
-    #servicios-img{
-        display: none;
+    .servicios-encabezado {
+        margin-top: 0rem;
+        margin-bottom: 0rem;
     }
 
     .display{
