@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,7 +41,7 @@
 <!-- --------------------------------------------------------------------------------------------------------------------- -->
 
 <!-- Botón scroll down Landing Page-->
-<div class="flecha-bajar"><a href="#sensores"><i class="fas fa-angle-down"></i></a></div>
+<a class="desliz scroll-down blur" id="flecha" href="#sensores"></a>
 
 
 <!-- --------------------------------------------------------------------------------------------------------------------- -->
@@ -94,11 +93,11 @@
 
     <!-- --------------------------------------------------------------------------------------------------------------------- -->
 </section>
-<div class="flecha-bajar2"><a href="#services"><i class="fas fa-angle-down"></i></a></div>
+
 <!-- Sección Adquirir Servicio -->
 <section class="adquirir_servicios blur" id="adquirir_servicios">
 
-    <h2 class="titulo" id="services">¿Cómo adquirir nuestro servicio?</h2>
+    <h2 class="titulo">¿Cómo adquirir nuestro servicio?</h2>
     <!-- CONTÁCTANOS -->
     <div class="contenedor-nuestro">
         <div class="contenedor-servicios">
@@ -139,7 +138,7 @@
                 datos de tu terreno.</p>
         </div>
     </div>
-    <h3 class="sencillo"><b>¡ASÍ DE SENCILLO!</b></h3>
+    <h4 class="sencillo"><b>¡ASÍ DE SENCILLO!</b></h4>
 </section>
 
 <!--¡ASÍ DE SENCILLO!-->
