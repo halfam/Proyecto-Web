@@ -49,7 +49,6 @@
 <!-- Sección Servicios-->
 <section class="servicios-encabezado blur servicios-principal" id="encabezado_servicios">
     <h1 class="dentro">Servicios</h1>
-    <img src="img/servicios.jpg" alt="servicios-img" id="servicios-img">
     <img src="img/servicios1.jpg" alt="servicios-img" id="servicios-img1">
 </section>
 
@@ -101,21 +100,21 @@
     <!-- CONTÁCTANOS -->
     <div class="contenedor-nuestro">
         <div class="contenedor-servicios">
-            <h4><b>1-. CONTÁCTANOS</b></h4>
+            <h4 class="primera-letra"><b>1-. CONTÁCTANOS</b></h4>
             <img src="img/contacto.svg" alt="contacto" class="img-guia">
             <p class="text">Póngase en contacto con nosotros mediante el formulario de contacto.</p>
         </div>
 
         <!--ESPERA NUESTRA RESPUESTA-->
         <div class="contenedor-servicios">
-            <h4><b>2-. ESPERA NUESTRA RESPUESTA</b></h4>
+            <h4 class="primera-letra"><b>2-. ESPERA NUESTRA RESPUESTA</b></h4>
             <img src="img/email.svg" alt="espera" class="img-guia">
             <p class="text">Nos pondremos en contacto contigo en menos de 24/48h.</p>
         </div>
 
         <!--SELECCIONA LA FECHA DE REUNIÓN-->
         <div class="contenedor-servicios">
-            <h4><b>3-. SELECCIONA LA FECHA DE REUNIÓN</b></h4>
+            <h4 class="primera-letra"><b>3-. SELECCIONA LA FECHA DE REUNIÓN</b></h4>
             <img src="img/cita.svg" alt="cita" class="img-guia">
             <p class="text">Elegiremos una fecha que se adapte a tu horario para poder revisar tu terreno y
                 elegir los sensores necesarios.</p>
@@ -124,7 +123,7 @@
 
         <!--RECIBE LA INSTALACIÓN-->
         <div class="contenedor-servicios">
-            <h4><b>4-. RECIBE LA INSTALACIÓN</b></h4>
+            <h4 class="primera-letra"><b>4-. RECIBE LA INSTALACIÓN</b></h4>
             <img src="img/instalation.svg" alt="instalación" class="img-guia">
             <p class="text">Una vez acordados los sensores necesarios, uno de nuestros profesionales
                 realizará la instalación.</p>
@@ -132,7 +131,7 @@
 
         <!--ACCEDE A LA PÁGINA WEB-->
         <div class="contenedor-servicios">
-            <h4><b>5-. ACCEDE A LA PÁGINA WEB</b></h4>
+            <h4 class="primera-letra"><b>5-. ACCEDE A LA PÁGINA WEB</b></h4>
             <img src="img/password.svg" alt="credenciales" class="img-guia">
             <p class="text">Finalmente, te otorgaremos tus credenciales para poder consultar en la web todos los
                 datos de tu terreno.</p>
