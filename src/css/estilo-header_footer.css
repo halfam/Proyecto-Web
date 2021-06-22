@@ -355,12 +355,12 @@ a, button{
     justify-content: center;
 }
 
-/* Contenido del menú */
+/* Edición de cruz para cerrar */
 .overlay .close {
-    padding: 15px;
-    font-size: 25px;
+    font-size: 30px;
     display: block;
     transition: all 0.3s ease 0s;
+    cursor: pointer;
 }
 
 /* Color al accionar */
@@ -372,30 +372,20 @@ a, button{
 
 }
 
-/* Edición de cruz para cerrar */
-.overlay .close {
-    position: absolute;
-    top: 50px;
-    right: 25px;
-    font-size: 45px;
-    color: #edf0f1;
-    cursor: pointer;
-}
-
 /*------------------------------------------------------------------------------------------------*/
 
 
 /* Edición de cruz para cerrar */
-@media screen and (max-height: 450px) {
-  .overlay a {
-    font-size: 20px;
-  }
-  .overlay .close {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
-}
+/*@media screen and (max-height: 450px) {*/
+/*  .overlay a {*/
+/*    font-size: 20px;*/
+/*  }*/
+/*  .overlay .close {*/
+/*    font-size: 40px;*/
+/*    top: 15px;*/
+/*    right: 35px;*/
+/*  }*/
+/*}*/
 /* ------------------------------------------------------------------------------------------------------------------------ */
 
 
