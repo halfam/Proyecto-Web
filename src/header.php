@@ -50,12 +50,12 @@
         <div id="menutlf" class="overlay ">
 
             <div class="overlay--active login-content">
-                    <a class="close cerrar" onclick="loginBlur(false)">&times;</a>
                     <div class="clickme cerrar" onclick="loginBlur(false)"></div>
 
                     <!-- -------------------------------------------------------------------------------------------------------------------------- -->
                     <!-- FORMULARIO LOGIN -->
                     <form method="post">
+                        <a class="close cerrar" onclick="loginBlur(false)">&times;</a>
                         <!-- IMAGEN GTI Y TEXTO PARA LOGIN-->
                         <a class="logologin"><img src="<?php echo $path?>img/Security-amico.svg"></a>
 
