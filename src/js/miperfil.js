@@ -88,8 +88,8 @@ function llenarTabla() {
                 var modificaciones = fila.insertCell(5)
                 modificaciones.setAttribute("class","modificaciones")
                 idUsuario = usuario['id']
-                modificaciones.innerHTML =  `<a href="#" onclick="editarUsuario(this,idUsuario)">Editar</a> /
-                            <a href="#" onclick="eliminarUsuario(idUsuario)">Eliminar</a>`
+                modificaciones.innerHTML =  `<a href="#" onclick="editarUsuario(this,idUsuario)"><img src="../img/editar.png"></a>
+                            <a href="#" onclick="eliminarUsuario(idUsuario)"><img src="../img/eliminar.png"></a>`
                 // fila.contentEditable;
             })
         }
