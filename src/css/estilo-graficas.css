@@ -78,6 +78,7 @@
 .fa-plus-circle{
     color: #820053;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 /*Contenedor*/
 .interracion-usuario{
