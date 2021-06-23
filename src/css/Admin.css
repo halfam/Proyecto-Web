@@ -280,7 +280,7 @@ th, td{
     }
 
     .modificaciones{
-        justify-content: center;
+        justify-content: space-around;
     }
 
     table thead{
