@@ -27,7 +27,7 @@ include_once $path.'header.php';?>
     <!--PARTE SUPERIOR, FOTO PERFIL Y VOLVER-->
     <div class="perfil-usuario-header">
         <div class="perfil-usuario-portada">
-            <a href="<?php echo $path?>index.php" onclick="history.go(-1);return false;"><img class="volver" src="../img/volvermiperfil.png" alt="Volver"></a>
+            <a href="<?php echo $path?>index.php" onclick="history.go(-1);return false;" class="volver"><i class="fas fa-arrow-circle-left"></i></a>
             <div class="perfil-usuario-avatar">
                 <img src="../img/perfil.png" alt="img-avatar" id="foto">
 <!--                <button type="button" class="boton-avatar" onclick="cargarImg()">-->
