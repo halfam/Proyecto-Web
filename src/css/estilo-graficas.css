@@ -74,6 +74,11 @@
     color: #820053;
     font-size: 1.9rem;
 }
+/*Círculo + Comparar*/
+.fa-plus-circle{
+    color: #820053;
+    margin-bottom: 10px;
+}
 /*Contenedor*/
 .interracion-usuario{
     width: 100vw;
