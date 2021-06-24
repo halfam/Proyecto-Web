@@ -208,7 +208,7 @@ function ponerTitulo(path, nombre) {
         position: bounds.getCenter(),
         label: {
             text: nombre,
-            color: "#4682B4",
+            color: "#fff",
             fontSize: "30px",
             fontWeight: "bold"
         },

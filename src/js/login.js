@@ -57,9 +57,6 @@ function logout() {
 
 function abrirIniciosesion(acitvar) {
     sessionStorage.setItem("activar", acitvar)
-
-
-
 }
 
 function checkNotificaciones(idUser) {

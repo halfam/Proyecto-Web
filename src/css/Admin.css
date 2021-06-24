@@ -312,5 +312,7 @@ th, td{
     }
 
 }
-
+.editando{
+    border: red solid 3px
+}
 
