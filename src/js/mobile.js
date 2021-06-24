@@ -1,11 +1,11 @@
 var path = "";
-if (!location.pathname.includes("/app/")){
+if (!location.pathname.includes("/app/")) {
     path = "./"
-}else{
+} else {
     path = "../"
 }
 
-const passphrase= "La cookie de sesión";
+const passphrase = "La cookie de sesión";
 const doc = document;
 const overlay = doc.querySelector(".overlay");
 /* ------------------------------------------------------------------------------------------------------------------------ */
@@ -37,7 +37,7 @@ function loginBlur(loginpopup) {
 function comprobarSesion() {
 
     // console.log(sessionStorage.getItem('activar'))
-    fetch(path+'api/v1.0/sesion', {
+    fetch(path + 'api/v1.0/sesion', {
         method: 'GET',
     }).then(function (respuesta) {
         if (respuesta.ok) {
@@ -45,11 +45,11 @@ function comprobarSesion() {
         }
 
     }).then(function (data) {
-        if (data != undefined || data != null){
+        if (data != undefined || data != null) {
             getUser(data['id'])
 
-        }else{
-            if (sessionStorage.getItem('activar')!=null){
+        } else {
+            if (sessionStorage.getItem('activar') != null) {
                 loginBlur(true)
                 sessionStorage.clear()
             }
@@ -59,15 +59,15 @@ function comprobarSesion() {
 }
 
 function getUser(id) {
-    fetch(path+'api/v1.0/user/'+id,{
+    fetch(path + 'api/v1.0/user/' + id, {
         method: 'GET'
-    }).then(function (respuesta){
-        if (respuesta.ok){
+    }).then(function (respuesta) {
+        if (respuesta.ok) {
             return respuesta.json()
         }
-    }).then(function (data){
+    }).then(function (data) {
         cambiarMenu(data[0])
-        if (location.pathname.includes("contacto.php")){
+        if (location.pathname.includes("contacto.php")) {
             let inputNombre = document.getElementById("nombre")
             inputNombre.setAttribute("value", data[0]['Apodo'])
             inputNombre.setAttribute("readonly", "")
@@ -79,7 +79,7 @@ function getUser(id) {
 
         let picuser = document.querySelectorAll(".login")
         picuser.forEach(function (elem) {
-            elem.setAttribute("href", path+"app/miperfil.php" )
+            elem.setAttribute("href", path + "app/miperfil.php")
             // elem.setAttribute("onclick", "")
         })
         /*
@@ -102,40 +102,37 @@ function cambiarMenu(user) {
     let menu = document.getElementById('lista-menu')
     let miPerfil = document.createElement('li')
     miPerfil.classList.add('nav-link')
-    miPerfil.innerHTML="<a href='"+path+"app/miperfil.php'>"+nombre+"</a>"
-    menu.appendChild(miPerfil)
-    document.getElementById("login").innerText="Cerrar sesión";
+    miPerfil.innerHTML = "<a href='" + path + "app/miperfil.php'>" + "Hola " + nombre + "</a>"
+
+    document.getElementById("login").innerText = "Cerrar sesión";
     document.getElementById("login").setAttribute("onclick", "logout()");
 
     switch (rol) {
         case 'usuario':
-             let misCampos = document.createElement('li')
-             misCampos.classList.add('nav-link')
-             misCampos.innerHTML = "<a href='"+path+"app/miscampos.php'>Mis campos</a>"
-             menu.appendChild(misCampos)
-            
-            let nosotros = document.getElementById('nosotros')
-             let nstr = nosotros.parentNode;
-             nstr.removeChild(nosotros)
+            let misCampos = document.createElement('li')
+            misCampos.classList.add('nav-link')
+            misCampos.innerHTML = "<a href='" + path + "app/miscampos.php'>Mis campos</a>"
+            menu.appendChild(misCampos)
 
-             let servicios = document.getElementById('servicios')
-             let serv = servicios.parentNode;
-             serv.removeChild(servicios)
-            
-            let misDatos = document.createElement('li')
-            misDatos.classList.add('nav-link')
-            misDatos.innerHTML = "<a href='" + path + "app/misdatos.php'>Mis datos</a>"
-            menu.appendChild(misDatos)
+            let nosotros = document.getElementById('nosotros')
+            let nstr = nosotros.parentNode;
+            nstr.removeChild(nosotros)
+
+            let servicios = document.getElementById('servicios')
+            let serv = servicios.parentNode;
+            serv.removeChild(servicios)
+
             break;
 
         case 'admin':
             let admin = document.createElement('li')
             admin.classList.add('nav-link')
-            admin.innerHTML = "<a href='"+path+"app/admin.php'>Panel de Control</a>"
+            admin.innerHTML = "<a href='" + path + "app/admin.php'>Panel de Control</a>"
             menu.appendChild(admin)
 
         case 'empleado':
             break;
     }
-}
 
+    menu.appendChild(miPerfil)
+}
