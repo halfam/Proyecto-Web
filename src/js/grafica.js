@@ -161,7 +161,6 @@ function procesarDatos(mediciones) {
     if (sessionStorage.getItem("medicionComparar")!=null){
         var tipoComparar = sessionStorage.getItem("medicionComparar")
         var datosPrevios = JSON.parse(sessionStorage.getItem("datosPrevios"))
-        tipoComparar ="3"
         let tipo = ""
         switch (tipoComparar){
             case "0":
