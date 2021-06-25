@@ -75,6 +75,11 @@ function getUser(id) {
             let inputEmail = document.getElementById("email")
             inputEmail.setAttribute("value", data[0]['correo'])
             inputEmail.setAttribute("readonly", "")
+            if (sessionStorage.getItem("sondaIncidencia") != null){
+                let inputMensaje = document.getElementById("mensaje")
+                inputMensaje.innerText+="La sonda "+ sessionStorage.getItem("sondaIncidencia") + " no está activada y desearía saber por qué "
+                sessionStorage.removeItem("sondaIncidencia")
+            }
         }
 
         let picuser = document.querySelectorAll(".login")

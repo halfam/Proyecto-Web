@@ -36,8 +36,12 @@ function initMap() {
 
 let infoWindows = [];
 var parcela = "";
+var idSondaIncidencia;
+
 function addMarker(lat, lng, id, nombreParcela) {
+
     setTimeout(() => {
+        idSondaIncidencia = id
         var marker = new google.maps.Marker({
             position: {lat: lat, lng: lng},
             label: id,
@@ -59,7 +63,7 @@ function addMarker(lat, lng, id, nombreParcela) {
                 }
             }).then(function (data) {
                 if (data == undefined)
-                    infoWindow.setContent("Esta sonda no esta activada <br><br> <a href='../contacto.php'>Resolver incidencia>></a>")
+                    infoWindow.setContent("Esta sonda no esta activada <br><br> <a href='../contacto.php' onclick='setSonda(idSondaIncidencia)'>Resolver incidencia>></a>")
 
                 else {
                     parcela = nombreParcela;
@@ -78,8 +82,8 @@ function addMarker(lat, lng, id, nombreParcela) {
                         '<label htmlFor="valor de humedad" id="humedad">' + data[0]["humedad"] + '%</label>' +
                         '</div>' +
                         '<div class="enlace">' +
-                        '<a class="boton-comparar" onclick="cargarGraficas(' + id + ',' + true +','+'parcela'+ ')">[+]Comparar</a>' +
-                        '<a class="informacion-detallada" onclick="cargarGraficas(' + id + ',' + false +','+'parcela'+ ')">Ver más >></a>' +
+                        '<a class="boton-comparar" onclick="cargarGraficas(' + id + ',' + true + ',' + 'parcela' + ')">[+]Comparar</a>' +
+                        '<a class="informacion-detallada" onclick="cargarGraficas(' + id + ',' + false + ',' + 'parcela' + ')">Ver más >></a>' +
                         '</div>'
                         // '<div class="enlace"><a class="informacion-detallada" onclick="cargarGraficas(' + id + ', false)">Ver más >></div>' +
                     )
@@ -108,14 +112,14 @@ function cerrarInfowindows(infowindows) {
 
 let sondas = [];
 
-function cargarGraficas(idSonda, comparar,nombreParecela) {
+function cargarGraficas(idSonda, comparar, nombreParecela) {
     console.log(nombreParecela)
     idSonda = parseInt(idSonda)
-    if (!comparar){
+    if (!comparar) {
         sondas = []
-    } else{
-        if(sessionStorage.getItem('sondas') !== null){
-            if (sessionStorage.getItem('sondas').length <= 2 ){
+    } else {
+        if (sessionStorage.getItem('sondas') !== null) {
+            if (sessionStorage.getItem('sondas').length <= 2) {
                 sondas.push(parseInt(sessionStorage.getItem('sondas')))
             }
         }
@@ -192,7 +196,7 @@ function dibujarParcela(latitudes, longitudes, color, id, nombreParcela) {
         ponerTitulo(path, nombreParcela);
         parcelas.push({poly: polygon, id: id, nombre: nombreParcela})
         if (sessionStorage.getItem('campo') !== null)
-        centrarParcela(sessionStorage.getItem('campo') )
+            centrarParcela(sessionStorage.getItem('campo'))
 
     }
 }
@@ -246,7 +250,7 @@ function centrarParcela(nombre) {
 function hemosclicado(opcio) {
 
     centrarParcela(opcio.value)
-    setTimeout(()=>opcio.value = "", 1000)
+    setTimeout(() => opcio.value = "", 1000)
 
 }
 
@@ -284,6 +288,10 @@ function cargarParcelas() {
             }
         })
     })
+}
+
+function setSonda(idSonda) {
+    sessionStorage.setItem("sondaIncidencia", idSonda)
 }
 
 
