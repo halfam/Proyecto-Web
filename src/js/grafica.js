@@ -12,6 +12,8 @@ let auxTiempo = 0;
 
 var dts = []
 var ops = []
+var datosPDF = []
+var tituloPDF;
 
 let datos = {
     labels: [],
@@ -158,11 +160,11 @@ function procesarDatos(mediciones) {
     })
 
     datos.labels = fechas;
-    if (sessionStorage.getItem("medicionComparar")!=null){
+    if (sessionStorage.getItem("medicionComparar") != null) {
         var tipoComparar = sessionStorage.getItem("medicionComparar")
         var datosPrevios = JSON.parse(sessionStorage.getItem("datosPrevios"))
         let tipo = ""
-        switch (tipoComparar){
+        switch (tipoComparar) {
             case "0":
                 tipo = "Humedad"
                 datos.datasets[1].data = [];
@@ -202,13 +204,12 @@ function procesarDatos(mediciones) {
                 break;
         }
 
-        opciones.plugins.title.text = "Comparando " + tipo  +" de las sondas " + idSondas[0] + " y " + idSondas[1];
+        opciones.plugins.title.text = "Comparando " + tipo + " de las sondas " + idSondas[0] + " y " + idSondas[1];
         // datos.datasets.pop()
         // datos.datasets.pop()
 
         // console.log(datos.datasets)
-    }
-    else{
+    } else {
 
         datos.datasets[0].data = humedad;
         datos.datasets[1].data = salinidad;
@@ -216,10 +217,10 @@ function procesarDatos(mediciones) {
         datos.datasets[3].data = temperatura;
         opciones.plugins.title.text = "Los datos obtenidos por la sonda " + id;
     }
-    dts.push(datos)
-    console.log(dts[0])
+    dts.push(datos);
+    cargarDatosPDF(datos.labels, datos.datasets[0].data, datos.datasets[1].data, datos.datasets[2].data, datos.datasets[3].data, id);
     ops.push(opciones)
-    if (miGrafica== null || miGrafica == undefined) {
+    if (miGrafica == null || miGrafica == undefined) {
         CrearGrafica(id);
     }
     miGrafica.update()
@@ -262,7 +263,7 @@ function modificarDatos() {
         labels: [],
         datasets: [
             {
-                label: "sonda " + idSondas[0] ,
+                label: "sonda " + idSondas[0],
                 backgroundColor: 'rgb(0,225,0)',
                 borderColor: "rgb(0,225,0)",
                 tension: 0.3,
@@ -295,10 +296,92 @@ function almacenarDatosSonda() {
     datos.datasets[3].backgroundColor = "rgb(0,225,0)"
     datos.datasets[3].borderColor = "rgb(0,225,0)"
     datos.datasets[3].label = "sonda " + idSondas[0]
-    sessionStorage.setItem("datosPrevios",JSON.stringify(datos))
+    sessionStorage.setItem("datosPrevios", JSON.stringify(datos))
 }
+
 function cambiarTiempo(value) {
     tiempo = parseInt(value);
     checkSondas();
 }
 
+function cambiarIcono() {
+    var myselect = document.getElementById("test-dropdown");
+    document.getElementById("imgTemperatura").style.display = "none";
+    document.getElementById("imgSalinidad").style.display = "none";
+    document.getElementById("imgHumedad").style.display = "none";
+    document.getElementById("imgLuminosidad").style.display = "none";
+    switch (myselect.value) {
+        case "0":
+            document.getElementById("imgHumedad").style.display = "block";
+            break;
+        case "1":
+            document.getElementById("imgSalinidad").style.display = "block";
+            break;
+        case "2":
+            document.getElementById("imgLuminosidad").style.display = "block";
+            break;
+        case "3":
+            document.getElementById("imgTemperatura").style.display = "block";
+            break;
+    }
+}
+
+
+//PDF
+function cargarDatosPDF(fechas, humedad, salinidad, luminosidad, temperatura, id) {
+    tituloPDF = "Sonda " + id;
+
+    var aux = {}
+    for (var i = 0; i < fechas.length; i++) {
+        aux.Fecha = fechas[i];
+        aux.Humedad = humedad[i];
+        aux.Salinidad = salinidad[i];
+        aux.Luminosidad = luminosidad[i];
+        aux.Temperatura = temperatura[i];
+        //console.log(aux);
+        datosPDF.push(Object.assign({}, aux));
+    }
+    //console.log(datosPDF);
+
+}
+
+function CreatePDF() {
+
+
+    function createHeaders(keys) {
+        var result = [];
+        for (var i = 0; i < keys.length; i += 1) {
+            result.push({
+                id: keys[i],
+                name: keys[i],
+                prompt: keys[i],
+                width: 65,
+                align: "center",
+                padding: 0
+            });
+        }
+        return result;
+    }
+
+    var headers = createHeaders([
+  "Fecha",
+  "Humedad",
+  "Salinidad",
+  "Luminosidad",
+  "Temperatura"
+]);
+
+    var doc = new jsPDF({
+        putOnlyUsedFonts: true,
+        orientation: "landscape"
+    });
+    doc.setFontSize(22);
+    doc.setFont("helvetica", "bold");
+    doc.text(tituloPDF, 25, 10);
+    doc.setFontSize(16);
+    doc.setFont("helvetica", "normal");
+    doc.table(25, 20, datosPDF, headers, {
+        autoSize: false
+    });
+    doc.save(tituloPDF + '.pdf');
+}
