@@ -1,30 +1,35 @@
 /*-----------------------------------------------DISEÑO GENERAL-----------------------------------------------*/
 /*--------------------------------------------------*/
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Varela Round', sans-serif;
 
 }
-.header{
+
+.header {
     height: 70px
 }
+
 /*Diseño título de la gráfica*/
-.tituloGraficas{
+.tituloGraficas {
     text-align: center;
     margin: 2rem;
 }
+
 /*Estilo de la section*/
 .cabecera_princ {
     margin: 0 auto;
     text-align: center;
 }
+
 /*Elementos de arriba de la gráfica*/
-.graficas_princ{
+.graficas_princ {
     position: relative;
     display: inline-block;
 }
+
 /*Imágen título*/
 #graficas-img {
     width: 100vw;
@@ -32,8 +37,9 @@
     margin-bottom: -3px;
 
 }
+
 /*Dentro de la imagen del título*/
-.dentro{
+.dentro {
     position: absolute;
     top: 38%;
     left: 50%;
@@ -44,44 +50,51 @@
     width: 100%;
     color: black;
 }
+
 /*Texto de las gráficas*/
-.texto_graficas{
+.texto_graficas {
     width: 90%;
     text-align: justify;
     margin: 0 auto;
     margin-top: 4%;
 }
+
 /*Botón atrás*/
-.flecha_atras_bonita_bonita{
+.flecha_atras_bonita_bonita {
     text-decoration: none;
     margin-top: 2%;
     display: inline;
     margin-left: 0px;
     text-align: left;
 }
+
 /*Texto para la lista*/
-.mostrar-mis-datos{
+.mostrar-mis-datos {
     margin-left: auto;
     margin-right: 10px;
 }
+
 /*Desplegable del tiempo*/
-.tiempo{
+.tiempo {
     padding-right: 20px;
 }
+
 /*Círculo de la flecha de atrás*/
-.fa-arrow-circle-left{
+.fa-arrow-circle-left {
     margin-left: 4vw;
     color: #820053;
     font-size: 1.9rem;
 }
+
 /*Círculo + Comparar*/
-.fa-plus-circle{
+.fa-plus-circle {
     color: #820053;
     margin-bottom: 10px;
     cursor: pointer;
 }
+
 /*Contenedor*/
-.interracion-usuario{
+.interracion-usuario {
     width: 100vw;
     display: flex;
     margin: 2vh 0px 1vh 0px;
@@ -89,65 +102,100 @@
     width: 90%;
 }
 
-.comparar{
+.comparar {
     display: flex;
     justify-content: center;
 }
-#graficas-img2{
+
+#graficas-img2 {
     display: none;
 }
-#graficas-img3{
+
+#graficas-img3 {
     display: none;
 }
+
+.btn_pdf {
+    background: none;
+    border: none;
+    font-size: 40px;
+    margin-left: 2rem;
+    color: red;
+}
+
+
 /*----------------------------------------------FIN DISEÑO GENERAL-----------------------------------------------*/
 /*---------------------------------------------------------------------------------------------------------------*/
 
 
 /*----------------------------------------------DISEÑO ORDENADOR-------------------------------------------------*/
 /*---------------------------------------------------------------------------------------------------------------*/
-@media  screen and (min-width: 800px) {
+@media screen and (min-width: 800px) {
+
     /*Interacción del usuario*/
     .interracion-usuario {
         margin-bottom: 0px;
     }
+
     /*Imagen 1 de la cabecera de la página*/
-    #graficas-img{
+    #graficas-img {
         display: none;
     }
+
     /*Imagen 2 para PC*/
-    #graficas-img2{
+    #graficas-img2 {
         display: initial;
         width: 100%;
         height: 160px;
     }
+
     /*Imagen 3*/
-    #graficas-img3{
+    #graficas-img3 {
         display: none;
     }
 }
 
+
 /*---------------------------------------------FIN DISEÑO TABLET-------------------------------------------------*/
 /*---------------------------------------------------------------------------------------------------------------*/
-@media  screen and (min-width: 520px) and (max-width: 800px){
+@media screen and (min-width: 520px) and (max-width: 800px) {
+
     /*Cambios de imagen de la cabecera*/
-    #graficas-img{
+    #graficas-img {
         display: none;
     }
-    #graficas-img2{
+
+    #graficas-img2 {
         display: none;
     }
-    #graficas-img3{
+
+    #graficas-img3 {
         display: initial;
         width: 100%;
         height: 160px;
     }
 }
+
 /*--------------------------------------------FIN DISEÑO TABLET--------------------------------------------------*/
 /*---------------------------------------------------------------------------------------------------------------*/
 
 
 /* Diseño para el overlay de seleccionar el tipo de dato a comparar*/
-.overlay_graficas{
+
+.close {
+    font-size: 30px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    align-self: flex-end;
+    color: grey;
+}
+
+.close:hover {
+    color: #820053;
+}
+
+.overlay_graficas {
     position: fixed;
     z-index: 11;
     width: 10%;
@@ -158,39 +206,105 @@
     padding: 1rem;
 }
 
-@media  screen and (min-width: 200px) and (max-width: 920px) {
-    .overlay_graficas {
-        position: fixed;
-        z-index: 11;
-        width: 80vw;
-        border: 3px red solid;
-        left: 10vw;
-        top: 40%;
-        background: #FFFFFFE0;
-        text-align: center;
-        font-size: 2rem;
-        height: 20rem;
-        border-radius: 3rem;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-content: center;
-        align-items: center;
-    }
-    .overlay_graficas .formularioComparar{
-        margin-top: 1rem;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-    #botonAceptar{
-        bottom: 0;
+.formularioComparar > button {
+    padding: .5rem 1.3rem;
+    font-size: 1rem;
+    border: 2px solid #820053;
+    border-radius: 10px;
+    line-height: 1;
+    transition: .3s;
+    background-color: #fff;
+}
+
+.formularioComparar > button:hover {
+    background-color: #820053;
+    color: #fff;
+}
+
+.formularioComparar > select {
+    margin-bottom: 1em;
+    padding: .25em;
+    border: 0;
+    border-bottom: 2px solid #820053;
+    border-radius: 0;
+    font-size: 16px;
+
+    &:focus,
+    &:active {
+        outline: 0;
+        border-bottom-color: red;
     }
 }
 
-.ocultar{
+.imgComparador {
+    height: 4rem;
+    width: 4rem;
+}
+
+#imgHumedad,
+#imgSalinidad,
+#imgLuminosidad {
+    display: none;
+}
+
+#botonAceptar {
+    bottom: 0;
+}
+
+.overlay_graficas {
+    position: fixed;
+    z-index: 11;
+    border: 3px #820053 solid;
+    top: 40%;
+    background: #FFFFFFE0;
+    text-align: center;
+    font-size: 2rem;
+    height: 20rem;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+}
+
+.overlay_graficas .formularioComparar {
+    margin-top: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media screen and (min-width: 200px) and (max-width: 650px) {
+    .overlay_graficas {
+        width: 80vw;
+        left: 10vw;
+
+    }
+
+}
+
+@media screen and (min-width: 920px) {
+    .overlay_graficas {
+        width: 40vw;
+        left: 30vw;
+    }
+
+}
+
+@media screen and (min-width: 650px) and (max-width: 920px) {
+    .overlay_graficas {
+        width: 50vw;
+        left: 25vw;
+
+    }
+
+}
+
+.ocultar {
     display: none;
 }
