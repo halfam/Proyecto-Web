@@ -216,9 +216,10 @@ function procesarDatos(mediciones) {
         datos.datasets[2].data = luminosidad;
         datos.datasets[3].data = temperatura;
         opciones.plugins.title.text = "Los datos obtenidos por la sonda " + id;
+        cargarDatosPDF(datos.labels, datos.datasets[0].data, datos.datasets[1].data, datos.datasets[2].data, datos.datasets[3].data, id);
     }
     dts.push(datos);
-    cargarDatosPDF(datos.labels, datos.datasets[0].data, datos.datasets[1].data, datos.datasets[2].data, datos.datasets[3].data, id);
+
     ops.push(opciones)
     if (miGrafica == null || miGrafica == undefined) {
         CrearGrafica(id);

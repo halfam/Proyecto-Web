@@ -89,7 +89,7 @@
                         </label>
 
                         <!-- ¿HAS OLVIDADO TU CONTRASEÑA?   -->
-                        <a href="<?php echo $path?>#">¿Has olvidado tu contraseña?</a>
+                        <a href="<?php echo $path?>forgotPassword.php">¿Has olvidado tu contraseña?</a>
                         </div>
                         <div id="output"></div>
                         <input type="submit" class="btn" value="Iniciar Sesión" >
