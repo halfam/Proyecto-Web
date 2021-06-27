@@ -118,6 +118,7 @@ function actualizarUsuario(editar, userID) {
         fila = editar.parentNode.parentNode
         campos = fila.childNodes
         fila.classList.remove("editando")
+        alert("actualizado con exito")
         location.reload()
     } else {
         // getUserInfo()
@@ -139,12 +140,13 @@ function actualizarUsuario(editar, userID) {
         method: "PUT",
         body: JSON.stringify(Object.fromEntries(dataUser)),
     }).then(function (respuesta) {
+
     })
 }
 
 
 function eliminarUsuario(userID) {
-    let opcion = confirm("¿Estás seguro de que quieres cerrar sesión?")
+    let opcion = confirm("¿Estás seguro de que quieres eliminar este usuario?")
     if (!opcion) {
         return
     } else {
@@ -219,7 +221,9 @@ function addUser(fila) {
     }).then(function (data) {
         if (flag)
             alert("El usuario no se ha podido crear")
-        else
+        else {
             alert("El usuario se ha creado con exito")
+            location.reload()
+        }
     })
 }
