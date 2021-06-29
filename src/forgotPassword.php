@@ -7,7 +7,7 @@
     <title>Nosotros</title>
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <link rel="stylesheet" href="css/estilo-header_footer.css">
-    <link rel="stylesheet" href="css/nosotros.css">
+<!--    <link rel="stylesheet" href="css/nosotros.css">-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600;800&family=Varela+Round&display=swap" rel="stylesheet">

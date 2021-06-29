@@ -4,6 +4,28 @@
   box-sizing: border-box;
   font-family: 'Varela Round', sans-serif;
 }
+.header{
+    height: 50px;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+/*--------------------------------------------------*/
+/*VARIABLES ESTABLECIDOS */
+:root {
+    --softRed: hsl(14, 88%, 65%);
+    --veryDarkGrayBlue: hsl(237, 12%, 33%);
+    --darkGrayBlue: hsl(240, 6%, 50%);
+    --lightGrayBlue: hsl(240, 5%, 91%);
+    --fontSize: 12px;
+    --widthBuscar: 20%;
+    --marginTopBuscar: 1rem;
+}
+/*--------------------------------------------------*/
+
 /* ------------------------------------------------------------------------------------------------------------------------ */
                                                       /* HEADER */
 /* ------------------------------------------------------------------------------------------------------------------------ */
@@ -824,3 +846,2126 @@ a, button{
 .rojo{
     background: red;
 }
+
+/*----------------------------------------------- Inicio CSS pagina de contacto -----------------------------------------------*/
+@media screen and (min-width: 610px) {
+
+    /*--------------------------------------------------*/
+    /*OPCIONES DE LAS IMÁGENES DE ENCABEZADO*/
+    #contacto-elipse,
+    #contacto-img {
+        display: none;
+    }
+
+    /*--------------------------------------------------*/
+
+    .contacto-textos,
+    .contacto-textos-2 {
+        display: none;
+    }
+
+    .contacto_princ {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+
+    #contacto-img-princ2 {
+        width: 100%;
+        height: 200px;
+    }
+    #contacto-img-princ{
+        display: none;
+    }
+
+    .dentro {
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        transform: translate(-50%, 80%);
+        padding: 2px;
+        font-size: 20px;
+        background: #EAEAEA80;
+        width: 100%;
+        color: black;
+    }
+
+    .contenedor-flex {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .texto-pc {
+        margin: auto auto;
+        width: 70vh;
+        height: auto;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .formulario {
+        position: relative;
+        margin: 0 auto;
+        width: 550px;
+        height: auto;
+    }
+
+    .verticalLine {
+        border-left: 2px solid #D0DCE5;
+    }
+
+    /*diseño del formulario*/
+    .contacto-formulario {
+        height: auto;
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+
+    .contacto-formulario form {
+        width: 100%;
+        height: 360px;
+        padding: 20px;
+        border-radius: 20px;
+        margin: 0px auto;
+    }
+
+    .contacto-formulario input,
+    .txt {
+        background-color: #EAEFF3;
+        width: 100%;
+        height: 40px;
+        border-radius: 13px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #D0DCE5;
+        margin: 3px auto;
+    }
+
+    .contacto-formulario input {
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
+
+    .contacto-formulario textarea {
+        background-color: #EAEFF3;
+        width: 99%;
+        height: 100px;
+        border-radius: 15px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #D0DCE5;
+        margin: 5px auto 10px auto;
+        padding-top: 15px;
+        padding-left: 10px;
+        resize: none;
+    }
+
+    .formulario input:focus {
+        outline: 0;
+        border: 2px solid #820053;
+    }
+
+
+    .formulario textarea:focus {
+        outline: 0;
+        border: 2px solid #820053;
+    }
+
+    .contacto-formulario ::placeholder {
+        color: black;
+
+
+    }
+
+    /*-------------------------------------------------------------------------------------------------------------------*/
+
+    /*-------------------------------------------------------------------------------------------------------------------*/
+
+    /*diseño del boton*/
+    .btn {
+        display: block;
+        width: 100%;
+        height: 50px;
+        border-radius: 50px;
+        outline: none;
+        border: none;
+        background-image: linear-gradient(to left, #820053, #8088, #820053);
+        background-size: 200%;
+        font-size: 1.2rem;
+        color: #fff;
+        margin: 0 auto;
+        cursor: pointer;
+        transition: .5s;
+    }
+
+    .btn:hover {
+        background-position: right;
+
+    }
+
+    /*--------------------------------------------------*/
+
+
+
+}
+
+/*----------------------------------------------FIN DISEÑO ORDENADOR---------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------DISEÑO MÓVIL--------------------------------------------------*/
+@media screen and (max-width: 610px) {
+
+    .contacto_princ {
+        display: none;
+    }
+
+    #contacto-img-princ2{
+        display: none;
+    }
+
+    .texto-pc {
+        display: none;
+    }
+
+    /*Primera parte del texto y foto*/
+    .contacto-encabezado {
+        background-color: #D0DCE5;
+        border-bottom: solid 4px #820053;
+        margin-top: -0.2rem;
+    }
+
+    /*-------------------------------------------------------------------------------------------------------------------*/
+
+    /*-------------------------------------------------------------------------------------------------------------------*/
+    /*diseño del texto tipografia y alineacion*/
+    .contacto-textos {
+        margin: 0 auto;
+        text-align: center;
+        color: white;
+    }
+
+    .contacto-textos-2 {
+        padding-top: 25px;
+        margin: 0px 15px 40px 15px;
+        text-align: center;
+        font-style: italic;
+        font-size: 18px;
+    }
+
+    /*-------------------------------------------------------------------------------------------------------------------*/
+
+    /*-------------------------------------------------------------------------------------------------------------------*/
+
+    /*Diseño para textos*/
+    .contacto-textos h1 {
+        font-size: 24px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .contacto-formulario p,
+    .contacto-textos p {
+        margin: 0 1rem;
+        font-size: 18px;
+        font-weight: normal;
+    }
+
+    /*-------------------------------------------------------------------------------------------------------------------*/
+
+    /*-------------------------------------------------------------------------------------------------------------------*/
+
+    /*Diseño de la imagen contacto*/
+    #contacto-img {
+        width: 100%;
+        height: auto;
+        margin-bottom: -3px;
+    }
+
+    /*-------------------------------------------------------------------------------------------------------------------*/
+
+    /*-------------------------------------------------------------------------------------------------------------------*/
+
+    /*Diseño imagen elipse*/
+    #contacto-elipse {
+        width: 100%;
+        height: auto;
+        margin-bottom: -3px;
+        margin-top: -3px;
+    }
+
+    /*-------------------------------------------------------------------------------------------------------------------*/
+
+    /*-------------------------------------------------------------------------------------------------------------------*/
+
+    /*diseño del formulario*/
+    .contacto-formulario {
+        background: linear-gradient(to right, #6F60CC 10%, #9F6CB4);
+        height: auto;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        border-top: solid 4px #820053;
+    }
+
+    .contacto-formulario form {
+        width: 85%;
+        height: 370px;
+        background: rgba(255, 255, 255, 0.7);
+        padding: 20px;
+        border-radius: 20px;
+        margin: 30px auto 20px auto;
+    }
+
+    .contacto-formulario input,
+    .txt {
+        background-color: #EAEFF3;
+        width: 100%;
+        height: 40px;
+        border-radius: 13px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #D0DCE5;
+        margin: 3px auto;
+    }
+
+    .contacto-formulario input {
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
+
+    .contacto-formulario textarea {
+        background-color: #EAEFF3;
+        width: 99%;
+        height: 100px;
+        border-radius: 15px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #D0DCE5;
+        margin: 5px auto 10px auto;
+        padding-top: 15px;
+        padding-left: 10px;
+        resize: none;
+    }
+
+    .formulario input:focus {
+        outline: 0;
+        border: 2px solid #820053;
+    }
+
+
+    .formulario textarea:focus {
+        outline: 0;
+        border: 2px solid #820053;
+    }
+
+    .contacto-formulario ::placeholder {
+        color: black;
+
+
+    }
+
+    /*-------------------------------------------------------------------------------------------------------------------*/
+
+    /*-------------------------------------------------------------------------------------------------------------------*/
+
+    /*diseño del boton*/
+    .btn {
+        display: block;
+        width: 100%;
+        height: 50px;
+        border-radius: 50px;
+        outline: none;
+        border: none;
+        background-image: linear-gradient(to left, #820053, #8088, #820053);
+        background-size: 200%;
+        font-size: 1.2rem;
+        color: #fff;
+        margin: 0 auto;
+        cursor: pointer;
+        transition: .5s;
+    }
+
+    .btn:hover {
+        background-position: right;
+
+    }
+
+    /*--------------------------------------------------*/
+}
+
+/*-----------------------------------------------FIN DISEÑO MÓVIL------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------- Fin CSS pagina de contacto -----------------------------------------------*/
+/*----------------------------------------------- Inicio CSS pagina de Admin -----------------------------------------------*/
+
+/*-------------------------------------------DISEÑO DE LO VISIBLE-----------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------*/
+/*DISEÑOS GENERALES DE CONTENEDORES*/
+.seccion-perfil-usuario .perfil-usuario-body,
+.seccion-perfil-usuario {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*COLOR DE FONDO GENERAL*/
+.seccion-perfil-usuario .perfil-usuario-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#d991b1, transparent);
+    margin-bottom: 1.25rem;
+}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*COLOR DE ENCABEZADO INICIAL*/
+.seccion-perfil-usuario .perfil-usuario-portada {
+    display: block;
+    position: relative;
+    width: 90%;
+    height: 180px;
+    background: linear-gradient(25deg, #820053, #d991b1);
+    border-radius: 0 0 20px 20px;
+}
+
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*DISEÑO BOTÓN VOLVER*/
+.volver {
+    margin-top: 20px;
+    margin-left: 30px;
+    color: white;
+    font-size: 1.9rem;
+    display: flex;
+    cursor: pointer;
+    width: 24px;
+    text-decoration: none;
+}
+.volver:hover{
+    color: #d991b1;
+}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*DISEÑO CONTENEDORES DE LA IMAGEN DE PERFIL*/
+.seccion-perfil-usuario .perfil-usuario-avatar {
+    display: flex;
+    width: 180px;
+    height: 180px;
+    align-items: center;
+    justify-content: center;
+    border: 7px solid #FFFFFF;
+    background-color: #EAEAEA;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    position: absolute;
+    bottom: -40px;
+    left: calc(50% - 90px);
+    z-index: 1;
+}
+.seccion-perfil-usuario .perfil-usuario-avatar img {
+    width: 100%;
+    position: relative;
+    border-radius: 50%;
+}
+
+/*-------------------------------------------------------*/
+/*DISEÑO BOTÓN CAMBIAR FOTO DE PERFIL*/
+.seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar {
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    border: 0;
+    background-color: #fff;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*TAMAÑO DE LOS CUADRADOS BLANCOS*/
+.seccion-perfil-usuario .perfil-usuario-body {
+    width: 70%;
+    position: relative;
+}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*OPCIONES DEL NOMBRE DEL USUARIO*/
+.seccion-perfil-usuario .perfil-usuario-body .titulo {
+    display: block;
+    width: 100%;
+    font-size: 35px;
+}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*CREACIÓN DE LOS CONTENEDORES BLANCOS Y ESPACIOS*/
+.seccion-perfil-usuario .perfil-usuario-footer,
+.seccion-perfil-usuario .perfil-usuario-bio {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5rem 1.5rem;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    background-color: #fff;
+    border-radius: 15px;
+    width: 85vw;
+    margin-bottom: 7%;
+}
+.perfil-usuario-footer{
+    margin-top: 3%;
+}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+.seccion-perfil-usuario .perfil-usuario-bio {
+    margin-bottom: 1.25rem;
+    margin-top: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.crearusuarioadmin {
+    margin: 0 auto;
+    border: 2px solid #820053;
+    padding: 5px 10px;
+    border-radius: 12px;
+    background: #d380b5b8;
+    margin-top: 10px;
+}
+.crearusuarioadmin:hover{
+    background-color: #820053;
+    color: white;
+}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*DISEÑO DE LOS APARTADOS DE DATOS PERSONALES*/
+.seccion-perfil-usuario .lista-datos {
+    width: 50%;
+    list-style: none;
+}
+.seccion-perfil-usuario .lista-datos li {
+    padding: 5px 0;
+}
+.tlf, .crreo, .direcc, .servs{
+    font-weight: bold;
+}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*EDICIÓN DE LOS ICONOS INDIVIDUALES*/
+.seccion-perfil-usuario .lista-datos li> .icono {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+/*-------------------------------------------------------*/
+/*.seccion-perfil-usuario .redes-sociales {*/
+/*    position: absolute;*/
+/*    right: calc(0px - 50px - 1rem);*/
+/*    top: 0;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*EDICIÓN DE LA FRASE DE DATOS PERSONALES*/
+.misusuarios{
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 3%;
+    text-decoration: underline;
+    font-size: 20px;
+}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*OPCIONES DE TAMAÑO Y DISPOSICIÓN CUADRADOS BLANCOS*/
+.seccion-perfil-usuario .lista-datos {
+    width: 100%;
+}
+.seccion-perfil-usuario .perfil-usuario-portada,
+.seccion-perfil-usuario .perfil-usuario-body {
+    width: 95%;
+}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*UBICACIÓN DE LA INFORMACIÓN DATOS PERSONALES*/
+.seccion-perfil-usuario {
+    position: relative;
+    flex-direction: row;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+/*-------------------------------------------------------*/
+
+/*--------------------------------------------FIN DISEÑO DE LO VISIBLE------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------INICIO DISEÑO TABLA--------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------*/
+/*POSICIÓN DE LA TABLA*/
+.tabla{
+    margin: 0 auto;
+}
+table{
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th{
+    background: #afafaf;
+    padding: 0.3rem 2rem;
+}
+th, td{
+    border: 2px solid #d0d0d0;
+    padding: 1rem .5rem;
+}
+.tabla caption {
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+@media (max-width:810px) {
+
+    table{
+        width: 75vw;
+    }
+    table tr{
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+
+    td{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .modificaciones{
+        justify-content: space-around;
+    }
+
+    table thead{
+        display: none;
+    }
+
+    table td[data-titulo]::before{
+        content: attr(data-titulo);
+        font-weight: bold;
+
+    }
+
+    .crearusuarioadmin {
+        margin: 0 auto;
+        border: 2px solid #820053;
+        padding: 5px 10px;
+        border-radius: 12px;
+        background: #d380b5b8;
+    }
+    .crearusuarioadmin:hover{
+        background-color: #820053;
+        color: white;
+    }
+
+}
+.editando{
+    border: red solid 3px
+}
+
+/*----------------------------------------------- Fin CSS pagina de Admin -----------------------------------------------*/
+/*----------------------------------------------- Inicio CSS pagina de graficas -----------------------------------------------*/
+
+/*Diseño título de la gráfica*/
+.tituloGraficas {
+    text-align: center;
+    margin: 2rem;
+}
+
+/*Estilo de la section*/
+.cabecera_princ {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*Elementos de arriba de la gráfica*/
+.graficas_princ {
+    position: relative;
+    display: inline-block;
+}
+
+/*Imágen título*/
+#graficas-img {
+    width: 100vw;
+    height: 20vh;
+    margin-bottom: -3px;
+
+}
+
+/*Dentro de la imagen del título*/
+.dentro {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2px;
+    font-size: 20px;
+    background: #EAEAEA80;
+    width: 100%;
+    color: black;
+}
+
+/*Texto de las gráficas*/
+.texto_graficas {
+    width: 90%;
+    text-align: justify;
+    margin: 0 auto;
+    margin-top: 4%;
+}
+
+/*Botón atrás*/
+.flecha_atras_bonita_bonita {
+    text-decoration: none;
+    margin-top: 2%;
+    display: inline;
+    margin-left: 0px;
+    text-align: left;
+}
+
+/*Texto para la lista*/
+.mostrar-mis-datos {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+/*Desplegable del tiempo*/
+.tiempo {
+    padding-right: 20px;
+}
+
+/*Círculo de la flecha de atrás*/
+.interracion-usuario .fa-arrow-circle-left {
+    margin-left: 4vw;
+    color: #820053;
+    font-size: 1.9rem;
+}
+
+/*Círculo + Comparar*/
+.fa-plus-circle {
+    color: #820053;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/*Contenedor*/
+.interracion-usuario {
+    width: 100vw;
+    display: flex;
+    margin: 2vh 0px 1vh 0px;
+    align-items: center;
+    width: 90%;
+}
+
+.comparar {
+    display: flex;
+    justify-content: center;
+}
+
+#graficas-img2 {
+    display: none;
+}
+
+#graficas-img3 {
+    display: none;
+}
+
+.btn_pdf {
+    background: none;
+    border: none;
+    font-size: 40px;
+    margin-left: 2rem;
+    color: red;
+}
+
+
+/*----------------------------------------------FIN DISEÑO GENERAL-----------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------DISEÑO ORDENADOR-------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 800px) {
+
+    /*Interacción del usuario*/
+    .interracion-usuario {
+        margin-bottom: 0px;
+    }
+
+    /*Imagen 1 de la cabecera de la página*/
+    #graficas-img {
+        display: none;
+    }
+
+    /*Imagen 2 para PC*/
+    #graficas-img2 {
+        display: initial;
+        width: 100%;
+        height: 160px;
+    }
+
+    /*Imagen 3*/
+    #graficas-img3 {
+        display: none;
+    }
+}
+
+
+/*---------------------------------------------FIN DISEÑO TABLET-------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 520px) and (max-width: 800px) {
+
+    /*Cambios de imagen de la cabecera*/
+    #graficas-img {
+        display: none;
+    }
+
+    #graficas-img2 {
+        display: none;
+    }
+
+    #graficas-img3 {
+        display: initial;
+        width: 100%;
+        height: 160px;
+    }
+}
+
+/*--------------------------------------------FIN DISEÑO TABLET--------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------*/
+
+
+/* Diseño para el overlay de seleccionar el tipo de dato a comparar*/
+
+.close {
+    font-size: 30px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    align-self: flex-end;
+    color: grey;
+}
+
+.close:hover {
+    color: #820053;
+}
+
+.overlay_graficas {
+    position: fixed;
+    z-index: 11;
+    width: 10%;
+    border: 3px red solid;
+    left: 45%;
+    top: 50%;
+    background: #00000050;
+    padding: 1rem;
+}
+
+.formularioComparar > button {
+    padding: .5rem 1.3rem;
+    font-size: 1rem;
+    border: 2px solid #820053;
+    border-radius: 10px;
+    line-height: 1;
+    transition: .3s;
+    background-color: #fff;
+}
+
+.formularioComparar > button:hover {
+    background-color: #820053;
+    color: #fff;
+}
+
+.formularioComparar > select {
+    margin-bottom: 1em;
+    padding: .25em;
+    border: 0;
+    border-bottom: 2px solid #820053;
+    border-radius: 0;
+    font-size: 16px;
+
+&:focus,
+&:active {
+     outline: 0;
+     border-bottom-color: red;
+ }
+}
+
+.imgComparador {
+    height: 4rem;
+    width: 4rem;
+}
+
+#imgHumedad,
+#imgSalinidad,
+#imgLuminosidad {
+    display: none;
+}
+
+#botonAceptar {
+    bottom: 0;
+}
+
+.overlay_graficas {
+    position: fixed;
+    z-index: 11;
+    border: 3px #820053 solid;
+    top: 40%;
+    background: #FFFFFFE0;
+    text-align: center;
+    font-size: 2rem;
+    height: 20rem;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+}
+
+.overlay_graficas .formularioComparar {
+    margin-top: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media screen and (min-width: 200px) and (max-width: 650px) {
+    .overlay_graficas {
+        width: 80vw;
+        left: 10vw;
+
+    }
+
+}
+
+@media screen and (min-width: 920px) {
+    .overlay_graficas {
+        width: 40vw;
+        left: 30vw;
+    }
+
+}
+
+@media screen and (min-width: 650px) and (max-width: 920px) {
+    .overlay_graficas {
+        width: 50vw;
+        left: 25vw;
+
+    }
+
+}
+
+.ocultar {
+    display: none;
+}
+/*----------------------------------------------- Fin CSS pagina de graficas -----------------------------------------------*/
+/*----------------------------------------------- Inicio CSS Landing Page -----------------------------------------------*/
+
+
+/*Imagen de fondo y estilo*/
+.fondo{
+    padding-top: 70px;
+    background-image: url(../img/fondo.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+/*Diseño del fondo en vista de pantalla*/
+#imagen-fondo{
+    position: absolute;
+    z-index: -2;
+}
+#imagen-fondo,.fondo{
+    height: 100vh;
+}
+
+.texto-encabezado {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-top: 6vh;
+}
+
+
+/*Estilo del texto de relleno (información adicional)*/
+.texto_relleno{
+    padding-top: 6vh;
+    font-size: 18px;
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+/*Estilos para PC*/
+
+/*Diseño para tablet*/
+@media screen and (min-width: 610px) and (max-width: 833px) {
+    .texto_relleno{
+        margin: 0 auto;
+        font-size: 22px;
+        width: 35%;
+    }
+}
+/*Diseño del contenedor promoción*/
+.promocion{
+    text-align: center;
+    margin-bottom: 20vh;
+}
+
+/*Diseño del contenedor promoción*/
+.promocion{
+    text-align: center;
+    margin-bottom: 20vh;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*Diseño del texto para el call to action*/
+.info {
+    color: white;
+    padding-bottom: 4vh;
+    align-items: center;
+    text-align: center;
+}
+
+.boton_personalizado{
+    text-decoration: none;
+    padding: 15px 60px;
+    font-weight: 600;
+    font-size: 17px;
+    color: white;
+    background-color: #8b9ec8;
+    border-radius: 15px;
+    border: 3px solid white;
+}
+
+.boton_personalizado:hover{
+    background: #8b9ec8;
+    transition-delay: 0.05s;
+    color: white;
+    border: 3px solid ;
+}
+
+.boton_personalizado span {
+    position: absolute;
+    display: block;
+}
+
+.boton_personalizado:active{
+    background: #8b9ec8;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+.finscroll {
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+
+/* Diseño Flecha indicadora abajo */
+.scroll-down {
+    height: 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 25px;
+    z-index: 6;
+}
+
+.scroll-down::before,
+.scroll-down::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    height: 25px;
+    width: 25px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border: 4px solid gray;
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 0.7s ease-in-out infinite;
+}
+
+@keyframes scroll-down {
+    0% {
+        top:20%;
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        top: 90%;
+        opacity: 0;
+    }
+}
+/* ---------------------------------------------------------------------- */
+
+
+
+/* SECCION SERVICIOS*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/* Vista en teléfono */
+/*@media screen and (max-width: 900px) {*/
+
+.sensores .titulo {
+    text-align: center;
+    /*text-decoration: bold;*/
+    padding: 2vh 5% 5vh 5vw;
+    margin-top: 5px;
+
+}
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*Apartado Servicios inicial*/
+.servicios-encabezado {
+    font-family: 'Varela Round', sans-serif;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+#servicios-img1{
+    display: none;
+}
+
+.servicios-principal{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.dentro{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2px;
+    font-size: 50px;
+    background: #EAEAEA80;
+    width: 100%;
+    color: black;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*Apartado explicación de sensores*/
+.numero{
+    font-size: 2rem;
+    color: white;
+    background: #820053;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    margin: 0 auto;
+}
+
+.titulo_nuestro{
+    margin-top: 1.5rem;
+}
+.display{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 5vh;
+}
+
+.sens{
+    height: 50px;
+    width: 50px;
+
+}
+
+.divisiones{
+    height: 210px;
+    width: 44vw;
+    padding: 4% 2% 4% 2%;
+    margin: auto;
+    background-color: rgba(255, 236, 217, 0.5);
+    border-radius: 15px;
+    text-align: center;
+    position: center;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 3px 1px black;
+}
+
+.text-sensores{
+    text-align: center;
+    margin-bottom: 5%;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*Apartado como adquirir servicios*/
+.contenedor-servicios{
+    margin-top: 5vh;
+    padding-top: 4vh;
+    text-align: center;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+}
+.img-guia{
+    margin-bottom: -4%;
+    width: 65%;
+}
+
+.sencillo{
+    margin-top: 70px;
+    margin-bottom:70px ;
+    text-align: center;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*Diseño de los textos*/
+.text{
+    font-size: 15px;
+    margin-bottom: 2.2rem;
+}
+
+.masinfo{
+    text-align: center;
+    margin: -30px 0px 20px 0px;
+    padding-left: 16%;
+    padding-right: 16%;
+    font-size: 15px;
+}
+
+.a{
+    color: #820053;
+    text-decoration: underline;
+    font-size: 15px;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+
+/*Responsive*/
+
+
+/*Responsive para ordenador*/
+@media  screen and (min-width: 1000px) {
+    .texto-encabezado {
+        font-size: 30px;
+        margin-bottom: 27vh;
+    }
+    /*Estilo del texto adicional*/
+    .texto_relleno {
+        margin: 0 auto;
+        font-size: 22px;
+        width: 35%;
+    }
+    .boton_personalizado{
+        width: 350px;
+        height:60px;
+    }
+    .dentro{
+        font-size: 2.8rem;
+        margin-bottom: 0px;
+    }
+    .sensores .titulo{
+        font-size: 1.8rem;
+    }
+    .info{
+        font-size: 1.7rem;
+    }
+    #servicios-img1{
+        display: initial;
+        width: 100%;
+    }
+    .servicios-encabezado {
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    .display{
+        width: 48vw;
+        justify-content: center;
+
+
+    }
+    .divisiones{
+        margin-right:20px;
+        margin-left: 20px;
+    }
+}
+
+/*Responsive para tablet*/
+@media  screen and (min-width: 800px) {
+    .contenedor-sensores{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 0px;
+    }
+    .contenedor-nuestro{
+        display: flex;
+        width: 97vw;
+    }
+    .servicios-encabezado {
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+    .text{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .divisiones{
+        margin: 20px;
+    }
+    .sencillo{
+        font-size: 2rem;
+    }
+    #servicios-img{
+        display: none;
+    }
+    #servicios-img1{
+        display: initial;
+        width: 100%;
+    }
+}
+/*----------------------------------------------- Fin CSS Landing page -----------------------------------------------*/
+/*----------------------------------------------- Inicio CSS FAQ -----------------------------------------------*/
+
+/*--------------------------------------------------*/
+/*POSICION PARA EL TITULO*/
+.FAQ-encabezado {
+    margin: 0 auto;
+    text-align: center;
+}
+.FAQ-principal{
+    position: relative;
+    display: inline-block;
+}
+.dentroFAQ{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2px;
+    font-size: 20px;
+    background: #EAEAEA80;
+    width: 100%;
+    color: black;
+}
+/*--------------------------------------------------*/
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------DISEÑO ORDENADOR---------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 900px) {
+    /*    opciones para la imagen de arriba*/
+    #FAQ-img {
+        display: none;
+    }
+    #FAQ-imgpc{
+        height: 210px;
+        width: 100%;
+    }
+
+    /*--------------------------------------------------*/
+    /*POSICION DE LAS PREGUNTAS Y RESPUESTAS*/
+    .titulopreguntas{
+        margin: 30px 120px 10px 120px;
+        font-size: 23px;
+    }
+    .respuestas{
+        text-align: justify;
+        font-size: 19px;
+        margin: 0 120px 40px 125px;
+    }
+    .preguntafinal{
+        text-align: center;
+        font-size: 19px;
+        margin: 0 120px 20px 120px;
+    }
+    .preguntafinal p{
+        margin-bottom: 60px;
+        margin-left: 5px;
+    }
+    .preguntafinal h2{
+        margin-bottom: 10px;
+        font-size: 23px;
+    }
+    .ccto{
+        color: #820053;
+        text-decoration: underline;
+    }
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*HACER QUE LA FLECHA NO APAREZCA*/
+    .flechaFAQ{
+        display: none;
+    }
+    /*--------------------------------------------------*/
+}
+
+/*-----------------------------------------------FIN DISEÑO ORDENADOR-------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------DISEÑO TELEFONO----------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 900px) {
+    /*--------------------------------------------------*/
+    /*EDICION PARA LA IMAGEN*/
+    #FAQ-img {
+        width: 100%;
+        height: auto;
+        margin-bottom: -3px;
+    }
+    #FAQ-imgpc{
+        display: none;
+    }
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*ESTILOS Y POSICION DE LOS TEXTOS Y RESPUESTAS*/
+    .preguntas{
+        margin: 10px 25px 10px 25px;
+    }
+    .preguntafinal{
+        margin: 20px 32px 25px 32px;
+    }
+    .ccto{
+        color: #820053;
+        text-decoration: underline;
+    }
+    .preguntafinal h2{
+        text-align: center;
+        margin: 2% 0 2% 0;
+    }
+    .preguntafinal p{
+        text-align: justify;
+    }
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*HACER QUE LAS RESPUESTAS NO SE VEAN PRIMERO*/
+    .preguntas-respuestas > .respuestas {
+        display: none;
+    }
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*HACER QUE AL PRESIONAR LA PREGUNTA APAREZCA LA RESPUESTA*/
+    .active > .respuestas {
+        display: block;
+        padding-bottom: 1.3rem;
+        margin: 0px 7% 0px 7%;
+        text-align: justify;
+    }
+    .respuestas{
+        margin: 0 auto;
+    }
+    /*LA FLECHA SE MEUEVE AL PRESIONAR LA PREGUNTA*/
+    .active img {
+        transform: rotate(180deg);
+        transition: all 0.3s ease-in;
+    }
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*VISUALIZACIÓN PREGUNTAS*/
+    .preguntas-acordeon {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*LINEA SEPARATORIA ENTRE PREGUNTAS*/
+    .preguntas-respuestas {
+        width: 100%;
+        border-bottom: 2px solid #d5d5dc;
+    }
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*OPCIONES DEL TEXTO DE LAS PREGUNTAS*/
+    .titulopreguntas {
+        font-weight: 100;
+        font-size: 1.2rem;
+        color: var(--veryDarkGrayBlue);
+        margin: 1.4rem;
+    }
+    .active h2 {
+        font-weight: 600;
+    }
+
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*DISEÑO FLECHAS DESPLEGABLE*/
+    .preguntas {
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    .preguntas img {
+        align-self: center;
+    }
+    /*--------------------------------------------------*/
+
+}
+/*---------------------------------------------FIN DISEÑO TELEFONO----------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------Fin CSS FAQ---------------------------------------------*/
+/*----------------------------------------------- Inicio CSS pagina de mi perfil -----------------------------------------------*/
+
+
+/*-------------------------------------------DISEÑO DE LO VISIBLE-----------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------*/
+/*DISEÑOS GENERALES DE CONTENEDORES*/
+.seccion-perfil-usuario .perfil-usuario-body,
+.seccion-perfil-usuario {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*COLOR DE FONDO GENERAL*/
+.seccion-perfil-usuario .perfil-usuario-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#d991b1, transparent);
+    margin-bottom: 1.25rem;
+}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*COLOR DE ENCABEZADO INICIAL*/
+.seccion-perfil-usuario .perfil-usuario-portada {
+    display: block;
+    position: relative;
+    width: 90%;
+    height: 180px;
+    background: linear-gradient(25deg, #820053, #d991b1);
+    border-radius: 0 0 20px 20px;
+}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*DISEÑO BOTÓN VOLVER*/
+/*.volver{*/
+/*    width: auto;*/
+/*    height: 35px;*/
+/*    margin-top: 20px;*/
+/*    display: flex;*/
+/*    margin-left: 30px;*/
+/*}*/
+.volver {
+    margin-top: 20px;
+    margin-left: 30px;
+    color: white;
+    font-size: 1.9rem;
+    display: flex;
+    cursor: pointer;
+    width: 24px;
+    text-decoration: none;
+}
+.volver:hover{
+    color: #d991b1;
+}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*DISEÑO CONTENEDORES DE LA IMAGEN DE PERFIL*/
+.seccion-perfil-usuario .perfil-usuario-avatar {
+    display: flex;
+    width: 180px;
+    height: 180px;
+    align-items: center;
+    justify-content: center;
+    border: 7px solid #FFFFFF;
+    background-color: #EAEAEA;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    position: absolute;
+    bottom: -40px;
+    left: calc(50% - 90px);
+    z-index: 1;
+}
+.seccion-perfil-usuario .perfil-usuario-avatar img {
+    width: 100%;
+    position: relative;
+    border-radius: 50%;
+}
+
+/*-------------------------------------------------------*/
+/*DISEÑO BOTÓN CAMBIAR FOTO DE PERFIL*/
+.seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar {
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    border: 0;
+    background-color: #fff;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*TAMAÑO DE LOS CUADRADOS BLANCOS*/
+.seccion-perfil-usuario .perfil-usuario-body {
+    width: 70%;
+    position: relative;
+    max-width: 750px;
+}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*OPCIONES DEL NOMBRE DEL USUARIO*/
+.seccion-perfil-usuario .perfil-usuario-body .titulo {
+    display: block;
+    width: 100%;
+    font-size: 35px;
+}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*CREACIÓN DE LOS CONTENEDORES BLANCOS Y ESPACIOS*/
+.seccion-perfil-usuario .perfil-usuario-footer,
+.seccion-perfil-usuario .perfil-usuario-bio {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    background-color: #fff;
+    border-radius: 15px;
+    width: 100%;
+    margin-bottom: 7%;
+}
+.perfil-usuario-footer{
+    margin-top: 3%;
+}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+.seccion-perfil-usuario .perfil-usuario-bio {
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*DISEÑO DE LOS APARTADOS DE DATOS PERSONALES*/
+.apartado-editar{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+apartado-editar img {
+    align-self: end;
+}
+.seccion-perfil-usuario .lista-datos {
+    width: 50%;
+    list-style: none;
+}
+.seccion-perfil-usuario .lista-datos li {
+    padding: 5px 0;
+}
+.tlf, .crreo, .direcc, .servs{
+    font-weight: bold;
+}
+#boton-actualizar {
+    margin: 0 auto;
+    border: 2px solid #820053;
+    border-radius: 12px;
+    padding: 5px 15px;
+    background: #d380b5b8;
+}
+#boton-actualizar:hover{
+    background-color: #820053;
+    color: white;
+}
+
+.editar{
+    display: none;
+}
+
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*EDICIÓN DE LOS ICONOS INDIVIDUALES*/
+.seccion-perfil-usuario .lista-datos li> .icono {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+/*-------------------------------------------------------*/
+/*.seccion-perfil-usuario .redes-sociales {*/
+/*    position: absolute;*/
+/*    right: calc(0px - 50px - 1rem);*/
+/*    top: 0;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*EDICIÓN DE LA FRASE DE DATOS PERSONALES*/
+.datospersonales{
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 3%;
+    text-decoration: underline;
+    font-size: 20px;
+}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*OPCIONES DE TAMAÑO Y DISPOSICIÓN CUADRADOS BLANCOS*/
+.seccion-perfil-usuario .lista-datos {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.seccion-perfil-usuario .perfil-usuario-portada,
+.seccion-perfil-usuario .perfil-usuario-body {
+    width: 95%;
+}
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*UBICACIÓN DE LA INFORMACIÓN DATOS PERSONALES*/
+.seccion-perfil-usuario {
+    position: relative;
+    flex-direction: row;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: center
+}
+/*-------------------------------------------------------*/
+
+/*--------------------------------------------FIN DISEÑO DE LO VISIBLE------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------- Fin CSS pagina de mi perfil -----------------------------------------------*/
+/*----------------------------------------------- Inicio CSS pagina de mis campos -----------------------------------------------*/
+#mis-campos{
+    padding-top: 70px;
+}
+#map{
+    width: 100%;
+    height: 91.5vh;
+    border: solid 1px black;
+}
+#buscar {
+    position: absolute;
+    z-index: 1;
+    border-radius: 10px;
+    width: var(--widthBuscar);
+    margin: 0 10px;
+    margin-top: var(--marginTopBuscar);
+    height: 40px;
+}
+@media (max-width: 920px) {
+    :root{
+        --widthBuscar: 95%;
+        /*--marginTopBuscar: 30px;*/
+    }
+}
+#infoContent{
+    width: 220px;
+    height: 130px;
+}
+
+#infoContent h3 {
+    display: block;
+    margin-block-start: 0px;
+    margin-block-end: 10px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-bottom: 2%;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#infoContent label{
+    font-size: 22px;
+    font-weight: normal;
+    padding-bottom: 3%;
+}
+.imagenes, .valores{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.valores label{
+    margin-top: 0.3rem;
+    font-weight: bold;
+}
+.valores label, .imagenes img{
+    flex: 1 1 40px;
+}
+.imagenes img{
+    height: 38px;
+    margin-bottom: 1%;
+}
+.divinfo{
+    text-align: center;
+}
+
+#infoContent .enlace{
+    display: flex;
+    /*justify-content: flex-end;*/
+    justify-content: space-between;
+}
+.informacion-detallada{
+    color: blue;
+    /*margin-right: 5px;*/
+    text-decoration: underline;
+}
+
+.boton-comparar{
+    color: blue;
+    /*margin-left: 5px;*/
+}
+/*----------------------------------------------- Fin CSS de mis campos -----------------------------------------------*/
+/*----------------------------------------------- Inicio CSS pagina Nosotros -----------------------------------------------*/
+
+/*--------------------------------------------------*/
+/*PRIMERA PARTE DEL TEXTO Y FOTO*/
+.nosotros-encabezado {
+    margin: 0 auto;
+    text-align: center;
+}
+.nosotros-informacion {
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.nosotros-principal{
+    position: relative;
+    display: inline-block;
+}
+/*--------------------------------------------------*/
+
+/*--------------------------------------------------*/
+/*TAMAÑO DEL MAPA UBICACIÓN*/
+.mapa{
+    margin-bottom: 10px;
+    text-align: center;
+}
+/*--------------------------------------------------*/
+/*----------------------------------------------FIN DISEÑO GENERAL-----------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*----------------------------------------------DISEÑO ORDENADOR-------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 1000px){
+    /*--------------------------------------------------*/
+    /*OPCIONES DE LAS IMÁGENES DE ENCABEZADO*/
+    #nosotros-img-pc {
+        width: 100%;
+        height: 220px;
+        margin-bottom: -3px;
+        flex: 1 1 200px;
+    }
+    #nosotros-img,#nosotros-img-tablet, #nosotros-img-tabletpc {
+        display: none;
+    }
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*DISEÑO DE CADA UNO DE LOS TEXTOS*/
+    .dentro{
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2px;
+        font-size: 24px;
+        background: #EAEAEA80;
+        width: 100%;
+        color: black;
+    }
+    h4{
+        font-weight: normal;
+        font-size: 18px;
+    }
+    h2{
+        font-size: 23px;
+        margin-bottom: 5px;
+
+    }
+    .quienes-somos,.negocio,.ubicacion{
+        margin: 30px 120px 25px 120px;
+        /*width: 30%;*/
+    }
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*TAMAÑO DEL MAPA UBICACIÓN*/
+    .mapa{
+        margin-bottom: 10px;
+        text-align: center;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*OPCIONES DE LAS IMÁGENES DE MODELO*/
+    .modelonegociotablet,.modelonegocio{
+        display: none;
+    }
+    .modelonegociopc{
+        width: 60%;
+        margin-top: 25px;
+        margin-left: 20%;
+    }
+    /*--------------------------------------------------*/
+}
+/*----------------------------------------------FIN DISEÑO ORDENADOR---------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*---------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------DISEÑO TABLET-ORDENADOR-----------------------------------------*/
+@media screen and (min-width: 833px) and (max-width: 1000px) {
+    /*--------------------------------------------------*/
+    /*OPCIONES DE LAS IMÁGENES DE ENCABEZADO*/
+    #nosotros-img, #nosotros-img-pc,#nosotros-img-tablet{
+        display: none;
+    }
+    #nosotros-img-tabletpc{
+        width: 100%;
+        height: 220px;
+        margin-bottom: -3px;
+    }
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*DISEÑO DE CADA UNO DE LOS TEXTOS*/
+    .dentro{
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2px;
+        font-size: 20px;
+        background: #EAEAEA80;
+        width: 100%;
+        color: black;
+    }
+    h4{
+        font-weight: normal;
+        font-size: 18px;
+    }
+    h2{
+        font-size: 23px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    .quienes-somos,.negocio,.ubicacion{
+        margin: 20px 60px 25px 60px;
+    }
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*OPCIONES DE LAS IMÁGENES DE MODELO*/
+    .modelonegocio,.modelonegociopc{
+        display: none;
+    }
+    .modelonegociotablet{
+        width: 100%;
+        margin-top: 15px;
+    }
+    /*--------------------------------------------------*/
+}
+/*-------------------------------------------FIN DISEÑO TABLET-ORDENADOR-----------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*---------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------DISEÑO TABLET---------------------------------------------------*/
+@media screen and (min-width: 610px) and (max-width: 833px) {
+    /*--------------------------------------------------*/
+    /*OPCIONES DE LAS IMÁGENES DE ENCABEZADO*/
+    #nosotros-img,#nosotros-img-pc,#nosotros-img-tabletpc{
+        display: none;
+    }
+    #nosotros-img-tablet {
+        width: 100%;
+        height: 220px;
+        margin-bottom: -3px;
+    }
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*DISEÑO DE CADA UNO DE LOS TEXTOS*/
+    .dentro{
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2px;
+        font-size: 20px;
+        background: #EAEAEA80;
+        width: 100%;
+        color: black;
+    }
+    h4{
+        font-weight: normal;
+        font-size: 18px;
+    }
+    h2{
+        font-size: 23px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    .quienes-somos,.negocio,.ubicacion{
+        margin: 20px 60px 25px 60px;
+    }
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*OPCIONES DE LAS IMÁGENES DE MODELO*/
+    .modelonegocio,.modelonegociopc{
+        display: none;
+    }
+    .modelonegociotablet{
+        width: 100%;
+        margin-top: 15px;
+    }
+    /*--------------------------------------------------*/
+}
+/*-----------------------------------------------FIN DISEÑO TABLET------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*----------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------DISEÑO MÓVIL--------------------------------------------------*/
+@media screen and (max-width: 610px) {
+    /*--------------------------------------------------*/
+    /*OPCIONES DE LAS IMÁGENES DE ENCABEZADO*/
+    #nosotros-img-tablet,#nosotros-img-pc,#nosotros-img-tabletpc{
+        display: none;
+    }
+    #nosotros-img {
+        width: 100%;
+        height: 220px;
+        margin-bottom: -3px;
+    }
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*DISEÑO DE CADA UNO DE LOS TEXTOS*/
+    .dentro{
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2px;
+        font-size: 20px;
+        background: #EAEAEA80;
+        width: 100%;
+        color: black;
+    }
+    h4{
+        font-weight: normal;
+    }
+    h2{
+        font-size: 20px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    .quienes-somos,.negocio,.modelonegocio,.ubicacion{
+        margin: 20px 32px 25px 32px;
+    }
+    /*--------------------------------------------------*/
+
+    /*--------------------------------------------------*/
+    /*OPCIONES DE LAS IMÁGENES DE MODELO*/
+    .modelonegociotablet,.modelonegociopc{
+        display: none;
+    }
+    .modelonegocio{
+        width: 100%;
+        margin: 0 auto;
+    }
+    /*--------------------------------------------------*/
+}
+/*-----------------------------------------------FIN DISEÑO MÓVIL------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------- Fin CSS pagina Nosotros -----------------------------------------------*/
+
+
+
+

@@ -167,24 +167,26 @@ function procesarDatos(mediciones) {
         switch (tipoComparar) {
             case "0":
                 tipo = "Humedad"
-                datos.datasets[1].data = [];
-                datos.datasets[1] = datosPrevios.datasets[0]
-                datos.datasets[2].data = []
+                // datos.datasets[1].data = [];
+                datos.datasets[1].data = humedad
+                datos.datasets[0] = datosPrevios.datasets[0]
+
                 // datos.datasets[3].data = []
                 modificarDatos()
 
                 break;
             case "1":
                 tipo = "Salinidad"
-                datos.datasets[0].data = [];
+                // datos.datasets[0].data = [];
+                datos.datasets[1].data = salinidad
                 datos.datasets[0] = datosPrevios.datasets[1]
-                datos.datasets[2].data = []
+
                 // datos.datasets[3].data = []
                 modificarDatos()
                 break;
             case "2":
                 tipo = "Luminosidad"
-                datos.datasets[1].data = [];
+                datos.datasets[1].data = luminosidad;
                 // datos.datasets[1] = datos.datasets[2];
                 datos.datasets[0].data = [];
                 // datos.datasets[3].data = [];

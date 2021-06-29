@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mis campos</title>
-    <link rel="stylesheet" href="../css/miscampos.css">
+<!--    <link rel="stylesheet" href="../css/miscampos.css">-->
     <link rel="stylesheet" href="../css/estilo-header_footer.css">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <script src="../js/restringir-acceso.js"></script>
