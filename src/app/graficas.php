@@ -35,7 +35,7 @@ include_once $path . 'header.php'; ?>
     <div class="header"></div>
     <section class="cabecera_princ">
         <div class="graficas_princ">
-            <div class="dentro">
+            <div class="dentro infodetallada">
                 <h1>Información detallada</h1>
             </div>
             <img src="../img/grafic.png" alt="img-graficas" id="graficas-img">
