@@ -48,7 +48,7 @@
 
 <!-- Sección Servicios-->
 <section class="servicios-encabezado blur servicios-principal" id="encabezado_servicios">
-    <h1 class="dentro">Servicios</h1>
+    <h1 class="dentro serviciostitulo">Servicios</h1>
     <img src="img/servicios1.jpg" alt="servicios-img" id="servicios-img1">
 </section>
 
