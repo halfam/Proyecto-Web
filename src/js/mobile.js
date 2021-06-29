@@ -107,7 +107,7 @@ function cambiarMenu(user) {
     let menu = document.getElementById('lista-menu')
     let miPerfil = document.createElement('li')
     miPerfil.classList.add('nav-link')
-    miPerfil.innerHTML = "<a href='" + path + "app/miperfil.php'>" + "Hola " + nombre + "</a>"
+    miPerfil.innerHTML = "<a href='" + path + "app/miperfil.php'>" + "Hola, " + nombre + "</a>"
 
     document.getElementById("login").innerText = "Cerrar sesión";
     document.getElementById("login").setAttribute("onclick", "logout()");
@@ -139,5 +139,5 @@ function cambiarMenu(user) {
             break;
     }
 
-    menu.appendChild(miPerfil)
+    document.getElementById("mi-perfil").appendChild(miPerfil)
 }
