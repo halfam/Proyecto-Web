@@ -8,6 +8,7 @@
         <!-- SECCIONES DEL MENU -->
         <nav class="nav-btn" id="menu">
             <ul id="lista-menu" class="nav-links blur">
+                    <div id="mi-perfil"></div>
                 <li class="nav-link" >
                     <a href="<?php echo $path?>index.php">Inicio</a>
                 </li>
