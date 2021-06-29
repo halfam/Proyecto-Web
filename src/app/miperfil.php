@@ -52,7 +52,7 @@ include_once $path.'header.php';?>
         <div class="perfil-usuario-footer">
            <div class="apartado-editar">
                <h3 class="datospersonales">Datos Personales</h3>
-               <img src="../img/editar.png" alt="Imagen de editar los campos de mi perfil" onclick="o()">
+               <img src="../img/editar.png" alt="Imagen de editar los campos de mi perfil" onclick="o()" class="boton-editar">
            </div>    
 
             <div class="lista-datos">
