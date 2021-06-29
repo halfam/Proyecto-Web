@@ -103,7 +103,9 @@ function editarUsuario(editar, userID) {
     let fila = editar.parentNode.parentNode
     fila.classList.add("editando")
     fila.setAttribute("contenteditable", "true");
-    editar.parentNode.innerHTML = "<a href='#' onclick='actualizarUsuario(this," + userID + ")'>Listo<a/>";
+    editar.parentNode.innerHTML = "<a href='#' class='listo' onclick='actualizarUsuario(this," + userID + ") '>Listo<a/>";
+
+    // editar.parentNode
 }
 
 // function actualizarUsuario(datos, )
@@ -118,8 +120,8 @@ function actualizarUsuario(editar, userID) {
         fila = editar.parentNode.parentNode
         campos = fila.childNodes
         fila.classList.remove("editando")
-        alert("actualizado con exito")
-        location.reload()
+        // alert("actualizado con exito")
+        // location.reload()
     } else {
         // getUserInfo()
         userID = idUsuario
@@ -142,6 +144,8 @@ function actualizarUsuario(editar, userID) {
     }).then(function (respuesta) {
 
     })
+    alert("actualizado con exito")
+    location.reload()
 }
 
 

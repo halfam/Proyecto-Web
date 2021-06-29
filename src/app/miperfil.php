@@ -90,8 +90,11 @@ include_once $path.'header.php';?>
 <script>function o(){
         document.getElementById('boton-actualizar').classList.remove('editar')
         document.querySelectorAll('.tabla_item').forEach(function(campo) {
-            if (campo.getAttribute('id') !== 'servicios_usuario')
+            if (campo.getAttribute('id') !== 'servicios_usuario'){
                 campo.setAttribute("contenteditable","true");
+                campo.classList.add("editando")
+            }
+
         })
     }</script>
 </body>
