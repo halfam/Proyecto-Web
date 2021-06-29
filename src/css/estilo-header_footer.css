@@ -846,7 +846,189 @@ a, button{
 .rojo{
     background: red;
 }
+/*-------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------- Recuperar contraseña (formulario) --------------------------*/
 
+.forgotPassword{
+    background: url("../img/fondo_contra.jpg");
+}
+.titulo-recuperarContra{
+    font-size: 2rem;
+    padding: 50px 0px 1.5rem 0px;
+    text-align: center;
+}
+
+.texto-descriptivo1{
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    font-size: 1.05rem;
+}
+.formulario-correo-contra{
+    margin-top: 4rem;
+    padding-left: 15%;
+}
+
+
+.text-correo-electro{
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+#Recuperar_correo{
+    margin: .6rem 0px 1rem 0px;
+    width: 80%;
+    height: 2rem;
+    border-radius: 8px;
+    padding-left: 7px;
+}
+.boton-enviar-correo{
+    width: 80%;
+    height: 3rem;
+    background-color: #97095e;
+    font-size: 2rem;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 3.5rem;
+}
+.boton-enviar-correo:hover{
+    background-color: #820053;
+}
+
+.texto-descriptivo2{
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.05rem;
+}
+
+.img-relleno{
+    height: 12rem;
+    width: 100%;
+}
+/*----------------------------------------------- Inicio CSS recuperar contraseña tablet ---------------------------------------*/
+@media screen and (min-width: 610px) {
+    .titulo-recuperarContra{
+        font-size: 3rem;
+    }
+    .texto-descriptivo1{
+        width: 70%;
+        font-size: 1.5rem;
+    }
+    .formulario-correo-contra{
+        margin-top: 5rem;
+    }
+    .texto-descriptivo2{
+        width: 70%;
+        font-size: 1.5rem;
+    }
+    .img-relleno{
+        height: 20rem;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+}
+/*----------------------------------------------- FIN CSS recuperar contraseña tablet ---------------------------------------*/
+/*----------------------------------------------- Inicio CSS recuperar contraseña pc ---------------------------------------*/
+@media screen and (min-width: 1000px) {
+    .texto-descriptivo1 {
+        width: 50%;
+        font-size: 1.1rem;
+    }
+
+    .texto-descriptivo2 {
+        width: 50%;
+        font-size: 1.1rem;
+    }
+
+    .formulario-correo-contra {
+        width: 60%;
+        margin: 0 auto;
+        padding-left: 10%;
+    }
+    .img-relleno{
+        height: 15rem;
+        width: 100%;
+    }
+}
+/*----------------------------------------------- Inicio CSS pagina de recuperar -----------------------------------------------*/
+.contenedor-recuperar{
+    margin-top: 4rem;
+    padding-left: 15%;
+}
+.contraseña-recuperar{
+    display: block;
+    margin:0 auto;
+}
+#Contrasenya1{
+    margin: .6rem 0px 1rem 0px;
+    width: 80%;
+    height: 2rem;
+    border-radius: 8px;
+    padding-left: 7px;
+}
+#Contrasenya2{
+    margin: .6rem 0px 1rem 0px;
+    width: 80%;
+    height: 2rem;
+    border-radius: 8px;
+    padding-left: 7px;
+}
+.texto-contra{
+    font-weight: bold;
+}
+.texto-descriptivo3{
+    text-align: center;
+    width:80%;
+    margin: 0 auto;
+}
+.texto-descriptivo4{
+    text-align: center;
+    width:80%;
+    margin: 0 auto;
+    padding-bottom: 18vh;
+}
+
+/*----------------------------------------------- Inicio CSS pagina de recuperar tablet-----------------------------------------------*/
+@media screen and (min-width: 610px) {
+    .titulo-recuperarContra{
+        font-size: 3rem;
+    }
+    .texto-descriptivo3{
+        width: 70%;
+        font-size: 1.5rem;
+    }
+    .texto-descriptivo4{
+        width: 70%;
+        font-size: 1.5rem;
+        padding-bottom: 26vh;
+    }
+    .contraseña-recuperar{
+        height: 5rem;
+    }
+}
+/*----------------------------------------------- fin CSS pagina de recuperar tablet-----------------------------------------------*/
+/*----------------------------------------------- inicio CSS pagina de recuperar PC-----------------------------------------------*/
+@media screen and (min-width: 1000px) {
+    .contenedor-recuperar{
+        width: 60%;
+        margin: 0 auto;
+        padding-left: 10%;
+    }
+
+    .texto-descriptivo3 {
+        width: 50%;
+        font-size: 1.1rem;
+        margin-bottom: 4rem;
+    }
+
+    .texto-descriptivo4 {
+        width: 50%;
+        font-size: 1.1rem;
+    }
+}
+    /*----------------------------------------------- FIN CSS pagina de recuperar -----------------------------------------------*/
 /*----------------------------------------------- Inicio CSS pagina de contacto -----------------------------------------------*/
 @media screen and (min-width: 610px) {
 
